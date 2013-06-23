@@ -1,0 +1,2003 @@
+/* line 4, ../sass/screen.scss */
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+}
+
+/* line 17, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 9, ../sass/lib/bootstrap/_type.scss */
+p {
+  margin: 0 0 10px;
+}
+
+/* line 12, ../sass/lib/bootstrap/_type.scss */
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+}
+
+/* line 24, ../sass/lib/bootstrap/_type.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 26, ../sass/lib/bootstrap/_type.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 27, ../sass/lib/bootstrap/_type.scss */
+em {
+  font-style: italic;
+}
+
+/* line 28, ../sass/lib/bootstrap/_type.scss */
+cite {
+  font-style: normal;
+}
+
+/* line 31, ../sass/lib/bootstrap/_type.scss */
+.muted {
+  color: #e6e6e6;
+}
+
+/* line 33, ../sass/lib/bootstrap/_type.scss */
+a.muted:hover,
+a.muted:focus {
+  color: #cccccc;
+}
+
+/* line 35, ../sass/lib/bootstrap/_type.scss */
+.text-warning {
+  color: #c09853;
+}
+
+/* line 37, ../sass/lib/bootstrap/_type.scss */
+a.text-warning:hover,
+a.text-warning:focus {
+  color: #a47e3c;
+}
+
+/* line 39, ../sass/lib/bootstrap/_type.scss */
+.text-error {
+  color: #b94a48;
+}
+
+/* line 41, ../sass/lib/bootstrap/_type.scss */
+a.text-error:hover,
+a.text-error:focus {
+  color: #953b39;
+}
+
+/* line 43, ../sass/lib/bootstrap/_type.scss */
+.text-info {
+  color: #3a87ad;
+}
+
+/* line 45, ../sass/lib/bootstrap/_type.scss */
+a.text-info:hover,
+a.text-info:focus {
+  color: #2d6987;
+}
+
+/* line 47, ../sass/lib/bootstrap/_type.scss */
+.text-success {
+  color: #468847;
+}
+
+/* line 49, ../sass/lib/bootstrap/_type.scss */
+a.text-success:hover,
+a.text-success:focus {
+  color: #356635;
+}
+
+/* line 51, ../sass/lib/bootstrap/_type.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 52, ../sass/lib/bootstrap/_type.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 53, ../sass/lib/bootstrap/_type.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 59, ../sass/lib/bootstrap/_type.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+/* line 66, ../sass/lib/bootstrap/_type.scss */
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #e6e6e6;
+}
+
+/* line 75, ../sass/lib/bootstrap/_type.scss */
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+
+/* line 77, ../sass/lib/bootstrap/_type.scss */
+h1 {
+  font-size: 38.5px;
+}
+
+/* line 78, ../sass/lib/bootstrap/_type.scss */
+h2 {
+  font-size: 31.5px;
+}
+
+/* line 79, ../sass/lib/bootstrap/_type.scss */
+h3 {
+  font-size: 24.5px;
+}
+
+/* line 80, ../sass/lib/bootstrap/_type.scss */
+h4 {
+  font-size: 17.5px;
+}
+
+/* line 81, ../sass/lib/bootstrap/_type.scss */
+h5 {
+  font-size: 14px;
+}
+
+/* line 82, ../sass/lib/bootstrap/_type.scss */
+h6 {
+  font-size: 11.9px;
+}
+
+/* line 84, ../sass/lib/bootstrap/_type.scss */
+h1 small {
+  font-size: 24.5px;
+}
+
+/* line 85, ../sass/lib/bootstrap/_type.scss */
+h2 small {
+  font-size: 17.5px;
+}
+
+/* line 86, ../sass/lib/bootstrap/_type.scss */
+h3 small {
+  font-size: 14px;
+}
+
+/* line 87, ../sass/lib/bootstrap/_type.scss */
+h4 small {
+  font-size: 14px;
+}
+
+/* line 93, ../sass/lib/bootstrap/_type.scss */
+.page-header {
+  padding-bottom: 9px;
+  margin: 20px 0 30px;
+  border-bottom: 1px solid white;
+}
+
+/* line 105, ../sass/lib/bootstrap/_type.scss */
+ul, ol {
+  padding: 0;
+  margin: 0 0 10px 25px;
+}
+
+/* line 112, ../sass/lib/bootstrap/_type.scss */
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+/* line 115, ../sass/lib/bootstrap/_type.scss */
+li {
+  line-height: 20px;
+}
+
+/* line 121, ../sass/lib/bootstrap/_type.scss */
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+/* line 128, ../sass/lib/bootstrap/_type.scss */
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+/* line 131, ../sass/lib/bootstrap/_type.scss */
+ul.inline > li,
+ol.inline > li {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 140, ../sass/lib/bootstrap/_type.scss */
+dl {
+  margin-bottom: 20px;
+}
+
+/* line 144, ../sass/lib/bootstrap/_type.scss */
+dt,
+dd {
+  line-height: 20px;
+}
+
+/* line 147, ../sass/lib/bootstrap/_type.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 150, ../sass/lib/bootstrap/_type.scss */
+dd {
+  margin-left: 10px;
+}
+
+/* line 154, ../sass/lib/bootstrap/_type.scss */
+.dl-horizontal {
+  *zoom: 1;
+}
+/* line 15, ../sass/lib/bootstrap/_mixins.scss */
+.dl-horizontal:before, .dl-horizontal:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, ../sass/lib/bootstrap/_mixins.scss */
+.dl-horizontal:after {
+  clear: both;
+}
+/* line 156, ../sass/lib/bootstrap/_type.scss */
+.dl-horizontal dt {
+  float: left;
+  width: 160px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 163, ../sass/lib/bootstrap/_type.scss */
+.dl-horizontal dd {
+  margin-left: 180px;
+}
+
+/* line 172, ../sass/lib/bootstrap/_type.scss */
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+/* line 182, ../sass/lib/bootstrap/_type.scss */
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #e6e6e6;
+}
+
+/* line 186, ../sass/lib/bootstrap/_type.scss */
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+/* line 192, ../sass/lib/bootstrap/_type.scss */
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 20px;
+  border-left: 5px solid white;
+}
+/* line 196, ../sass/lib/bootstrap/_type.scss */
+blockquote p {
+  margin-bottom: 0;
+  font-size: 17.5px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+/* line 202, ../sass/lib/bootstrap/_type.scss */
+blockquote small {
+  display: block;
+  line-height: 20px;
+  color: #e6e6e6;
+}
+/* line 206, ../sass/lib/bootstrap/_type.scss */
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+/* line 212, ../sass/lib/bootstrap/_type.scss */
+blockquote.pull-right {
+  float: right;
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid white;
+  border-left: 0;
+}
+/* line 219, ../sass/lib/bootstrap/_type.scss */
+blockquote.pull-right p,
+blockquote.pull-right small {
+  text-align: right;
+}
+/* line 223, ../sass/lib/bootstrap/_type.scss */
+blockquote.pull-right small:before {
+  content: '';
+}
+/* line 226, ../sass/lib/bootstrap/_type.scss */
+blockquote.pull-right small:after {
+  content: '\00A0 \2014';
+}
+
+/* line 237, ../sass/lib/bootstrap/_type.scss */
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+/* line 242, ../sass/lib/bootstrap/_type.scss */
+address {
+  display: block;
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 20px;
+}
+
+/* line 18, ../sass/lib/bootstrap/_sprites.scss */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url(image-path("glyphicons-halflings.png"));
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+}
+
+/* White icons with optional class, or on hover/focus/active states of certain elements */
+/* line 48, ../sass/lib/bootstrap/_sprites.scss */
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:focus > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > li > a:focus > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:focus > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"],
+.dropdown-submenu:focus > a > [class*=" icon-"] {
+  background-image: url(image-path("glyphicons-halflings-white.png"));
+}
+
+/* line 52, ../sass/lib/bootstrap/_sprites.scss */
+.icon-glass {
+  background-position: 0 0;
+}
+
+/* line 53, ../sass/lib/bootstrap/_sprites.scss */
+.icon-music {
+  background-position: -24px 0;
+}
+
+/* line 54, ../sass/lib/bootstrap/_sprites.scss */
+.icon-search {
+  background-position: -48px 0;
+}
+
+/* line 55, ../sass/lib/bootstrap/_sprites.scss */
+.icon-envelope {
+  background-position: -72px 0;
+}
+
+/* line 56, ../sass/lib/bootstrap/_sprites.scss */
+.icon-heart {
+  background-position: -96px 0;
+}
+
+/* line 57, ../sass/lib/bootstrap/_sprites.scss */
+.icon-star {
+  background-position: -120px 0;
+}
+
+/* line 58, ../sass/lib/bootstrap/_sprites.scss */
+.icon-star-empty {
+  background-position: -144px 0;
+}
+
+/* line 59, ../sass/lib/bootstrap/_sprites.scss */
+.icon-user {
+  background-position: -168px 0;
+}
+
+/* line 60, ../sass/lib/bootstrap/_sprites.scss */
+.icon-film {
+  background-position: -192px 0;
+}
+
+/* line 61, ../sass/lib/bootstrap/_sprites.scss */
+.icon-th-large {
+  background-position: -216px 0;
+}
+
+/* line 62, ../sass/lib/bootstrap/_sprites.scss */
+.icon-th {
+  background-position: -240px 0;
+}
+
+/* line 63, ../sass/lib/bootstrap/_sprites.scss */
+.icon-th-list {
+  background-position: -264px 0;
+}
+
+/* line 64, ../sass/lib/bootstrap/_sprites.scss */
+.icon-ok {
+  background-position: -288px 0;
+}
+
+/* line 65, ../sass/lib/bootstrap/_sprites.scss */
+.icon-remove {
+  background-position: -312px 0;
+}
+
+/* line 66, ../sass/lib/bootstrap/_sprites.scss */
+.icon-zoom-in {
+  background-position: -336px 0;
+}
+
+/* line 67, ../sass/lib/bootstrap/_sprites.scss */
+.icon-zoom-out {
+  background-position: -360px 0;
+}
+
+/* line 68, ../sass/lib/bootstrap/_sprites.scss */
+.icon-off {
+  background-position: -384px 0;
+}
+
+/* line 69, ../sass/lib/bootstrap/_sprites.scss */
+.icon-signal {
+  background-position: -408px 0;
+}
+
+/* line 70, ../sass/lib/bootstrap/_sprites.scss */
+.icon-cog {
+  background-position: -432px 0;
+}
+
+/* line 71, ../sass/lib/bootstrap/_sprites.scss */
+.icon-trash {
+  background-position: -456px 0;
+}
+
+/* line 73, ../sass/lib/bootstrap/_sprites.scss */
+.icon-home {
+  background-position: 0 -24px;
+}
+
+/* line 74, ../sass/lib/bootstrap/_sprites.scss */
+.icon-file {
+  background-position: -24px -24px;
+}
+
+/* line 75, ../sass/lib/bootstrap/_sprites.scss */
+.icon-time {
+  background-position: -48px -24px;
+}
+
+/* line 76, ../sass/lib/bootstrap/_sprites.scss */
+.icon-road {
+  background-position: -72px -24px;
+}
+
+/* line 77, ../sass/lib/bootstrap/_sprites.scss */
+.icon-download-alt {
+  background-position: -96px -24px;
+}
+
+/* line 78, ../sass/lib/bootstrap/_sprites.scss */
+.icon-download {
+  background-position: -120px -24px;
+}
+
+/* line 79, ../sass/lib/bootstrap/_sprites.scss */
+.icon-upload {
+  background-position: -144px -24px;
+}
+
+/* line 80, ../sass/lib/bootstrap/_sprites.scss */
+.icon-inbox {
+  background-position: -168px -24px;
+}
+
+/* line 81, ../sass/lib/bootstrap/_sprites.scss */
+.icon-play-circle {
+  background-position: -192px -24px;
+}
+
+/* line 82, ../sass/lib/bootstrap/_sprites.scss */
+.icon-repeat {
+  background-position: -216px -24px;
+}
+
+/* line 83, ../sass/lib/bootstrap/_sprites.scss */
+.icon-refresh {
+  background-position: -240px -24px;
+}
+
+/* line 84, ../sass/lib/bootstrap/_sprites.scss */
+.icon-list-alt {
+  background-position: -264px -24px;
+}
+
+/* line 85, ../sass/lib/bootstrap/_sprites.scss */
+.icon-lock {
+  background-position: -287px -24px;
+}
+
+/* line 86, ../sass/lib/bootstrap/_sprites.scss */
+.icon-flag {
+  background-position: -312px -24px;
+}
+
+/* line 87, ../sass/lib/bootstrap/_sprites.scss */
+.icon-headphones {
+  background-position: -336px -24px;
+}
+
+/* line 88, ../sass/lib/bootstrap/_sprites.scss */
+.icon-volume-off {
+  background-position: -360px -24px;
+}
+
+/* line 89, ../sass/lib/bootstrap/_sprites.scss */
+.icon-volume-down {
+  background-position: -384px -24px;
+}
+
+/* line 90, ../sass/lib/bootstrap/_sprites.scss */
+.icon-volume-up {
+  background-position: -408px -24px;
+}
+
+/* line 91, ../sass/lib/bootstrap/_sprites.scss */
+.icon-qrcode {
+  background-position: -432px -24px;
+}
+
+/* line 92, ../sass/lib/bootstrap/_sprites.scss */
+.icon-barcode {
+  background-position: -456px -24px;
+}
+
+/* line 94, ../sass/lib/bootstrap/_sprites.scss */
+.icon-tag {
+  background-position: 0 -48px;
+}
+
+/* line 95, ../sass/lib/bootstrap/_sprites.scss */
+.icon-tags {
+  background-position: -25px -48px;
+}
+
+/* line 96, ../sass/lib/bootstrap/_sprites.scss */
+.icon-book {
+  background-position: -48px -48px;
+}
+
+/* line 97, ../sass/lib/bootstrap/_sprites.scss */
+.icon-bookmark {
+  background-position: -72px -48px;
+}
+
+/* line 98, ../sass/lib/bootstrap/_sprites.scss */
+.icon-print {
+  background-position: -96px -48px;
+}
+
+/* line 99, ../sass/lib/bootstrap/_sprites.scss */
+.icon-camera {
+  background-position: -120px -48px;
+}
+
+/* line 100, ../sass/lib/bootstrap/_sprites.scss */
+.icon-font {
+  background-position: -144px -48px;
+}
+
+/* line 101, ../sass/lib/bootstrap/_sprites.scss */
+.icon-bold {
+  background-position: -167px -48px;
+}
+
+/* line 102, ../sass/lib/bootstrap/_sprites.scss */
+.icon-italic {
+  background-position: -192px -48px;
+}
+
+/* line 103, ../sass/lib/bootstrap/_sprites.scss */
+.icon-text-height {
+  background-position: -216px -48px;
+}
+
+/* line 104, ../sass/lib/bootstrap/_sprites.scss */
+.icon-text-width {
+  background-position: -240px -48px;
+}
+
+/* line 105, ../sass/lib/bootstrap/_sprites.scss */
+.icon-align-left {
+  background-position: -264px -48px;
+}
+
+/* line 106, ../sass/lib/bootstrap/_sprites.scss */
+.icon-align-center {
+  background-position: -288px -48px;
+}
+
+/* line 107, ../sass/lib/bootstrap/_sprites.scss */
+.icon-align-right {
+  background-position: -312px -48px;
+}
+
+/* line 108, ../sass/lib/bootstrap/_sprites.scss */
+.icon-align-justify {
+  background-position: -336px -48px;
+}
+
+/* line 109, ../sass/lib/bootstrap/_sprites.scss */
+.icon-list {
+  background-position: -360px -48px;
+}
+
+/* line 110, ../sass/lib/bootstrap/_sprites.scss */
+.icon-indent-left {
+  background-position: -384px -48px;
+}
+
+/* line 111, ../sass/lib/bootstrap/_sprites.scss */
+.icon-indent-right {
+  background-position: -408px -48px;
+}
+
+/* line 112, ../sass/lib/bootstrap/_sprites.scss */
+.icon-facetime-video {
+  background-position: -432px -48px;
+}
+
+/* line 113, ../sass/lib/bootstrap/_sprites.scss */
+.icon-picture {
+  background-position: -456px -48px;
+}
+
+/* line 115, ../sass/lib/bootstrap/_sprites.scss */
+.icon-pencil {
+  background-position: 0 -72px;
+}
+
+/* line 116, ../sass/lib/bootstrap/_sprites.scss */
+.icon-map-marker {
+  background-position: -24px -72px;
+}
+
+/* line 117, ../sass/lib/bootstrap/_sprites.scss */
+.icon-adjust {
+  background-position: -48px -72px;
+}
+
+/* line 118, ../sass/lib/bootstrap/_sprites.scss */
+.icon-tint {
+  background-position: -72px -72px;
+}
+
+/* line 119, ../sass/lib/bootstrap/_sprites.scss */
+.icon-edit {
+  background-position: -96px -72px;
+}
+
+/* line 120, ../sass/lib/bootstrap/_sprites.scss */
+.icon-share {
+  background-position: -120px -72px;
+}
+
+/* line 121, ../sass/lib/bootstrap/_sprites.scss */
+.icon-check {
+  background-position: -144px -72px;
+}
+
+/* line 122, ../sass/lib/bootstrap/_sprites.scss */
+.icon-move {
+  background-position: -168px -72px;
+}
+
+/* line 123, ../sass/lib/bootstrap/_sprites.scss */
+.icon-step-backward {
+  background-position: -192px -72px;
+}
+
+/* line 124, ../sass/lib/bootstrap/_sprites.scss */
+.icon-fast-backward {
+  background-position: -216px -72px;
+}
+
+/* line 125, ../sass/lib/bootstrap/_sprites.scss */
+.icon-backward {
+  background-position: -240px -72px;
+}
+
+/* line 126, ../sass/lib/bootstrap/_sprites.scss */
+.icon-play {
+  background-position: -264px -72px;
+}
+
+/* line 127, ../sass/lib/bootstrap/_sprites.scss */
+.icon-pause {
+  background-position: -288px -72px;
+}
+
+/* line 128, ../sass/lib/bootstrap/_sprites.scss */
+.icon-stop {
+  background-position: -312px -72px;
+}
+
+/* line 129, ../sass/lib/bootstrap/_sprites.scss */
+.icon-forward {
+  background-position: -336px -72px;
+}
+
+/* line 130, ../sass/lib/bootstrap/_sprites.scss */
+.icon-fast-forward {
+  background-position: -360px -72px;
+}
+
+/* line 131, ../sass/lib/bootstrap/_sprites.scss */
+.icon-step-forward {
+  background-position: -384px -72px;
+}
+
+/* line 132, ../sass/lib/bootstrap/_sprites.scss */
+.icon-eject {
+  background-position: -408px -72px;
+}
+
+/* line 133, ../sass/lib/bootstrap/_sprites.scss */
+.icon-chevron-left {
+  background-position: -432px -72px;
+}
+
+/* line 134, ../sass/lib/bootstrap/_sprites.scss */
+.icon-chevron-right {
+  background-position: -456px -72px;
+}
+
+/* line 136, ../sass/lib/bootstrap/_sprites.scss */
+.icon-plus-sign {
+  background-position: 0 -96px;
+}
+
+/* line 137, ../sass/lib/bootstrap/_sprites.scss */
+.icon-minus-sign {
+  background-position: -24px -96px;
+}
+
+/* line 138, ../sass/lib/bootstrap/_sprites.scss */
+.icon-remove-sign {
+  background-position: -48px -96px;
+}
+
+/* line 139, ../sass/lib/bootstrap/_sprites.scss */
+.icon-ok-sign {
+  background-position: -72px -96px;
+}
+
+/* line 140, ../sass/lib/bootstrap/_sprites.scss */
+.icon-question-sign {
+  background-position: -96px -96px;
+}
+
+/* line 141, ../sass/lib/bootstrap/_sprites.scss */
+.icon-info-sign {
+  background-position: -120px -96px;
+}
+
+/* line 142, ../sass/lib/bootstrap/_sprites.scss */
+.icon-screenshot {
+  background-position: -144px -96px;
+}
+
+/* line 143, ../sass/lib/bootstrap/_sprites.scss */
+.icon-remove-circle {
+  background-position: -168px -96px;
+}
+
+/* line 144, ../sass/lib/bootstrap/_sprites.scss */
+.icon-ok-circle {
+  background-position: -192px -96px;
+}
+
+/* line 145, ../sass/lib/bootstrap/_sprites.scss */
+.icon-ban-circle {
+  background-position: -216px -96px;
+}
+
+/* line 146, ../sass/lib/bootstrap/_sprites.scss */
+.icon-arrow-left {
+  background-position: -240px -96px;
+}
+
+/* line 147, ../sass/lib/bootstrap/_sprites.scss */
+.icon-arrow-right {
+  background-position: -264px -96px;
+}
+
+/* line 148, ../sass/lib/bootstrap/_sprites.scss */
+.icon-arrow-up {
+  background-position: -289px -96px;
+}
+
+/* line 149, ../sass/lib/bootstrap/_sprites.scss */
+.icon-arrow-down {
+  background-position: -312px -96px;
+}
+
+/* line 150, ../sass/lib/bootstrap/_sprites.scss */
+.icon-share-alt {
+  background-position: -336px -96px;
+}
+
+/* line 151, ../sass/lib/bootstrap/_sprites.scss */
+.icon-resize-full {
+  background-position: -360px -96px;
+}
+
+/* line 152, ../sass/lib/bootstrap/_sprites.scss */
+.icon-resize-small {
+  background-position: -384px -96px;
+}
+
+/* line 153, ../sass/lib/bootstrap/_sprites.scss */
+.icon-plus {
+  background-position: -408px -96px;
+}
+
+/* line 154, ../sass/lib/bootstrap/_sprites.scss */
+.icon-minus {
+  background-position: -433px -96px;
+}
+
+/* line 155, ../sass/lib/bootstrap/_sprites.scss */
+.icon-asterisk {
+  background-position: -456px -96px;
+}
+
+/* line 157, ../sass/lib/bootstrap/_sprites.scss */
+.icon-exclamation-sign {
+  background-position: 0 -120px;
+}
+
+/* line 158, ../sass/lib/bootstrap/_sprites.scss */
+.icon-gift {
+  background-position: -24px -120px;
+}
+
+/* line 159, ../sass/lib/bootstrap/_sprites.scss */
+.icon-leaf {
+  background-position: -48px -120px;
+}
+
+/* line 160, ../sass/lib/bootstrap/_sprites.scss */
+.icon-fire {
+  background-position: -72px -120px;
+}
+
+/* line 161, ../sass/lib/bootstrap/_sprites.scss */
+.icon-eye-open {
+  background-position: -96px -120px;
+}
+
+/* line 162, ../sass/lib/bootstrap/_sprites.scss */
+.icon-eye-close {
+  background-position: -120px -120px;
+}
+
+/* line 163, ../sass/lib/bootstrap/_sprites.scss */
+.icon-warning-sign {
+  background-position: -144px -120px;
+}
+
+/* line 164, ../sass/lib/bootstrap/_sprites.scss */
+.icon-plane {
+  background-position: -168px -120px;
+}
+
+/* line 165, ../sass/lib/bootstrap/_sprites.scss */
+.icon-calendar {
+  background-position: -192px -120px;
+}
+
+/* line 166, ../sass/lib/bootstrap/_sprites.scss */
+.icon-random {
+  background-position: -216px -120px;
+  width: 16px;
+}
+
+/* line 167, ../sass/lib/bootstrap/_sprites.scss */
+.icon-comment {
+  background-position: -240px -120px;
+}
+
+/* line 168, ../sass/lib/bootstrap/_sprites.scss */
+.icon-magnet {
+  background-position: -264px -120px;
+}
+
+/* line 169, ../sass/lib/bootstrap/_sprites.scss */
+.icon-chevron-up {
+  background-position: -288px -120px;
+}
+
+/* line 170, ../sass/lib/bootstrap/_sprites.scss */
+.icon-chevron-down {
+  background-position: -313px -119px;
+}
+
+/* line 171, ../sass/lib/bootstrap/_sprites.scss */
+.icon-retweet {
+  background-position: -336px -120px;
+}
+
+/* line 172, ../sass/lib/bootstrap/_sprites.scss */
+.icon-shopping-cart {
+  background-position: -360px -120px;
+}
+
+/* line 173, ../sass/lib/bootstrap/_sprites.scss */
+.icon-folder-close {
+  background-position: -384px -120px;
+  width: 16px;
+}
+
+/* line 174, ../sass/lib/bootstrap/_sprites.scss */
+.icon-folder-open {
+  background-position: -408px -120px;
+  width: 16px;
+}
+
+/* line 175, ../sass/lib/bootstrap/_sprites.scss */
+.icon-resize-vertical {
+  background-position: -432px -119px;
+}
+
+/* line 176, ../sass/lib/bootstrap/_sprites.scss */
+.icon-resize-horizontal {
+  background-position: -456px -118px;
+}
+
+/* line 178, ../sass/lib/bootstrap/_sprites.scss */
+.icon-hdd {
+  background-position: 0 -144px;
+}
+
+/* line 179, ../sass/lib/bootstrap/_sprites.scss */
+.icon-bullhorn {
+  background-position: -24px -144px;
+}
+
+/* line 180, ../sass/lib/bootstrap/_sprites.scss */
+.icon-bell {
+  background-position: -48px -144px;
+}
+
+/* line 181, ../sass/lib/bootstrap/_sprites.scss */
+.icon-certificate {
+  background-position: -72px -144px;
+}
+
+/* line 182, ../sass/lib/bootstrap/_sprites.scss */
+.icon-thumbs-up {
+  background-position: -96px -144px;
+}
+
+/* line 183, ../sass/lib/bootstrap/_sprites.scss */
+.icon-thumbs-down {
+  background-position: -120px -144px;
+}
+
+/* line 184, ../sass/lib/bootstrap/_sprites.scss */
+.icon-hand-right {
+  background-position: -144px -144px;
+}
+
+/* line 185, ../sass/lib/bootstrap/_sprites.scss */
+.icon-hand-left {
+  background-position: -168px -144px;
+}
+
+/* line 186, ../sass/lib/bootstrap/_sprites.scss */
+.icon-hand-up {
+  background-position: -192px -144px;
+}
+
+/* line 187, ../sass/lib/bootstrap/_sprites.scss */
+.icon-hand-down {
+  background-position: -216px -144px;
+}
+
+/* line 188, ../sass/lib/bootstrap/_sprites.scss */
+.icon-circle-arrow-right {
+  background-position: -240px -144px;
+}
+
+/* line 189, ../sass/lib/bootstrap/_sprites.scss */
+.icon-circle-arrow-left {
+  background-position: -264px -144px;
+}
+
+/* line 190, ../sass/lib/bootstrap/_sprites.scss */
+.icon-circle-arrow-up {
+  background-position: -288px -144px;
+}
+
+/* line 191, ../sass/lib/bootstrap/_sprites.scss */
+.icon-circle-arrow-down {
+  background-position: -312px -144px;
+}
+
+/* line 192, ../sass/lib/bootstrap/_sprites.scss */
+.icon-globe {
+  background-position: -336px -144px;
+}
+
+/* line 193, ../sass/lib/bootstrap/_sprites.scss */
+.icon-wrench {
+  background-position: -360px -144px;
+}
+
+/* line 194, ../sass/lib/bootstrap/_sprites.scss */
+.icon-tasks {
+  background-position: -384px -144px;
+}
+
+/* line 195, ../sass/lib/bootstrap/_sprites.scss */
+.icon-filter {
+  background-position: -408px -144px;
+}
+
+/* line 196, ../sass/lib/bootstrap/_sprites.scss */
+.icon-briefcase {
+  background-position: -432px -144px;
+}
+
+/* line 197, ../sass/lib/bootstrap/_sprites.scss */
+.icon-fullscreen {
+  background-position: -456px -144px;
+}
+
+/* line 7, ../sass/lib/bootstrap/_utilities.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 10, ../sass/lib/bootstrap/_utilities.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 15, ../sass/lib/bootstrap/_utilities.scss */
+.hide {
+  display: none;
+}
+
+/* line 18, ../sass/lib/bootstrap/_utilities.scss */
+.show {
+  display: block;
+}
+
+/* line 23, ../sass/lib/bootstrap/_utilities.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 28, ../sass/lib/bootstrap/_utilities.scss */
+.affix {
+  position: fixed;
+}
+
+/* line 33, ../sass/lib/bootstrap/_utilities.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 15, ../sass/lib/bootstrap/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, ../sass/lib/bootstrap/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 38, ../sass/lib/bootstrap/_utilities.scss */
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 43, ../sass/lib/bootstrap/_utilities.scss */
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, ../sass/my_lib/_buttons.scss */
+.btn {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #333333;
+  border: none;
+  border: 0;
+  *border: 0;
+  box-shadow: none;
+  *margin-left: .3em;
+}
+/* line 61, ../sass/lib/bootstrap/_mixins.scss */
+.btn:first-child {
+  *margin-left: 0;
+}
+/* line 31, ../sass/my_lib/_buttons.scss */
+.btn:hover, .btn:focus {
+  color: #b3b3b3;
+  text-decoration: none;
+  background-position: 0 -15px;
+  background-color: #049cdb;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+/* line 42, ../sass/my_lib/_buttons.scss */
+.btn:focus {
+  outline: thin dotted #333333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+/* line 48, ../sass/my_lib/_buttons.scss */
+.btn.active, .btn:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+/* line 56, ../sass/my_lib/_buttons.scss */
+.btn.disabled, .btn[disabled] {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 71, ../sass/my_lib/_buttons.scss */
+.btn-large {
+  padding: 10px 10px;
+  height: 50px;
+  font-size: 30px;
+  line-height: 30px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* line 79, ../sass/my_lib/_buttons.scss */
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"] {
+  margin-top: 4px;
+}
+
+/* line 84, ../sass/my_lib/_buttons.scss */
+.btn-small {
+  padding: 2px 10px;
+  font-size: 11.9px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* line 90, ../sass/my_lib/_buttons.scss */
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"] {
+  margin-top: 0;
+}
+
+/* line 94, ../sass/my_lib/_buttons.scss */
+.btn-mini [class^="icon-"],
+.btn-mini [class*=" icon-"] {
+  margin-top: -1px;
+}
+
+/* line 99, ../sass/my_lib/_buttons.scss */
+.btn-mini {
+  padding: 0px 6px;
+  font-size: 10.5px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+/* line 109, ../sass/my_lib/_buttons.scss */
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 118, ../sass/my_lib/_buttons.scss */
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+/* line 126, ../sass/my_lib/_buttons.scss */
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}
+
+/* line 142, ../sass/my_lib/_buttons.scss */
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* line 152, ../sass/my_lib/_buttons.scss */
+button.btn,
+input[type="submit"].btn {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+/* line 155, ../sass/my_lib/_buttons.scss */
+button.btn::-moz-focus-inner,
+input[type="submit"].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+/* line 164, ../sass/my_lib/_buttons.scss */
+button.btn.btn-large,
+input[type="submit"].btn.btn-large {
+  *padding-top: 7px;
+  *padding-bottom: 7px;
+}
+/* line 168, ../sass/my_lib/_buttons.scss */
+button.btn.btn-small,
+input[type="submit"].btn.btn-small {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+/* line 172, ../sass/my_lib/_buttons.scss */
+button.btn.btn-mini,
+input[type="submit"].btn.btn-mini {
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+/* line 185, ../sass/my_lib/_buttons.scss */
+.btn-link,
+.btn-link:active,
+.btn-link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 190, ../sass/my_lib/_buttons.scss */
+.btn-link {
+  border-color: transparent;
+  cursor: pointer;
+  color: #0088cc;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 197, ../sass/my_lib/_buttons.scss */
+.btn-link:hover,
+.btn-link:focus {
+  color: #005580;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+/* line 203, ../sass/my_lib/_buttons.scss */
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+/* line 14, ../sass/my_lib/_grid.scss */
+.container {
+  *zoom: 1;
+  max-width: 737.5px;
+  _width: 737.5px;
+  padding-left: 12.5px;
+  padding-right: 12.5px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 480px;
+}
+/* line 38, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 737.5px) {
+  /* line 14, ../sass/my_lib/_grid.scss */
+  .container {
+    max-width: 737.5px;
+  }
+}
+
+@media (min-width: 737.5px) {
+  /* line 21, ../sass/my_lib/_grid.scss */
+  .container {
+    max-width: 1200px;
+  }
+
+  /* line 27, ../sass/my_lib/_grid.scss */
+  .row {
+    overflow: hidden;
+  }
+  /* line 29, ../sass/my_lib/_grid.scss */
+  .row .half {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 31, ../sass/my_lib/_grid.scss */
+  .row .half:last-child {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 10, ../sass/my_lib/_navbar.scss */
+.navbar {
+  color: white;
+  overflow: visible;
+  background-color: #333333;
+  *position: relative;
+  *z-index: 2;
+  min-height: 50px;
+  vertical-align: middle;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 31, ../sass/my_lib/_navbar.scss */
+.navbar .btn.logo .icon-logo {
+  display: inline-block;
+  margin-top: 8.5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/* line 37, ../sass/my_lib/_navbar.scss */
+.navbar .btn.logo:hover {
+  background-color: #049cdb;
+}
+/* line 40, ../sass/my_lib/_navbar.scss */
+.navbar .btn.logo .logo-title {
+  width: 0;
+}
+/* line 44, ../sass/my_lib/_navbar.scss */
+.navbar .title {
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin-top: 14px;
+  font-family: Roboto;
+  font-weight: 100;
+}
+/* line 50, ../sass/my_lib/_navbar.scss */
+.navbar .title strong {
+  color: #cccccc;
+  font-family: Roboto;
+  font-weight: 400;
+}
+/* line 56, ../sass/my_lib/_navbar.scss */
+.navbar nav {
+  display: inline-block;
+  height: 50px;
+  float: right;
+}
+/* line 61, ../sass/my_lib/_navbar.scss */
+.navbar nav .tel {
+  color: #cccccc;
+  display: inline-block;
+  font-size: 19px;
+  line-height: 19px;
+  margin-top: 16px;
+  font-family: Roboto;
+  font-weight: 100;
+  margin-right: 15px;
+  text-decoration: none;
+}
+/* line 74, ../sass/my_lib/_navbar.scss */
+.navbar .btn {
+  vertical-align: top;
+  margin: 0;
+}
+/* line 81, ../sass/my_lib/_navbar.scss */
+.navbar h1, .navbar h2, .navbar h3, .navbar h4, .navbar h5 {
+  display: inline;
+}
+
+/* line 86, ../sass/my_lib/_navbar.scss */
+.navbar {
+  vertical-align: middle;
+}
+/* line 88, ../sass/my_lib/_navbar.scss */
+.navbar .logo {
+  margin-top: 0;
+  padding: 0;
+}
+/* line 91, ../sass/my_lib/_navbar.scss */
+.navbar .logo > h1 {
+  display: none;
+}
+
+/* line 97, ../sass/my_lib/_navbar.scss */
+.navbar + .main {
+  margin-bottom: 20px;
+}
+
+/* line 102, ../sass/my_lib/_navbar.scss */
+.navbar .divider-vertical {
+  height: 50px;
+  margin: 0 9px;
+  border-left: 1px solid #b3b3b3;
+  border-right: 1px solid white;
+}
+
+/* line 112, ../sass/my_lib/_navbar.scss */
+.navbar .btn,
+.navbar .btn-group {
+  height: 50px;
+}
+
+/* line 119, ../sass/my_lib/_navbar.scss */
+.navbar .btn-group .btn,
+.navbar .input-prepend .btn,
+.navbar .input-append .btn,
+.navbar .input-prepend .btn-group,
+.navbar .input-append .btn-group {
+  margin-top: 0;
+}
+
+/* line 128, ../sass/my_lib/_navbar.scss */
+.navbar-static-top {
+  position: static;
+  margin-bottom: 0;
+}
+/* line 131, ../sass/my_lib/_navbar.scss */
+.navbar-static-top .navbar-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 136, ../sass/my_lib/_navbar.scss */
+.navbar-fixed-top {
+  top: 0;
+}
+
+/* line 90, icons/*.png */
+.icons-sprite, i.icon-contact, i.icon-logo, i.icon-phone, i.icon-external-link, i.icon-arrow-right, i.icon-arrow-left, i.icon-lab {
+  background: url('../images/icons-sf9bb40898e.png') no-repeat;
+}
+
+/* line 2, ../sass/my_lib/my_icons.scss */
+i.icon-contact {
+  background-position: 0 -150px;
+  width: 32px;
+  height: 30px;
+}
+
+/* line 8, ../sass/my_lib/my_icons.scss */
+i.icon-logo {
+  background-position: 0 0;
+  width: 63px;
+  height: 30px;
+}
+
+/* line 14, ../sass/my_lib/my_icons.scss */
+i.icon-phone {
+  background-position: 0 -180px;
+  width: 20px;
+  height: 30px;
+}
+
+/* line 20, ../sass/my_lib/my_icons.scss */
+i.icon-external-link {
+  background-position: 0 -120px;
+  width: 33px;
+  height: 30px;
+}
+
+/* line 25, ../sass/my_lib/my_icons.scss */
+i.icon-arrow-right {
+  background-position: 0 -30px;
+  width: 24px;
+  height: 30px;
+}
+
+/* line 30, ../sass/my_lib/my_icons.scss */
+i.icon-arrow-left {
+  background-position: 0 -90px;
+  width: 24px;
+  height: 30px;
+}
+
+/* line 36, ../sass/my_lib/my_icons.scss */
+i.icon-lab {
+  background-position: 0 -60px;
+  width: 28px;
+  height: 30px;
+}
+
+/* line 42, ../sass/my_lib/my_icons.scss */
+.type-indicator {
+  z-index: 1;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 75px;
+  width: 75px;
+  background-image: url("images/spritesheet.png");
+}
+
+@media screen and (max-width: 550px) {
+  /* line 56, ../sass/my_lib/my_icons.scss */
+  .project .type-indicator {
+    background-position: -250px 0px;
+  }
+
+  /* line 60, ../sass/my_lib/my_icons.scss */
+  .experiment .type-indicator {
+    background-position: -330px 0px;
+  }
+
+  /* line 63, ../sass/my_lib/my_icons.scss */
+  .type-indicator {
+    height: 50px;
+    width: 50px;
+  }
+}
+/* line 5, ../sass/my_lib/btn_arrow.scss */
+.btn-arrow {
+  height: 70px;
+  width: 125px;
+  overflow: hidden;
+  background: none;
+  padding: 0;
+  border: 0;
+}
+/* line 13, ../sass/my_lib/btn_arrow.scss */
+.btn-arrow .arrow-left, .btn-arrow .arrow-right {
+  width: 90px;
+  height: 70px;
+  position: relative;
+  background: #b3b3b3;
+}
+/* line 19, ../sass/my_lib/btn_arrow.scss */
+.btn-arrow .arrow-left i.icon-arrow-right, .btn-arrow .arrow-left i.icon-arrow-left, .btn-arrow .arrow-right i.icon-arrow-right, .btn-arrow .arrow-right i.icon-arrow-left {
+  top: 17.5px;
+  position: absolute;
+}
+/* line 24, ../sass/my_lib/btn_arrow.scss */
+.btn-arrow .arrow-left i.icon-arrow-left, .btn-arrow .arrow-right i.icon-arrow-left {
+  right: 25px;
+}
+/* line 28, ../sass/my_lib/btn_arrow.scss */
+.btn-arrow .arrow-left i.icon-arrow-right, .btn-arrow .arrow-right i.icon-arrow-right {
+  left: 25px;
+}
+/* line 33, ../sass/my_lib/btn_arrow.scss */
+.btn-arrow .arrow-left {
+  margin-left: 35px;
+}
+/* line 36, ../sass/my_lib/btn_arrow.scss */
+.btn-arrow .arrow-left:before {
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  right: 100%;
+  border-right-color: #b3b3b3;
+  border-width: 35px;
+  top: 30px;
+  margin-top: -30px;
+}
+/* line 55, ../sass/my_lib/btn_arrow.scss */
+.btn-arrow .arrow-right:before {
+  left: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-left-color: #b3b3b3;
+  border-width: 35px;
+  top: 30px;
+  margin-top: -30px;
+}
+/* line 73, ../sass/my_lib/btn_arrow.scss */
+.btn-arrow:hover .arrow-left, .btn-arrow:hover .arrow-right {
+  background-color: #049cdb;
+}
+/* line 76, ../sass/my_lib/btn_arrow.scss */
+.btn-arrow:hover .arrow-left:before, .btn-arrow:hover .arrow-right:before {
+  border-right-color: #049cdb;
+  border-left-color: #049cdb;
+}
+
+/* line 2, ../sass/my_lib/_project-grid.scss */
+.projects {
+  background-color: #333333;
+}
+/* line 4, ../sass/my_lib/_project-grid.scss */
+.projects:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 22, ../sass/my_lib/_project-grid.scss */
+.project {
+  text-decoration: none;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  font-family: Roboto;
+  font-weight: 100;
+  color: #333333;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.project .rollover {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+/* line 33, ../sass/my_lib/_project-grid.scss */
+.project img {
+  width: 100%;
+  height: auto;
+}
+/* line 38, ../sass/my_lib/_project-grid.scss */
+.project h2 {
+  font-size: 17px;
+  line-height: 20.4px;
+  margin: 0;
+  font-family: Roboto;
+  font-weight: 400;
+}
+/* line 43, ../sass/my_lib/_project-grid.scss */
+.project h2 strong {
+  font-family: Roboto;
+  font-weight: 600;
+  text-decoration: underline;
+}
+/* line 50, ../sass/my_lib/_project-grid.scss */
+.project .rollover {
+  transition-property: left;
+  transition-duration: 0.25s;
+  position: absolute;
+  left: -100%;
+  width: 100%;
+}
+/* line 54, ../sass/my_lib/_project-grid.scss */
+.project .rollover .inner {
+  padding-top: 62.5%;
+}
+/* line 57, ../sass/my_lib/_project-grid.scss */
+.project .rollover .inner .content {
+  overflow: hidden;
+  text-overflow: hidden;
+  padding: 17px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* line 79, ../sass/my_lib/_project-grid.scss */
+.project:hover .rollover {
+  transition-property: left;
+  transition-duration: 0.25s;
+  left: 0;
+}
+
+/* line 89, ../sass/my_lib/_project-grid.scss */
+.ou {
+  color: white;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.ou .rollover {
+  background-color: rgba(191, 0, 0, 0.95);
+}
+
+/* line 93, ../sass/my_lib/_project-grid.scss */
+.beakerizer {
+  color: #333333;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.beakerizer .rollover {
+  background-color: rgba(255, 240, 0, 0.95);
+}
+
+/* line 97, ../sass/my_lib/_project-grid.scss */
+.bitesize {
+  color: white;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.bitesize .rollover {
+  background-color: rgba(90, 26, 91, 0.95);
+}
+
+/* line 101, ../sass/my_lib/_project-grid.scss */
+.capture-the-museum {
+  color: white;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.capture-the-museum .rollover {
+  background-color: rgba(18, 111, 0, 0.95);
+}
+
+/* line 105, ../sass/my_lib/_project-grid.scss */
+.tree-chavin-challenge {
+  color: white;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.tree-chavin-challenge .rollover {
+  background-color: rgba(0, 180, 255, 0.95);
+}
+
+/* line 109, ../sass/my_lib/_project-grid.scss */
+.zoom {
+  color: white;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.zoom .rollover {
+  background-color: rgba(192, 23, 21, 0.95);
+}
+
+/* line 113, ../sass/my_lib/_project-grid.scss */
+.kerve {
+  color: white;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.kerve .rollover {
+  background-color: rgba(0, 33, 129, 0.95);
+}
+
+/* line 117, ../sass/my_lib/_project-grid.scss */
+.gloop {
+  color: white;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.gloop .rollover {
+  background-color: rgba(192, 21, 182, 0.95);
+}
+
+/* line 121, ../sass/my_lib/_project-grid.scss */
+.myface {
+  color: white;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.myface .rollover {
+  background-color: rgba(0, 33, 129, 0.95);
+}
+
+/* line 125, ../sass/my_lib/_project-grid.scss */
+.martin-parr {
+  color: #333333;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.martin-parr .rollover {
+  background-color: rgba(255, 198, 0, 0.95);
+}
+
+/* line 129, ../sass/my_lib/_project-grid.scss */
+.team-wild {
+  color: white;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.team-wild .rollover {
+  background-color: rgba(18, 111, 0, 0.95);
+}
+
+/* line 133, ../sass/my_lib/_project-grid.scss */
+.zoom {
+  color: #333333;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.zoom .rollover {
+  background-color: rgba(255, 198, 0, 0.95);
+}
+
+/* line 137, ../sass/my_lib/_project-grid.scss */
+.capture {
+  color: white;
+}
+/* line 17, ../sass/my_lib/_project-grid.scss */
+.capture .rollover {
+  background-color: rgba(18, 111, 0, 0.95);
+}
+
+/* line 52, ../sass/screen.scss */
+body {
+  font-family: "Roboto", Arial, serif;
+  font-weight: 400;
+}
+
+/* line 59, ../sass/screen.scss */
+strong {
+  font-weight: 900;
+}
+
+/* line 65, ../sass/screen.scss */
+article > h2 {
+  font-family: "Roboto", Arial, serif;
+  font-weight: 300;
+  margin: 20px 0;
+}
+/* line 70, ../sass/screen.scss */
+article img {
+  margin-bottom: 10px;
+}
+
+/* line 75, ../sass/screen.scss */
+body.index {
+  background-color: #333333;
+  min-height: 100%;
+}
+
+/* line 81, ../sass/screen.scss */
+.features {
+  list-style: none;
+  font-weight: 300;
+  margin-left: 0;
+}
