@@ -32,19 +32,26 @@ $this->inc('elements/header.php'); ?>
 
 
 		<br>
-		<nav class="main-nav">
-	        <div class="btn-arrow">
-	            <div class="arrow-right">
-	                <i class="icon-arrow-right"></i>
-	            </div>
-	        </div>
-	        <div class="btn-arrow">
-	            <div class="arrow-left">
-	            <i class="icon-arrow-left"></i>
-	            </div>
-	        </div>
-	    </nav>
+
+		<?php 
+
+		$nextPrevBlock = BlockType::getByHandle('next_previous');
+
+		$nextPrevBlock->controller->nextLabel= 'Next';
+		$nextPrevBlock->controller->previousLabel= 'Previous';
+		$nextPrevBlock->controller->parentLabel='Up';
+		$nextPrevBlock->controller->showArrows=1;
+		$nextPrevBlock->controller->loopSequence=0;
+		$nextPrevBlock->controller->excludeSystemPages=1;
+		$nextPrevBlock->controller->orderBy='display_asc';
+
+		$nextPrevBlock->render('view');
+
+		?>
+		
 	</div>
+
+	
 	
 	<!-- end full width content area -->
 	

@@ -61,7 +61,7 @@ $ih = Loader::helper('image'); //<--uncomment this line if displaying image attr
             <div class="rollover">
                 <div class="inner">
                     <div class="content">
-                        <h2><strong><?php  echo $title ?></strong><?php  echo $subtitle ?></h2>
+                        <h2><strong><?php  echo $title ?></strong><?php if (!empty($subtitle)) echo ':&nbsp;'. $subtitle ?></h2>
                         <span><?php  echo $description ?></span>
                     </div>
                 </div>

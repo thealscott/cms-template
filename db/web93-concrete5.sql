@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 22, 2013 at 01:46 PM
+-- Generation Time: Jun 23, 2013 at 03:48 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.4.3
 
@@ -26,7 +26,6 @@ SET time_zone = "+00:00";
 -- Table structure for table `areapermissionassignments`
 --
 
-DROP TABLE IF EXISTS `areapermissionassignments`;
 CREATE TABLE IF NOT EXISTS `areapermissionassignments` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `arHandle` varchar(255) NOT NULL,
@@ -41,7 +40,6 @@ CREATE TABLE IF NOT EXISTS `areapermissionassignments` (
 -- Table structure for table `areapermissionblocktypeaccesslist`
 --
 
-DROP TABLE IF EXISTS `areapermissionblocktypeaccesslist`;
 CREATE TABLE IF NOT EXISTS `areapermissionblocktypeaccesslist` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -55,7 +53,6 @@ CREATE TABLE IF NOT EXISTS `areapermissionblocktypeaccesslist` (
 -- Table structure for table `areapermissionblocktypeaccesslistcustom`
 --
 
-DROP TABLE IF EXISTS `areapermissionblocktypeaccesslistcustom`;
 CREATE TABLE IF NOT EXISTS `areapermissionblocktypeaccesslistcustom` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -69,7 +66,6 @@ CREATE TABLE IF NOT EXISTS `areapermissionblocktypeaccesslistcustom` (
 -- Table structure for table `areas`
 --
 
-DROP TABLE IF EXISTS `areas`;
 CREATE TABLE IF NOT EXISTS `areas` (
   `arID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -81,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `areas` (
   KEY `arIsGlobal` (`arIsGlobal`),
   KEY `cID` (`cID`),
   KEY `arHandle` (`arHandle`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=83 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=116 ;
 
 --
 -- Dumping data for table `areas`
@@ -165,7 +161,40 @@ INSERT INTO `areas` (`arID`, `cID`, `arHandle`, `arOverrideCollectionPermissions
 (75, 137, 'Header Nav', 0, 0, 1),
 (76, 137, 'Header Image', 0, 0, 0),
 (77, 137, 'Main', 0, 0, 0),
-(78, 137, 'Sidebar', 0, 0, 0);
+(78, 137, 'Sidebar', 0, 0, 0),
+(83, 146, 'Sidebar', 0, 0, 0),
+(84, 146, 'Main', 0, 0, 0),
+(85, 117, 'Main', 0, 0, 0),
+(86, 138, 'Column 1', 0, 0, 0),
+(87, 138, 'Column 2', 0, 0, 0),
+(88, 138, 'Box 2', 0, 0, 0),
+(89, 139, 'Column 1', 0, 0, 0),
+(90, 139, 'Column 2', 0, 0, 0),
+(91, 139, 'Box 2', 0, 0, 0),
+(92, 140, 'Column 1', 0, 0, 0),
+(93, 140, 'Column 2', 0, 0, 0),
+(94, 140, 'Box 2', 0, 0, 0),
+(95, 141, 'Column 1', 0, 0, 0),
+(96, 141, 'Column 2', 0, 0, 0),
+(97, 141, 'Box 2', 0, 0, 0),
+(98, 142, 'Column 1', 0, 0, 0),
+(99, 142, 'Column 2', 0, 0, 0),
+(100, 142, 'Box 2', 0, 0, 0),
+(101, 143, 'Column 1', 0, 0, 0),
+(102, 143, 'Column 2', 0, 0, 0),
+(103, 143, 'Box 2', 0, 0, 0),
+(104, 144, 'Column 1', 0, 0, 0),
+(105, 144, 'Column 2', 0, 0, 0),
+(106, 144, 'Box 2', 0, 0, 0),
+(107, 145, 'Column 1', 0, 0, 0),
+(108, 145, 'Column 2', 0, 0, 0),
+(109, 145, 'Box 2', 0, 0, 0),
+(110, 146, 'Column 1', 0, 0, 0),
+(111, 146, 'Column 2', 0, 0, 0),
+(112, 146, 'Box 2', 0, 0, 0),
+(113, 147, 'Column 1', 0, 0, 0),
+(114, 147, 'Column 2', 0, 0, 0),
+(115, 147, 'Box 2', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -173,7 +202,6 @@ INSERT INTO `areas` (`arID`, `cID`, `arHandle`, `arOverrideCollectionPermissions
 -- Table structure for table `ataddress`
 --
 
-DROP TABLE IF EXISTS `ataddress`;
 CREATE TABLE IF NOT EXISTS `ataddress` (
   `avID` int(10) unsigned NOT NULL DEFAULT '0',
   `address1` varchar(255) DEFAULT NULL,
@@ -191,7 +219,6 @@ CREATE TABLE IF NOT EXISTS `ataddress` (
 -- Table structure for table `ataddresscustomcountries`
 --
 
-DROP TABLE IF EXISTS `ataddresscustomcountries`;
 CREATE TABLE IF NOT EXISTS `ataddresscustomcountries` (
   `atAddressCustomCountryID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `akID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -205,7 +232,6 @@ CREATE TABLE IF NOT EXISTS `ataddresscustomcountries` (
 -- Table structure for table `ataddresssettings`
 --
 
-DROP TABLE IF EXISTS `ataddresssettings`;
 CREATE TABLE IF NOT EXISTS `ataddresssettings` (
   `akID` int(10) unsigned NOT NULL DEFAULT '0',
   `akHasCustomCountries` int(1) NOT NULL DEFAULT '0',
@@ -219,7 +245,6 @@ CREATE TABLE IF NOT EXISTS `ataddresssettings` (
 -- Table structure for table `atboolean`
 --
 
-DROP TABLE IF EXISTS `atboolean`;
 CREATE TABLE IF NOT EXISTS `atboolean` (
   `avID` int(10) unsigned NOT NULL,
   `value` tinyint(1) NOT NULL DEFAULT '0',
@@ -253,7 +278,6 @@ INSERT INTO `atboolean` (`avID`, `value`) VALUES
 -- Table structure for table `atbooleansettings`
 --
 
-DROP TABLE IF EXISTS `atbooleansettings`;
 CREATE TABLE IF NOT EXISTS `atbooleansettings` (
   `akID` int(10) unsigned NOT NULL,
   `akCheckedByDefault` tinyint(1) NOT NULL DEFAULT '0',
@@ -278,7 +302,6 @@ INSERT INTO `atbooleansettings` (`akID`, `akCheckedByDefault`) VALUES
 -- Table structure for table `atdatetime`
 --
 
-DROP TABLE IF EXISTS `atdatetime`;
 CREATE TABLE IF NOT EXISTS `atdatetime` (
   `avID` int(10) unsigned NOT NULL,
   `value` datetime DEFAULT '0000-00-00 00:00:00',
@@ -291,7 +314,6 @@ CREATE TABLE IF NOT EXISTS `atdatetime` (
 -- Table structure for table `atdatetimesettings`
 --
 
-DROP TABLE IF EXISTS `atdatetimesettings`;
 CREATE TABLE IF NOT EXISTS `atdatetimesettings` (
   `akID` int(10) unsigned NOT NULL,
   `akDateDisplayMode` varchar(255) DEFAULT NULL,
@@ -304,7 +326,6 @@ CREATE TABLE IF NOT EXISTS `atdatetimesettings` (
 -- Table structure for table `atdefault`
 --
 
-DROP TABLE IF EXISTS `atdefault`;
 CREATE TABLE IF NOT EXISTS `atdefault` (
   `avID` int(10) unsigned NOT NULL,
   `value` longtext,
@@ -476,7 +497,54 @@ INSERT INTO `atdefault` (`avID`, `value`) VALUES
 (231, ''),
 (232, 'ZOOM'),
 (233, 'Animal poses unlock archive'),
-(235, '');
+(235, ''),
+(237, 'Meta title'),
+(238, 'Meta description'),
+(240, 'Beakeriser'),
+(241, 'Meta title'),
+(242, 'Meta description'),
+(244, 'Beakeriser'),
+(245, ''),
+(246, ''),
+(248, 'KS3 Geography'),
+(249, ''),
+(250, ''),
+(252, 'KS3 Geography'),
+(253, 'Gloopy Gloop'),
+(254, 'Vector drawn meatballs in canvas'),
+(256, ''),
+(257, 'My Face'),
+(258, 'Home made 3d face scanner made before Kinnect was cool'),
+(260, ''),
+(261, 'Open University'),
+(262, 'Discover your design alter-ego'),
+(264, 'The history of design'),
+(265, 'Kerve Creative'),
+(266, '3d forced perspective cloud thing'),
+(268, ''),
+(269, 'Tree Chaving Challenge'),
+(270, 'Wishing you a chavtastic christmas'),
+(272, ''),
+(273, 'WildScreen: Team Wild'),
+(274, 'Science to the rescue with a lot of jumping'),
+(276, 'Team Wild'),
+(277, 'Capture the Museum'),
+(278, 'Museum based team fun and shenanigans'),
+(280, ''),
+(281, 'Meta title'),
+(282, 'Meta description'),
+(284, 'Beakeriser'),
+(285, 'http://google.com'),
+(286, 'CorinWilkins.co.uk'),
+(287, 'I am Corin Wilkins, digital auteur. This is my work. '),
+(288, 'Tracy Beaker'),
+(289, 'Meta description'),
+(291, 'Beakeriser'),
+(292, 'http://google.com'),
+(293, 'BBC Bitesize'),
+(294, ''),
+(296, 'KS3 Geography'),
+(297, '');
 
 -- --------------------------------------------------------
 
@@ -484,7 +552,6 @@ INSERT INTO `atdefault` (`avID`, `value`) VALUES
 -- Table structure for table `atfile`
 --
 
-DROP TABLE IF EXISTS `atfile`;
 CREATE TABLE IF NOT EXISTS `atfile` (
   `avID` int(10) unsigned NOT NULL,
   `fID` int(10) unsigned NOT NULL,
@@ -513,7 +580,21 @@ INSERT INTO `atfile` (`avID`, `fID`) VALUES
 (222, 17),
 (226, 18),
 (230, 11),
-(234, 19);
+(234, 19),
+(239, 9),
+(243, 9),
+(247, 10),
+(251, 10),
+(255, 12),
+(259, 15),
+(263, 16),
+(267, 13),
+(271, 17),
+(275, 18),
+(279, 11),
+(283, 9),
+(290, 9),
+(295, 10);
 
 -- --------------------------------------------------------
 
@@ -521,7 +602,6 @@ INSERT INTO `atfile` (`avID`, `fID`) VALUES
 -- Table structure for table `atnumber`
 --
 
-DROP TABLE IF EXISTS `atnumber`;
 CREATE TABLE IF NOT EXISTS `atnumber` (
   `avID` int(10) unsigned NOT NULL,
   `value` decimal(14,4) DEFAULT '0.0000',
@@ -578,7 +658,6 @@ INSERT INTO `atnumber` (`avID`, `value`) VALUES
 -- Table structure for table `atselectoptions`
 --
 
-DROP TABLE IF EXISTS `atselectoptions`;
 CREATE TABLE IF NOT EXISTS `atselectoptions` (
   `ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `akID` int(10) unsigned DEFAULT NULL,
@@ -604,7 +683,6 @@ INSERT INTO `atselectoptions` (`ID`, `akID`, `value`, `displayOrder`, `isEndUser
 -- Table structure for table `atselectoptionsselected`
 --
 
-DROP TABLE IF EXISTS `atselectoptionsselected`;
 CREATE TABLE IF NOT EXISTS `atselectoptionsselected` (
   `avID` int(10) unsigned NOT NULL,
   `atSelectOptionID` int(10) unsigned NOT NULL,
@@ -627,7 +705,6 @@ INSERT INTO `atselectoptionsselected` (`avID`, `atSelectOptionID`) VALUES
 -- Table structure for table `atselectsettings`
 --
 
-DROP TABLE IF EXISTS `atselectsettings`;
 CREATE TABLE IF NOT EXISTS `atselectsettings` (
   `akID` int(10) unsigned NOT NULL,
   `akSelectAllowMultipleValues` tinyint(1) NOT NULL DEFAULT '0',
@@ -649,7 +726,6 @@ INSERT INTO `atselectsettings` (`akID`, `akSelectAllowMultipleValues`, `akSelect
 -- Table structure for table `attextareasettings`
 --
 
-DROP TABLE IF EXISTS `attextareasettings`;
 CREATE TABLE IF NOT EXISTS `attextareasettings` (
   `akID` int(10) unsigned NOT NULL DEFAULT '0',
   `akTextareaDisplayMode` varchar(255) DEFAULT NULL,
@@ -672,7 +748,6 @@ INSERT INTO `attextareasettings` (`akID`, `akTextareaDisplayMode`) VALUES
 -- Table structure for table `attributekeycategories`
 --
 
-DROP TABLE IF EXISTS `attributekeycategories`;
 CREATE TABLE IF NOT EXISTS `attributekeycategories` (
   `akCategoryID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `akCategoryHandle` varchar(255) NOT NULL,
@@ -696,7 +771,6 @@ INSERT INTO `attributekeycategories` (`akCategoryID`, `akCategoryHandle`, `akCat
 -- Table structure for table `attributekeys`
 --
 
-DROP TABLE IF EXISTS `attributekeys`;
 CREATE TABLE IF NOT EXISTS `attributekeys` (
   `akID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `akHandle` varchar(255) NOT NULL,
@@ -712,7 +786,7 @@ CREATE TABLE IF NOT EXISTS `attributekeys` (
   `pkgID` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`akID`),
   UNIQUE KEY `akHandle` (`akHandle`,`akCategoryID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `attributekeys`
@@ -734,7 +808,8 @@ INSERT INTO `attributekeys` (`akID`, `akHandle`, `akName`, `akIsSearchable`, `ak
 (13, 'height', 'Height', 1, 1, 0, 0, 0, 1, 6, 3, 0),
 (14, 'tags', 'Tags', 1, 1, 0, 0, 0, 1, 8, 1, 0),
 (15, 'page_image', 'Page Image', 1, 0, 0, 0, 0, 1, 5, 1, 0),
-(16, 'page_subtitle', 'Page Subtitle', 1, 0, 0, 0, 0, 1, 1, 1, 0);
+(16, 'page_subtitle', 'Page Subtitle', 1, 0, 0, 0, 0, 1, 1, 1, 0),
+(17, 'external_url', 'External URL', 1, 0, 0, 0, 0, 1, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -742,7 +817,6 @@ INSERT INTO `attributekeys` (`akID`, `akHandle`, `akName`, `akIsSearchable`, `ak
 -- Table structure for table `attributesetkeys`
 --
 
-DROP TABLE IF EXISTS `attributesetkeys`;
 CREATE TABLE IF NOT EXISTS `attributesetkeys` (
   `akID` int(10) unsigned NOT NULL DEFAULT '0',
   `asID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -772,7 +846,6 @@ INSERT INTO `attributesetkeys` (`akID`, `asID`, `displayOrder`) VALUES
 -- Table structure for table `attributesets`
 --
 
-DROP TABLE IF EXISTS `attributesets`;
 CREATE TABLE IF NOT EXISTS `attributesets` (
   `asID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asName` varchar(255) DEFAULT NULL,
@@ -799,7 +872,6 @@ INSERT INTO `attributesets` (`asID`, `asName`, `asHandle`, `akCategoryID`, `pkgI
 -- Table structure for table `attributetypecategories`
 --
 
-DROP TABLE IF EXISTS `attributetypecategories`;
 CREATE TABLE IF NOT EXISTS `attributetypecategories` (
   `atID` int(10) unsigned NOT NULL DEFAULT '0',
   `akCategoryID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -840,7 +912,6 @@ INSERT INTO `attributetypecategories` (`atID`, `akCategoryID`) VALUES
 -- Table structure for table `attributetypes`
 --
 
-DROP TABLE IF EXISTS `attributetypes`;
 CREATE TABLE IF NOT EXISTS `attributetypes` (
   `atID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `atHandle` varchar(255) NOT NULL,
@@ -870,7 +941,6 @@ INSERT INTO `attributetypes` (`atID`, `atHandle`, `atName`, `pkgID`) VALUES
 -- Table structure for table `attributevalues`
 --
 
-DROP TABLE IF EXISTS `attributevalues`;
 CREATE TABLE IF NOT EXISTS `attributevalues` (
   `avID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `akID` int(10) unsigned DEFAULT NULL,
@@ -878,7 +948,7 @@ CREATE TABLE IF NOT EXISTS `attributevalues` (
   `uID` int(10) unsigned DEFAULT NULL,
   `atID` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`avID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=237 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=298 ;
 
 --
 -- Dumping data for table `attributevalues`
@@ -1120,7 +1190,68 @@ INSERT INTO `attributevalues` (`avID`, `akID`, `avDateAdded`, `uID`, `atID`) VAL
 (233, 2, '2013-06-22 13:02:08', 1, 2),
 (234, 15, '2013-06-22 13:02:08', 1, 5),
 (235, 16, '2013-06-22 13:02:08', 1, 1),
-(236, 14, '2013-06-22 13:13:02', 1, 8);
+(236, 14, '2013-06-22 13:13:02', 1, 8),
+(237, 1, '2013-06-22 14:34:21', 1, 1),
+(238, 2, '2013-06-22 14:34:21', 1, 2),
+(239, 15, '2013-06-22 14:34:22', 1, 5),
+(240, 16, '2013-06-22 14:34:22', 1, 1),
+(241, 1, '2013-06-22 14:34:33', 1, 1),
+(242, 2, '2013-06-22 14:34:33', 1, 2),
+(243, 15, '2013-06-22 14:34:33', 1, 5),
+(244, 16, '2013-06-22 14:34:33', 1, 1),
+(245, 1, '2013-06-22 14:36:40', 1, 1),
+(246, 2, '2013-06-22 14:36:40', 1, 2),
+(247, 15, '2013-06-22 14:36:40', 1, 5),
+(248, 16, '2013-06-22 14:36:40', 1, 1),
+(249, 1, '2013-06-22 14:36:45', 1, 1),
+(250, 2, '2013-06-22 14:36:45', 1, 2),
+(251, 15, '2013-06-22 14:36:45', 1, 5),
+(252, 16, '2013-06-22 14:36:45', 1, 1),
+(253, 1, '2013-06-22 14:36:58', 1, 1),
+(254, 2, '2013-06-22 14:36:58', 1, 2),
+(255, 15, '2013-06-22 14:36:58', 1, 5),
+(256, 16, '2013-06-22 14:36:59', 1, 1),
+(257, 1, '2013-06-22 14:37:09', 1, 1),
+(258, 2, '2013-06-22 14:37:09', 1, 2),
+(259, 15, '2013-06-22 14:37:09', 1, 5),
+(260, 16, '2013-06-22 14:37:09', 1, 1),
+(261, 1, '2013-06-22 14:37:20', 1, 1),
+(262, 2, '2013-06-22 14:37:20', 1, 2),
+(263, 15, '2013-06-22 14:37:20', 1, 5),
+(264, 16, '2013-06-22 14:37:20', 1, 1),
+(265, 1, '2013-06-22 14:37:33', 1, 1),
+(266, 2, '2013-06-22 14:37:33', 1, 2),
+(267, 15, '2013-06-22 14:37:33', 1, 5),
+(268, 16, '2013-06-22 14:37:33', 1, 1),
+(269, 1, '2013-06-22 14:37:54', 1, 1),
+(270, 2, '2013-06-22 14:37:54', 1, 2),
+(271, 15, '2013-06-22 14:37:54', 1, 5),
+(272, 16, '2013-06-22 14:37:54', 1, 1),
+(273, 1, '2013-06-22 14:38:08', 1, 1),
+(274, 2, '2013-06-22 14:38:08', 1, 2),
+(275, 15, '2013-06-22 14:38:08', 1, 5),
+(276, 16, '2013-06-22 14:38:08', 1, 1),
+(277, 1, '2013-06-22 14:38:18', 1, 1),
+(278, 2, '2013-06-22 14:38:18', 1, 2),
+(279, 15, '2013-06-22 14:38:18', 1, 5),
+(280, 16, '2013-06-22 14:38:18', 1, 1),
+(281, 1, '2013-06-23 08:50:09', 1, 1),
+(282, 2, '2013-06-23 08:50:09', 1, 2),
+(283, 15, '2013-06-23 08:50:09', 1, 5),
+(284, 16, '2013-06-23 08:50:09', 1, 1),
+(285, 17, '2013-06-23 08:50:09', 1, 1),
+(286, 1, '2013-06-23 08:58:38', 1, 1),
+(287, 2, '2013-06-23 08:58:38', 1, 2),
+(288, 1, '2013-06-23 08:58:56', 1, 1),
+(289, 2, '2013-06-23 08:58:56', 1, 2),
+(290, 15, '2013-06-23 08:58:56', 1, 5),
+(291, 16, '2013-06-23 08:58:56', 1, 1),
+(292, 17, '2013-06-23 08:58:56', 1, 1),
+(293, 1, '2013-06-23 08:59:20', 1, 1),
+(294, 2, '2013-06-23 08:59:20', 1, 2),
+(295, 15, '2013-06-23 08:59:20', 1, 5),
+(296, 16, '2013-06-23 08:59:20', 1, 1),
+(297, 17, '2013-06-23 08:59:20', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1128,7 +1259,6 @@ INSERT INTO `attributevalues` (`avID`, `akID`, `avDateAdded`, `uID`, `atID`) VAL
 -- Table structure for table `basicworkflowpermissionassignments`
 --
 
-DROP TABLE IF EXISTS `basicworkflowpermissionassignments`;
 CREATE TABLE IF NOT EXISTS `basicworkflowpermissionassignments` (
   `wfID` int(10) unsigned NOT NULL DEFAULT '0',
   `pkID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1142,7 +1272,6 @@ CREATE TABLE IF NOT EXISTS `basicworkflowpermissionassignments` (
 -- Table structure for table `basicworkflowprogressdata`
 --
 
-DROP TABLE IF EXISTS `basicworkflowprogressdata`;
 CREATE TABLE IF NOT EXISTS `basicworkflowprogressdata` (
   `wpID` int(10) unsigned NOT NULL DEFAULT '0',
   `uIDStarted` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1157,7 +1286,6 @@ CREATE TABLE IF NOT EXISTS `basicworkflowprogressdata` (
 -- Table structure for table `blockpermissionassignments`
 --
 
-DROP TABLE IF EXISTS `blockpermissionassignments`;
 CREATE TABLE IF NOT EXISTS `blockpermissionassignments` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `cvID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1173,14 +1301,13 @@ CREATE TABLE IF NOT EXISTS `blockpermissionassignments` (
 -- Table structure for table `blockrelations`
 --
 
-DROP TABLE IF EXISTS `blockrelations`;
 CREATE TABLE IF NOT EXISTS `blockrelations` (
   `brID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `bID` int(10) unsigned NOT NULL DEFAULT '0',
   `originalBID` int(10) unsigned NOT NULL DEFAULT '0',
   `relationType` varchar(50) NOT NULL,
   PRIMARY KEY (`brID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `blockrelations`
@@ -1195,7 +1322,6 @@ INSERT INTO `blockrelations` (`brID`, `bID`, `originalBID`, `relationType`) VALU
 -- Table structure for table `blocks`
 --
 
-DROP TABLE IF EXISTS `blocks`;
 CREATE TABLE IF NOT EXISTS `blocks` (
   `bID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `bName` varchar(60) DEFAULT NULL,
@@ -1207,7 +1333,7 @@ CREATE TABLE IF NOT EXISTS `blocks` (
   `uID` int(10) unsigned DEFAULT NULL,
   `btCachedBlockRecord` longtext,
   PRIMARY KEY (`bID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=54 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=56 ;
 
 --
 -- Dumping data for table `blocks`
@@ -1263,7 +1389,9 @@ INSERT INTO `blocks` (`bID`, `bName`, `bDateAdded`, `bDateModified`, `bFilename`
 (47, '', '2013-06-22 10:54:44', '2013-06-22 10:54:44', NULL, '1', 28, 1, 'O:11:"BlockRecord":12:{s:5:"_dbat";i:1;s:6:"_table";s:13:"btDateArchive";s:8:"_tableat";s:13:"btDateArchive";s:6:"_where";N;s:6:"_saved";b:1;s:8:"_lasterr";b:0;s:9:"_original";a:4:{i:0;s:2:"47";i:1;s:8:"Archives";i:2;s:3:"133";i:3;s:2:"12";}s:11:"foreignName";s:11:"blockrecord";s:3:"bID";s:2:"47";s:5:"title";s:8:"Archives";s:9:"targetCID";s:3:"133";s:9:"numMonths";s:2:"12";}'),
 (48, NULL, '2013-06-22 11:22:59', '2013-06-22 11:22:59', NULL, '1', 20, 1, 'O:11:"BlockRecord":23:{s:5:"_dbat";i:1;s:6:"_table";s:10:"btPageList";s:8:"_tableat";s:10:"btPageList";s:6:"_where";N;s:6:"_saved";b:1;s:8:"_lasterr";b:0;s:9:"_original";a:15:{i:0;s:2:"48";i:1;i:0;i:2;s:11:"display_asc";i:3;i:0;i:4;s:1:"0";i:5;s:1:"0";i:6;i:0;i:7;s:1:"1";i:8;i:9;i:9;i:0;i:10;s:0:"";i:11;s:0:"";i:12;s:1:"0";i:13;s:1:"0";i:14;i:0;}s:11:"foreignName";s:11:"blockrecord";s:3:"bID";s:2:"48";s:3:"num";i:0;s:7:"orderBy";s:11:"display_asc";s:9:"cParentID";i:0;s:5:"cThis";s:1:"0";s:21:"includeAllDescendents";s:1:"0";s:8:"paginate";i:0;s:14:"displayAliases";s:1:"1";s:4:"ctID";i:9;s:3:"rss";i:0;s:8:"rssTitle";s:0:"";s:14:"rssDescription";s:0:"";s:17:"truncateSummaries";s:1:"0";s:19:"displayFeaturedOnly";s:1:"0";s:13:"truncateChars";i:0;}'),
 (49, NULL, '2013-06-22 11:40:43', '2013-06-22 11:40:43', NULL, '1', 20, 1, 'O:11:"BlockRecord":23:{s:5:"_dbat";i:1;s:6:"_table";s:10:"btPageList";s:8:"_tableat";s:10:"btPageList";s:6:"_where";N;s:6:"_saved";b:1;s:8:"_lasterr";b:0;s:9:"_original";a:15:{i:0;s:2:"49";i:1;i:0;i:2;s:11:"display_asc";i:3;s:3:"136";i:4;s:1:"1";i:5;s:1:"1";i:6;i:0;i:7;s:1:"0";i:8;i:9;i:9;i:0;i:10;s:0:"";i:11;s:0:"";i:12;s:1:"0";i:13;s:1:"0";i:14;i:0;}s:11:"foreignName";s:11:"blockrecord";s:3:"bID";s:2:"49";s:3:"num";i:0;s:7:"orderBy";s:11:"display_asc";s:9:"cParentID";s:3:"136";s:5:"cThis";s:1:"1";s:21:"includeAllDescendents";s:1:"1";s:8:"paginate";i:0;s:14:"displayAliases";s:1:"0";s:4:"ctID";i:9;s:3:"rss";i:0;s:8:"rssTitle";s:0:"";s:14:"rssDescription";s:0:"";s:17:"truncateSummaries";s:1:"0";s:19:"displayFeaturedOnly";s:1:"0";s:13:"truncateChars";i:0;}'),
-(50, NULL, '2013-06-22 11:41:18', '2013-06-22 11:41:18', NULL, '1', 18, 1, 'O:11:"BlockRecord":17:{s:5:"_dbat";i:1;s:6:"_table";s:14:"btContentImage";s:8:"_tableat";s:14:"btContentImage";s:6:"_where";N;s:6:"_saved";b:1;s:8:"_lasterr";b:0;s:9:"_original";a:9:{i:0;s:2:"50";i:1;s:1:"7";i:2;s:1:"0";i:3;i:0;i:4;i:0;i:5;s:0:"";i:6;i:0;i:7;s:1:"0";i:8;s:0:"";}s:11:"foreignName";s:11:"blockrecord";s:3:"bID";s:2:"50";s:3:"fID";s:1:"7";s:10:"fOnstateID";s:1:"0";s:8:"maxWidth";i:0;s:9:"maxHeight";i:0;s:12:"externalLink";s:0:"";s:15:"internalLinkCID";i:0;s:27:"forceImageToMatchDimensions";s:1:"0";s:7:"altText";s:0:"";}');
+(50, NULL, '2013-06-22 11:41:18', '2013-06-22 11:41:18', NULL, '1', 18, 1, 'O:11:"BlockRecord":17:{s:5:"_dbat";i:1;s:6:"_table";s:14:"btContentImage";s:8:"_tableat";s:14:"btContentImage";s:6:"_where";N;s:6:"_saved";b:1;s:8:"_lasterr";b:0;s:9:"_original";a:9:{i:0;s:2:"50";i:1;s:1:"7";i:2;s:1:"0";i:3;i:0;i:4;i:0;i:5;s:0:"";i:6;i:0;i:7;s:1:"0";i:8;s:0:"";}s:11:"foreignName";s:11:"blockrecord";s:3:"bID";s:2:"50";s:3:"fID";s:1:"7";s:10:"fOnstateID";s:1:"0";s:8:"maxWidth";i:0;s:9:"maxHeight";i:0;s:12:"externalLink";s:0:"";s:15:"internalLinkCID";i:0;s:27:"forceImageToMatchDimensions";s:1:"0";s:7:"altText";s:0:"";}'),
+(54, NULL, '2013-06-22 14:27:48', '2013-06-22 14:27:48', NULL, '1', 20, 1, NULL),
+(55, NULL, '2013-06-23 08:59:55', '2013-06-23 08:59:55', NULL, '1', 19, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -1271,7 +1399,6 @@ INSERT INTO `blocks` (`bID`, `bName`, `bDateAdded`, `bDateModified`, `bFilename`
 -- Table structure for table `blocktypepermissionblocktypeaccesslist`
 --
 
-DROP TABLE IF EXISTS `blocktypepermissionblocktypeaccesslist`;
 CREATE TABLE IF NOT EXISTS `blocktypepermissionblocktypeaccesslist` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1285,7 +1412,6 @@ CREATE TABLE IF NOT EXISTS `blocktypepermissionblocktypeaccesslist` (
 -- Table structure for table `blocktypepermissionblocktypeaccesslistcustom`
 --
 
-DROP TABLE IF EXISTS `blocktypepermissionblocktypeaccesslistcustom`;
 CREATE TABLE IF NOT EXISTS `blocktypepermissionblocktypeaccesslistcustom` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1299,7 +1425,6 @@ CREATE TABLE IF NOT EXISTS `blocktypepermissionblocktypeaccesslistcustom` (
 -- Table structure for table `blocktypes`
 --
 
-DROP TABLE IF EXISTS `blocktypes`;
 CREATE TABLE IF NOT EXISTS `blocktypes` (
   `btID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `btHandle` varchar(32) NOT NULL,
@@ -1357,7 +1482,6 @@ INSERT INTO `blocktypes` (`btID`, `btHandle`, `btName`, `btDescription`, `btActi
 -- Table structure for table `btcontentfile`
 --
 
-DROP TABLE IF EXISTS `btcontentfile`;
 CREATE TABLE IF NOT EXISTS `btcontentfile` (
   `bID` int(10) unsigned NOT NULL,
   `fID` int(10) unsigned DEFAULT NULL,
@@ -1372,7 +1496,6 @@ CREATE TABLE IF NOT EXISTS `btcontentfile` (
 -- Table structure for table `btcontentimage`
 --
 
-DROP TABLE IF EXISTS `btcontentimage`;
 CREATE TABLE IF NOT EXISTS `btcontentimage` (
   `bID` int(10) unsigned NOT NULL,
   `fID` int(10) unsigned DEFAULT '0',
@@ -1407,7 +1530,6 @@ INSERT INTO `btcontentimage` (`bID`, `fID`, `fOnstateID`, `maxWidth`, `maxHeight
 -- Table structure for table `btcontentlocal`
 --
 
-DROP TABLE IF EXISTS `btcontentlocal`;
 CREATE TABLE IF NOT EXISTS `btcontentlocal` (
   `bID` int(10) unsigned NOT NULL,
   `content` longtext,
@@ -1442,7 +1564,6 @@ INSERT INTO `btcontentlocal` (`bID`, `content`) VALUES
 -- Table structure for table `btcorescrapbookdisplay`
 --
 
-DROP TABLE IF EXISTS `btcorescrapbookdisplay`;
 CREATE TABLE IF NOT EXISTS `btcorescrapbookdisplay` (
   `bID` int(10) unsigned NOT NULL,
   `bOriginalID` int(10) unsigned NOT NULL,
@@ -1456,7 +1577,6 @@ CREATE TABLE IF NOT EXISTS `btcorescrapbookdisplay` (
 -- Table structure for table `btcorestackdisplay`
 --
 
-DROP TABLE IF EXISTS `btcorestackdisplay`;
 CREATE TABLE IF NOT EXISTS `btcorestackdisplay` (
   `bID` int(10) unsigned NOT NULL,
   `stID` int(10) unsigned NOT NULL,
@@ -1478,7 +1598,6 @@ INSERT INTO `btcorestackdisplay` (`bID`, `stID`) VALUES
 -- Table structure for table `btdashboardnewsflowlatest`
 --
 
-DROP TABLE IF EXISTS `btdashboardnewsflowlatest`;
 CREATE TABLE IF NOT EXISTS `btdashboardnewsflowlatest` (
   `bID` int(10) unsigned NOT NULL,
   `slot` varchar(1) NOT NULL,
@@ -1500,7 +1619,6 @@ INSERT INTO `btdashboardnewsflowlatest` (`bID`, `slot`) VALUES
 -- Table structure for table `btdatearchive`
 --
 
-DROP TABLE IF EXISTS `btdatearchive`;
 CREATE TABLE IF NOT EXISTS `btdatearchive` (
   `bID` int(10) unsigned NOT NULL,
   `title` varchar(255) DEFAULT NULL,
@@ -1523,7 +1641,6 @@ INSERT INTO `btdatearchive` (`bID`, `title`, `targetCID`, `numMonths`) VALUES
 -- Table structure for table `btdatenav`
 --
 
-DROP TABLE IF EXISTS `btdatenav`;
 CREATE TABLE IF NOT EXISTS `btdatenav` (
   `bID` int(10) unsigned NOT NULL,
   `num` smallint(5) unsigned NOT NULL,
@@ -1547,7 +1664,6 @@ CREATE TABLE IF NOT EXISTS `btdatenav` (
 -- Table structure for table `btexternalform`
 --
 
-DROP TABLE IF EXISTS `btexternalform`;
 CREATE TABLE IF NOT EXISTS `btexternalform` (
   `bID` int(10) unsigned NOT NULL,
   `filename` varchar(128) DEFAULT NULL,
@@ -1560,7 +1676,6 @@ CREATE TABLE IF NOT EXISTS `btexternalform` (
 -- Table structure for table `btflashcontent`
 --
 
-DROP TABLE IF EXISTS `btflashcontent`;
 CREATE TABLE IF NOT EXISTS `btflashcontent` (
   `bID` int(10) unsigned NOT NULL,
   `fID` int(10) unsigned DEFAULT NULL,
@@ -1575,7 +1690,6 @@ CREATE TABLE IF NOT EXISTS `btflashcontent` (
 -- Table structure for table `btform`
 --
 
-DROP TABLE IF EXISTS `btform`;
 CREATE TABLE IF NOT EXISTS `btform` (
   `bID` int(10) unsigned NOT NULL,
   `questionSetId` int(10) unsigned DEFAULT '0',
@@ -1603,7 +1717,6 @@ INSERT INTO `btform` (`bID`, `questionSetId`, `surveyName`, `thankyouMsg`, `noti
 -- Table structure for table `btformanswers`
 --
 
-DROP TABLE IF EXISTS `btformanswers`;
 CREATE TABLE IF NOT EXISTS `btformanswers` (
   `aID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asID` int(10) unsigned DEFAULT '0',
@@ -1619,7 +1732,6 @@ CREATE TABLE IF NOT EXISTS `btformanswers` (
 -- Table structure for table `btformanswerset`
 --
 
-DROP TABLE IF EXISTS `btformanswerset`;
 CREATE TABLE IF NOT EXISTS `btformanswerset` (
   `asID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `questionSetId` int(10) unsigned DEFAULT '0',
@@ -1635,7 +1747,6 @@ CREATE TABLE IF NOT EXISTS `btformanswerset` (
 -- Table structure for table `btformquestions`
 --
 
-DROP TABLE IF EXISTS `btformquestions`;
 CREATE TABLE IF NOT EXISTS `btformquestions` (
   `qID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `msqID` int(10) unsigned DEFAULT '0',
@@ -1669,7 +1780,6 @@ INSERT INTO `btformquestions` (`qID`, `msqID`, `bID`, `questionSetId`, `question
 -- Table structure for table `btgooglemap`
 --
 
-DROP TABLE IF EXISTS `btgooglemap`;
 CREATE TABLE IF NOT EXISTS `btgooglemap` (
   `bID` int(10) unsigned NOT NULL,
   `title` varchar(255) DEFAULT NULL,
@@ -1686,7 +1796,6 @@ CREATE TABLE IF NOT EXISTS `btgooglemap` (
 -- Table structure for table `btguestbook`
 --
 
-DROP TABLE IF EXISTS `btguestbook`;
 CREATE TABLE IF NOT EXISTS `btguestbook` (
   `bID` int(10) unsigned NOT NULL,
   `requireApproval` int(11) DEFAULT '0',
@@ -1712,7 +1821,6 @@ INSERT INTO `btguestbook` (`bID`, `requireApproval`, `title`, `dateFormat`, `dis
 -- Table structure for table `btguestbookentries`
 --
 
-DROP TABLE IF EXISTS `btguestbookentries`;
 CREATE TABLE IF NOT EXISTS `btguestbookentries` (
   `bID` int(11) DEFAULT NULL,
   `cID` int(11) DEFAULT '1',
@@ -1733,7 +1841,6 @@ CREATE TABLE IF NOT EXISTS `btguestbookentries` (
 -- Table structure for table `btnavigation`
 --
 
-DROP TABLE IF EXISTS `btnavigation`;
 CREATE TABLE IF NOT EXISTS `btnavigation` (
   `bID` int(10) unsigned NOT NULL,
   `orderBy` varchar(255) DEFAULT 'alpha_asc',
@@ -1762,7 +1869,6 @@ INSERT INTO `btnavigation` (`bID`, `orderBy`, `displayPages`, `displayPagesCID`,
 -- Table structure for table `btnextprevious`
 --
 
-DROP TABLE IF EXISTS `btnextprevious`;
 CREATE TABLE IF NOT EXISTS `btnextprevious` (
   `bID` int(10) unsigned NOT NULL,
   `linkStyle` varchar(32) DEFAULT NULL,
@@ -1776,13 +1882,19 @@ CREATE TABLE IF NOT EXISTS `btnextprevious` (
   PRIMARY KEY (`bID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `btnextprevious`
+--
+
+INSERT INTO `btnextprevious` (`bID`, `linkStyle`, `nextLabel`, `previousLabel`, `parentLabel`, `showArrows`, `loopSequence`, `excludeSystemPages`, `orderBy`) VALUES
+(55, 'next_previous', 'Next', 'Previous', 'Up', 1, 0, 1, 'display_asc');
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `btpagelist`
 --
 
-DROP TABLE IF EXISTS `btpagelist`;
 CREATE TABLE IF NOT EXISTS `btpagelist` (
   `bID` int(10) unsigned NOT NULL,
   `num` smallint(5) unsigned NOT NULL,
@@ -1809,7 +1921,8 @@ CREATE TABLE IF NOT EXISTS `btpagelist` (
 INSERT INTO `btpagelist` (`bID`, `num`, `orderBy`, `cParentID`, `cThis`, `includeAllDescendents`, `paginate`, `displayAliases`, `ctID`, `rss`, `rssTitle`, `rssDescription`, `truncateSummaries`, `displayFeaturedOnly`, `truncateChars`) VALUES
 (38, 12, 'chrono_desc', 129, 0, 0, 1, 0, 4, 0, '', '', 1, 0, 128),
 (48, 0, 'display_asc', 0, 0, 0, 0, 1, 9, 0, '', '', 0, 0, 0),
-(49, 0, 'display_asc', 136, 1, 1, 0, 0, 9, 0, '', '', 0, 0, 0);
+(49, 0, 'display_asc', 136, 1, 1, 0, 0, 9, 0, '', '', 0, 0, 0),
+(54, 0, 'display_asc', 0, 0, 0, 0, 1, 9, 0, '', '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1817,7 +1930,6 @@ INSERT INTO `btpagelist` (`bID`, `num`, `orderBy`, `cParentID`, `cThis`, `includ
 -- Table structure for table `btrssdisplay`
 --
 
-DROP TABLE IF EXISTS `btrssdisplay`;
 CREATE TABLE IF NOT EXISTS `btrssdisplay` (
   `bID` int(10) unsigned NOT NULL,
   `title` varchar(255) DEFAULT NULL,
@@ -1835,7 +1947,6 @@ CREATE TABLE IF NOT EXISTS `btrssdisplay` (
 -- Table structure for table `btsearch`
 --
 
-DROP TABLE IF EXISTS `btsearch`;
 CREATE TABLE IF NOT EXISTS `btsearch` (
   `bID` int(10) unsigned NOT NULL,
   `title` varchar(255) DEFAULT NULL,
@@ -1860,7 +1971,6 @@ INSERT INTO `btsearch` (`bID`, `title`, `buttonText`, `baseSearchPath`, `postTo_
 -- Table structure for table `btslideshow`
 --
 
-DROP TABLE IF EXISTS `btslideshow`;
 CREATE TABLE IF NOT EXISTS `btslideshow` (
   `bID` int(10) unsigned NOT NULL,
   `fsID` int(10) unsigned DEFAULT NULL,
@@ -1876,7 +1986,6 @@ CREATE TABLE IF NOT EXISTS `btslideshow` (
 -- Table structure for table `btslideshowimg`
 --
 
-DROP TABLE IF EXISTS `btslideshowimg`;
 CREATE TABLE IF NOT EXISTS `btslideshowimg` (
   `slideshowImgId` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `bID` int(10) unsigned DEFAULT NULL,
@@ -1896,7 +2005,6 @@ CREATE TABLE IF NOT EXISTS `btslideshowimg` (
 -- Table structure for table `btsurvey`
 --
 
-DROP TABLE IF EXISTS `btsurvey`;
 CREATE TABLE IF NOT EXISTS `btsurvey` (
   `bID` int(10) unsigned NOT NULL,
   `question` varchar(255) DEFAULT '',
@@ -1910,7 +2018,6 @@ CREATE TABLE IF NOT EXISTS `btsurvey` (
 -- Table structure for table `btsurveyoptions`
 --
 
-DROP TABLE IF EXISTS `btsurveyoptions`;
 CREATE TABLE IF NOT EXISTS `btsurveyoptions` (
   `optionID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `bID` int(11) DEFAULT NULL,
@@ -1925,7 +2032,6 @@ CREATE TABLE IF NOT EXISTS `btsurveyoptions` (
 -- Table structure for table `btsurveyresults`
 --
 
-DROP TABLE IF EXISTS `btsurveyresults`;
 CREATE TABLE IF NOT EXISTS `btsurveyresults` (
   `resultID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `optionID` int(10) unsigned DEFAULT '0',
@@ -1943,7 +2049,6 @@ CREATE TABLE IF NOT EXISTS `btsurveyresults` (
 -- Table structure for table `bttags`
 --
 
-DROP TABLE IF EXISTS `bttags`;
 CREATE TABLE IF NOT EXISTS `bttags` (
   `bID` int(10) unsigned NOT NULL,
   `title` varchar(255) DEFAULT NULL,
@@ -1968,7 +2073,6 @@ INSERT INTO `bttags` (`bID`, `title`, `targetCID`, `displayMode`, `cloudCount`) 
 -- Table structure for table `btvideo`
 --
 
-DROP TABLE IF EXISTS `btvideo`;
 CREATE TABLE IF NOT EXISTS `btvideo` (
   `bID` int(10) unsigned NOT NULL,
   `fID` int(10) unsigned DEFAULT NULL,
@@ -1983,7 +2087,6 @@ CREATE TABLE IF NOT EXISTS `btvideo` (
 -- Table structure for table `btyoutube`
 --
 
-DROP TABLE IF EXISTS `btyoutube`;
 CREATE TABLE IF NOT EXISTS `btyoutube` (
   `bID` int(10) unsigned NOT NULL,
   `title` varchar(255) DEFAULT NULL,
@@ -2000,7 +2103,6 @@ CREATE TABLE IF NOT EXISTS `btyoutube` (
 -- Table structure for table `collectionattributevalues`
 --
 
-DROP TABLE IF EXISTS `collectionattributevalues`;
 CREATE TABLE IF NOT EXISTS `collectionattributevalues` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `cvID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2014,6 +2116,8 @@ CREATE TABLE IF NOT EXISTS `collectionattributevalues` (
 --
 
 INSERT INTO `collectionattributevalues` (`cID`, `cvID`, `akID`, `avID`) VALUES
+(1, 5, 1, 286),
+(1, 5, 2, 287),
 (3, 1, 3, 1),
 (3, 1, 4, 2),
 (4, 1, 3, 3),
@@ -2159,6 +2263,34 @@ INSERT INTO `collectionattributevalues` (`cID`, `cvID`, `akID`, `avID`) VALUES
 (138, 6, 2, 197),
 (138, 6, 15, 198),
 (138, 6, 16, 199),
+(138, 7, 1, 237),
+(138, 7, 2, 238),
+(138, 7, 15, 239),
+(138, 7, 16, 240),
+(138, 8, 1, 241),
+(138, 8, 2, 242),
+(138, 8, 15, 243),
+(138, 8, 16, 244),
+(138, 9, 1, 281),
+(138, 9, 2, 282),
+(138, 9, 15, 283),
+(138, 9, 16, 284),
+(138, 9, 17, 285),
+(138, 10, 1, 288),
+(138, 10, 2, 289),
+(138, 10, 15, 290),
+(138, 10, 16, 291),
+(138, 10, 17, 292),
+(138, 11, 1, 288),
+(138, 11, 2, 289),
+(138, 11, 15, 290),
+(138, 11, 16, 291),
+(138, 11, 17, 292),
+(138, 12, 1, 288),
+(138, 12, 2, 289),
+(138, 12, 15, 290),
+(138, 12, 16, 291),
+(138, 12, 17, 292),
 (139, 2, 1, 146),
 (139, 2, 2, 147),
 (139, 2, 15, 148),
@@ -2175,10 +2307,27 @@ INSERT INTO `collectionattributevalues` (`cID`, `cvID`, `akID`, `avID`) VALUES
 (139, 5, 2, 201),
 (139, 5, 15, 202),
 (139, 5, 16, 203),
+(139, 6, 1, 245),
+(139, 6, 2, 246),
+(139, 6, 15, 247),
+(139, 6, 16, 248),
+(139, 7, 1, 249),
+(139, 7, 2, 250),
+(139, 7, 15, 251),
+(139, 7, 16, 252),
+(139, 8, 1, 293),
+(139, 8, 2, 294),
+(139, 8, 15, 295),
+(139, 8, 16, 296),
+(139, 8, 17, 297),
 (140, 1, 1, 188),
 (140, 1, 2, 189),
 (140, 1, 15, 190),
 (140, 1, 16, 191),
+(140, 2, 1, 253),
+(140, 2, 2, 254),
+(140, 2, 15, 255),
+(140, 2, 16, 256),
 (141, 1, 1, 192),
 (141, 1, 2, 193),
 (141, 1, 15, 194),
@@ -2187,14 +2336,26 @@ INSERT INTO `collectionattributevalues` (`cID`, `cvID`, `akID`, `avID`) VALUES
 (141, 2, 2, 209),
 (141, 2, 15, 210),
 (141, 2, 16, 211),
+(141, 3, 1, 257),
+(141, 3, 2, 258),
+(141, 3, 15, 259),
+(141, 3, 16, 260),
 (142, 1, 1, 204),
 (142, 1, 2, 205),
 (142, 1, 15, 206),
 (142, 1, 16, 207),
+(142, 2, 1, 261),
+(142, 2, 2, 262),
+(142, 2, 15, 263),
+(142, 2, 16, 264),
 (143, 1, 1, 212),
 (143, 1, 2, 213),
 (143, 1, 15, 214),
 (143, 1, 16, 215),
+(143, 2, 1, 265),
+(143, 2, 2, 266),
+(143, 2, 15, 267),
+(143, 2, 16, 268),
 (144, 1, 1, 216),
 (144, 1, 2, 217),
 (144, 1, 15, 218),
@@ -2203,14 +2364,26 @@ INSERT INTO `collectionattributevalues` (`cID`, `cvID`, `akID`, `avID`) VALUES
 (145, 1, 2, 221),
 (145, 1, 15, 222),
 (145, 1, 16, 223),
+(145, 2, 1, 269),
+(145, 2, 2, 270),
+(145, 2, 15, 271),
+(145, 2, 16, 272),
 (146, 1, 1, 224),
 (146, 1, 2, 225),
 (146, 1, 15, 226),
 (146, 1, 16, 227),
+(146, 2, 1, 273),
+(146, 2, 2, 274),
+(146, 2, 15, 275),
+(146, 2, 16, 276),
 (147, 1, 1, 228),
 (147, 1, 2, 229),
 (147, 1, 15, 230),
 (147, 1, 16, 231),
+(147, 2, 1, 277),
+(147, 2, 2, 278),
+(147, 2, 15, 279),
+(147, 2, 16, 280),
 (148, 1, 1, 232),
 (148, 1, 2, 233),
 (148, 1, 15, 234),
@@ -2222,7 +2395,6 @@ INSERT INTO `collectionattributevalues` (`cID`, `cvID`, `akID`, `avID`) VALUES
 -- Table structure for table `collections`
 --
 
-DROP TABLE IF EXISTS `collections`;
 CREATE TABLE IF NOT EXISTS `collections` (
   `cID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `cDateAdded` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -2231,14 +2403,14 @@ CREATE TABLE IF NOT EXISTS `collections` (
   PRIMARY KEY (`cID`),
   KEY `cDateModified` (`cDateModified`),
   KEY `cDateAdded` (`cDateAdded`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=150 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=149 ;
 
 --
 -- Dumping data for table `collections`
 --
 
 INSERT INTO `collections` (`cID`, `cDateAdded`, `cDateModified`, `cHandle`) VALUES
-(1, '2013-06-22 10:54:13', '2013-06-22 10:54:40', 'home'),
+(1, '2013-06-22 10:54:13', '2013-06-23 08:58:38', 'home'),
 (2, '2013-06-22 10:54:16', '2013-06-22 10:54:16', 'dashboard'),
 (3, '2013-06-22 10:54:17', '2013-06-22 10:54:17', 'composer'),
 (4, '2013-06-22 10:54:17', '2013-06-22 10:54:17', 'write'),
@@ -2365,27 +2537,27 @@ INSERT INTO `collections` (`cID`, `cDateAdded`, `cDateModified`, `cHandle`) VALU
 (125, '2013-06-22 10:54:40', '2013-06-22 10:54:40', NULL),
 (126, '2013-06-22 10:54:40', '2013-06-22 10:54:40', NULL),
 (127, '2013-06-22 10:54:40', '2013-06-22 10:54:40', NULL),
-(128, '2013-06-22 10:54:40', '2013-06-22 10:54:40', 'about'),
+(128, '2013-06-22 10:54:40', '2013-06-22 14:26:54', 'about'),
 (129, '2013-06-22 10:54:40', '2013-06-22 12:37:03', 'blog'),
-(130, '2013-06-22 10:54:40', '2013-06-22 10:54:40', 'search'),
+(130, '2013-06-22 10:54:40', '2013-06-22 14:27:00', 'search'),
 (131, '2013-06-22 10:54:40', '2013-06-22 10:54:40', 'contact-us'),
 (132, '2013-06-22 10:54:40', '2013-06-22 10:54:40', 'guestbook'),
 (133, '2013-06-22 10:54:40', '2013-06-22 10:54:40', 'blog-archives'),
 (134, '2013-06-22 10:54:40', '2013-06-22 10:54:40', 'hello-world'),
 (135, '2013-06-22 11:19:06', '2013-06-22 11:19:06', NULL),
-(136, '2013-06-22 11:19:46', '2013-06-22 13:09:54', 'work'),
+(136, '2013-06-22 11:19:46', '2013-06-22 14:26:41', 'work'),
 (137, '2013-06-22 11:20:56', '2013-06-22 11:20:56', NULL),
-(138, '2013-06-22 11:21:31', '2013-06-22 12:56:01', 'work-piece-1'),
-(139, '2013-06-22 11:22:16', '2013-06-22 12:56:06', 'work-piece-2'),
-(140, '2013-06-22 12:54:49', '2013-06-22 12:54:49', 'gloopy-gloop'),
-(141, '2013-06-22 12:55:52', '2013-06-22 12:57:18', 'my-face'),
-(142, '2013-06-22 12:57:00', '2013-06-22 12:57:00', 'open-university'),
-(143, '2013-06-22 12:58:08', '2013-06-22 12:58:08', 'kerve-creative'),
-(144, '2013-06-22 12:59:08', '2013-06-22 12:59:09', 'martin-parr'),
-(145, '2013-06-22 12:59:44', '2013-06-22 12:59:44', 'tree-chaving-challenge'),
-(146, '2013-06-22 13:00:28', '2013-06-22 13:00:28', 'wildscreen'),
-(147, '2013-06-22 13:01:19', '2013-06-22 13:01:19', 'capture-museum'),
-(148, '2013-06-22 13:02:08', '2013-06-22 13:02:08', 'zoom');
+(138, '2013-06-22 11:21:31', '2013-06-23 09:00:09', 'work-piece-1'),
+(139, '2013-06-22 11:22:16', '2013-06-23 08:59:20', 'work-piece-2'),
+(140, '2013-06-22 12:54:49', '2013-06-22 14:36:59', 'gloopy-gloop'),
+(141, '2013-06-22 12:55:52', '2013-06-22 14:37:09', 'my-face'),
+(142, '2013-06-22 12:57:00', '2013-06-22 14:37:20', 'open-university'),
+(143, '2013-06-22 12:58:08', '2013-06-22 14:37:34', 'kerve-creative'),
+(144, '2013-06-22 12:59:08', '2013-06-22 14:26:23', 'martin-parr'),
+(145, '2013-06-22 12:59:44', '2013-06-22 14:37:54', 'tree-chaving-challenge'),
+(146, '2013-06-22 13:00:28', '2013-06-22 14:38:08', 'wildscreen'),
+(147, '2013-06-22 13:01:19', '2013-06-22 14:38:18', 'capture-museum'),
+(148, '2013-06-22 13:02:08', '2013-06-22 14:26:36', 'zoom');
 
 -- --------------------------------------------------------
 
@@ -2393,7 +2565,6 @@ INSERT INTO `collections` (`cID`, `cDateAdded`, `cDateModified`, `cHandle`) VALU
 -- Table structure for table `collectionsearchindexattributes`
 --
 
-DROP TABLE IF EXISTS `collectionsearchindexattributes`;
 CREATE TABLE IF NOT EXISTS `collectionsearchindexattributes` (
   `cID` int(11) unsigned NOT NULL DEFAULT '0',
   `ak_meta_title` text,
@@ -2408,6 +2579,7 @@ CREATE TABLE IF NOT EXISTS `collectionsearchindexattributes` (
   `ak_tags` text,
   `ak_page_image` int(11) DEFAULT '0',
   `ak_page_subtitle` text,
+  `ak_external_url` text,
   PRIMARY KEY (`cID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -2415,115 +2587,115 @@ CREATE TABLE IF NOT EXISTS `collectionsearchindexattributes` (
 -- Dumping data for table `collectionsearchindexattributes`
 --
 
-INSERT INTO `collectionsearchindexattributes` (`cID`, `ak_meta_title`, `ak_meta_description`, `ak_meta_keywords`, `ak_icon_dashboard`, `ak_exclude_nav`, `ak_exclude_page_list`, `ak_header_extra_content`, `ak_exclude_search_index`, `ak_exclude_sitemapxml`, `ak_tags`, `ak_page_image`, `ak_page_subtitle`) VALUES
-(1, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(3, NULL, NULL, 'blog, blogging', 'icon-book', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(4, NULL, NULL, 'new blog, write blog, blogging', 'icon-pencil', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(5, NULL, NULL, 'blog drafts,composer', 'icon-book', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(6, NULL, NULL, 'pages, add page, delete page, copy, move, alias', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(7, NULL, NULL, 'pages, add page, delete page, copy, move, alias', 'icon-home', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(8, NULL, NULL, 'pages, add page, delete page, copy, move, alias, bulk', 'icon-road', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(9, NULL, NULL, 'find page, search page, search, find, pages, sitemap', 'icon-search', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(11, NULL, NULL, 'add file, delete file, copy, move, alias, resize, crop, rename, images, title, attribute', 'icon-picture', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(12, NULL, NULL, 'file, file attributes, title, attribute, description, rename', 'icon-cog', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(13, NULL, NULL, 'files, category, categories', 'icon-list-alt', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(14, NULL, NULL, 'new file set', 'icon-plus-sign', 1, 0, NULL, 0, 0, NULL, 0, NULL),
-(15, NULL, NULL, 'users, groups, people, find, delete user, remove user, change password, password', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(16, NULL, NULL, 'find, search, people, delete user, remove user, change password, password', 'icon-user', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(17, NULL, NULL, 'user, group, people, permissions, access, expire', 'icon-globe', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(18, NULL, NULL, 'user attributes, user data, gather data, registration data', 'icon-cog', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(19, NULL, NULL, 'new user, create', 'icon-plus-sign', 1, 0, NULL, 0, 0, NULL, 0, NULL),
-(20, NULL, NULL, 'new user group, new group, group, create', 'icon-plus', 1, 0, NULL, 0, 0, NULL, 0, NULL),
-(21, NULL, NULL, 'group set', 'icon-list', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(22, NULL, NULL, 'forms, log, error, email, mysql, exception, survey', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(23, NULL, NULL, 'hits, pageviews, visitors, activity', 'icon-signal', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(24, NULL, NULL, 'forms, questions, response, data', 'icon-briefcase', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(25, NULL, NULL, 'questions, quiz, response', 'icon-tasks', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(26, NULL, NULL, 'forms, log, error, email, mysql, exception, survey, history', 'icon-time', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(28, NULL, NULL, 'new theme, theme, active theme, change theme, template, css', 'icon-font', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(29, NULL, NULL, 'theme', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(30, NULL, NULL, 'page types', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(31, NULL, NULL, 'custom theme, change theme, custom css, css', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(32, NULL, NULL, 'page type defaults, global block, global area, starter, template', 'icon-file', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(34, NULL, NULL, 'page attributes, custom', 'icon-cog', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(35, NULL, NULL, 'single, page, custom, application', 'icon-wrench', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(36, NULL, NULL, 'add workflow, remove workflow', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(37, NULL, NULL, NULL, 'icon-list', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(38, NULL, NULL, NULL, 'icon-user', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(40, NULL, NULL, 'stacks, reusable content, scrapbook, copy, paste, paste block, copy block, site name, logo', 'icon-th', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(41, NULL, NULL, NULL, 'icon-lock', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(42, NULL, NULL, NULL, NULL, 1, 0, NULL, 1, 0, NULL, 0, NULL),
-(43, NULL, NULL, 'block, refresh, custom', 'icon-wrench', 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(44, NULL, NULL, NULL, NULL, 1, 0, NULL, 0, 0, NULL, 0, NULL),
-(45, NULL, NULL, NULL, NULL, 1, 0, NULL, 0, 0, NULL, 0, NULL),
-(46, NULL, NULL, 'add-on, addon, ecommerce, install, discussions, forums, themes, templates, blocks', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(47, NULL, NULL, 'update, upgrade', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(48, NULL, NULL, 'concrete5.org, my account, marketplace', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(49, NULL, NULL, 'buy theme, new theme, marketplace, template', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(50, NULL, NULL, 'buy addon, buy add on, buy add-on, purchase addon, purchase add on, purchase add-on, find addon, new addon, marketplace', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(51, NULL, NULL, NULL, NULL, 1, 0, NULL, 0, 0, NULL, 0, NULL),
-(53, NULL, NULL, 'website name, title', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(54, NULL, NULL, 'logo, favicon, iphone, icon, bookmark', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(55, NULL, NULL, 'tinymce, content block, fonts, editor, tinymce, content, overlay', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(56, NULL, NULL, 'translate, translation, internationalization, multilingual, translate', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(57, NULL, NULL, 'timezone, profile, locale', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(58, NULL, NULL, 'interface, quick nav, dashboard background, background image', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(60, NULL, NULL, 'vanity, pretty url, seo, pageview, view', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(61, NULL, NULL, 'bulk, seo, change keywords, engine, optimization, search', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(62, NULL, NULL, 'traffic, statistics, google analytics, quant, pageviews, hits', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(63, NULL, NULL, 'pretty, slug', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(64, NULL, NULL, 'turn off statistics, tracking, statistics, pageviews, hits', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(65, NULL, NULL, 'configure search, site search, search option', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(67, NULL, NULL, 'cache option, change cache, override, turn on cache, turn off cache, no cache, page cache, caching', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(68, NULL, NULL, 'cache option, turn off cache, no cache, page cache, caching', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(69, NULL, NULL, 'index search, reindex search, build sitemap, sitemap.xml, clear old versions, page versions, remove old', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(71, NULL, NULL, 'editors, hide site, offline, private, public, access', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(72, NULL, NULL, 'file options, file manager, upload, modify', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(73, NULL, NULL, 'security, files, media, extension, manager, upload', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(74, NULL, NULL, 'security, actions, administrator, admin, package, marketplace, search', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(77, NULL, NULL, 'security, lock ip, lock out, block ip, address, restrict, access', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(78, NULL, NULL, 'security, registration', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(79, NULL, NULL, 'antispam, block spam, security', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(80, NULL, NULL, 'lock site, under construction, hide, hidden', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(82, NULL, NULL, 'profile, login, redirect, specific, dashboard, administrators', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(83, NULL, NULL, 'member profile, member page,community, forums, social, avatar', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(84, NULL, NULL, 'signup, new user, community', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(85, NULL, NULL, 'smtp, mail settings', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(86, NULL, NULL, 'email server, mail settings, mail configuration, external, internal', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(87, NULL, NULL, 'email server, mail settings, mail configuration, private message, message system, import, email, message', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(88, NULL, NULL, 'attribute configuration', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(89, NULL, NULL, 'attributes, sets', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(90, NULL, NULL, 'attributes, types', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(91, NULL, NULL, NULL, NULL, 0, 0, NULL, 1, 0, NULL, 0, NULL),
-(92, NULL, NULL, 'overrides, system info, debug, support,help', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(93, NULL, NULL, 'errors,exceptions, develop, support, help', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(94, NULL, NULL, 'email, logging, logs, smtp, pop, errors, mysql, errors, log', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(95, NULL, NULL, 'security, alternate storage, hide files', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(96, NULL, NULL, 'network, proxy server', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(97, NULL, NULL, 'export, backup, database, sql, mysql, encryption, restore', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(99, NULL, NULL, 'upgrade, new version, update', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(100, NULL, NULL, 'export, database, xml, starting, points, schema, refresh, custom, tables', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(105, NULL, NULL, NULL, NULL, 1, 0, NULL, 1, 0, NULL, 0, NULL),
-(106, NULL, NULL, NULL, NULL, 1, 0, NULL, 0, 0, NULL, 0, NULL),
-(128, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(129, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, '', 0, NULL),
-(130, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(131, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(132, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(133, NULL, NULL, NULL, NULL, 1, 1, NULL, 1, 0, '', 0, NULL),
-(134, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, '\ncomposer\nhello\nworld\nfirst post\n', 0, NULL),
-(136, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL),
-(138, 'Meta title', 'Meta description', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 9, 'Beakeriser'),
-(139, '', '', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 10, 'KS3 Geography'),
-(140, 'Gloopy Gloop', 'Vector drawn meatballs in canvas', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 12, ''),
-(141, 'My Face', 'Home made 3d face scanner made before Kinnect was cool', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 15, ''),
-(142, 'Open University', 'Discover your design alter-ego', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 16, 'The history of design'),
-(143, 'Kerve Creative', '3d forced perspective cloud thing', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 13, ''),
-(144, 'Martin Parr: touchscreen interactive', 'In gallery voting touchscreen thing', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 14, 'touchscreen interactive'),
-(145, 'Tree Chaving Challenge', 'Wishing you a chavtastic christmas', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 17, ''),
-(146, 'WildScreen: Team Wild', 'Science to the rescue with a lot of jumping', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 18, 'Team Wild'),
-(147, 'Capture the Museum', 'Museum based team fun and shenanigans', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 11, ''),
-(148, 'ZOOM', 'Animal poses unlock archive', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 19, '');
+INSERT INTO `collectionsearchindexattributes` (`cID`, `ak_meta_title`, `ak_meta_description`, `ak_meta_keywords`, `ak_icon_dashboard`, `ak_exclude_nav`, `ak_exclude_page_list`, `ak_header_extra_content`, `ak_exclude_search_index`, `ak_exclude_sitemapxml`, `ak_tags`, `ak_page_image`, `ak_page_subtitle`, `ak_external_url`) VALUES
+(1, 'CorinWilkins.co.uk', 'I am Corin Wilkins, digital auteur. This is my work. ', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(3, NULL, NULL, 'blog, blogging', 'icon-book', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(4, NULL, NULL, 'new blog, write blog, blogging', 'icon-pencil', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(5, NULL, NULL, 'blog drafts,composer', 'icon-book', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(6, NULL, NULL, 'pages, add page, delete page, copy, move, alias', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(7, NULL, NULL, 'pages, add page, delete page, copy, move, alias', 'icon-home', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(8, NULL, NULL, 'pages, add page, delete page, copy, move, alias, bulk', 'icon-road', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(9, NULL, NULL, 'find page, search page, search, find, pages, sitemap', 'icon-search', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(11, NULL, NULL, 'add file, delete file, copy, move, alias, resize, crop, rename, images, title, attribute', 'icon-picture', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(12, NULL, NULL, 'file, file attributes, title, attribute, description, rename', 'icon-cog', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(13, NULL, NULL, 'files, category, categories', 'icon-list-alt', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(14, NULL, NULL, 'new file set', 'icon-plus-sign', 1, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(15, NULL, NULL, 'users, groups, people, find, delete user, remove user, change password, password', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(16, NULL, NULL, 'find, search, people, delete user, remove user, change password, password', 'icon-user', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(17, NULL, NULL, 'user, group, people, permissions, access, expire', 'icon-globe', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(18, NULL, NULL, 'user attributes, user data, gather data, registration data', 'icon-cog', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(19, NULL, NULL, 'new user, create', 'icon-plus-sign', 1, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(20, NULL, NULL, 'new user group, new group, group, create', 'icon-plus', 1, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(21, NULL, NULL, 'group set', 'icon-list', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(22, NULL, NULL, 'forms, log, error, email, mysql, exception, survey', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(23, NULL, NULL, 'hits, pageviews, visitors, activity', 'icon-signal', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(24, NULL, NULL, 'forms, questions, response, data', 'icon-briefcase', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(25, NULL, NULL, 'questions, quiz, response', 'icon-tasks', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(26, NULL, NULL, 'forms, log, error, email, mysql, exception, survey, history', 'icon-time', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(28, NULL, NULL, 'new theme, theme, active theme, change theme, template, css', 'icon-font', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(29, NULL, NULL, 'theme', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(30, NULL, NULL, 'page types', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(31, NULL, NULL, 'custom theme, change theme, custom css, css', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(32, NULL, NULL, 'page type defaults, global block, global area, starter, template', 'icon-file', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(34, NULL, NULL, 'page attributes, custom', 'icon-cog', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(35, NULL, NULL, 'single, page, custom, application', 'icon-wrench', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(36, NULL, NULL, 'add workflow, remove workflow', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(37, NULL, NULL, NULL, 'icon-list', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(38, NULL, NULL, NULL, 'icon-user', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(40, NULL, NULL, 'stacks, reusable content, scrapbook, copy, paste, paste block, copy block, site name, logo', 'icon-th', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(41, NULL, NULL, NULL, 'icon-lock', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(42, NULL, NULL, NULL, NULL, 1, 0, NULL, 1, 0, NULL, 0, NULL, NULL),
+(43, NULL, NULL, 'block, refresh, custom', 'icon-wrench', 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(44, NULL, NULL, NULL, NULL, 1, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(45, NULL, NULL, NULL, NULL, 1, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(46, NULL, NULL, 'add-on, addon, ecommerce, install, discussions, forums, themes, templates, blocks', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(47, NULL, NULL, 'update, upgrade', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(48, NULL, NULL, 'concrete5.org, my account, marketplace', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(49, NULL, NULL, 'buy theme, new theme, marketplace, template', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(50, NULL, NULL, 'buy addon, buy add on, buy add-on, purchase addon, purchase add on, purchase add-on, find addon, new addon, marketplace', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(51, NULL, NULL, NULL, NULL, 1, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(53, NULL, NULL, 'website name, title', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(54, NULL, NULL, 'logo, favicon, iphone, icon, bookmark', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(55, NULL, NULL, 'tinymce, content block, fonts, editor, tinymce, content, overlay', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(56, NULL, NULL, 'translate, translation, internationalization, multilingual, translate', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(57, NULL, NULL, 'timezone, profile, locale', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(58, NULL, NULL, 'interface, quick nav, dashboard background, background image', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(60, NULL, NULL, 'vanity, pretty url, seo, pageview, view', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(61, NULL, NULL, 'bulk, seo, change keywords, engine, optimization, search', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(62, NULL, NULL, 'traffic, statistics, google analytics, quant, pageviews, hits', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(63, NULL, NULL, 'pretty, slug', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(64, NULL, NULL, 'turn off statistics, tracking, statistics, pageviews, hits', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(65, NULL, NULL, 'configure search, site search, search option', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(67, NULL, NULL, 'cache option, change cache, override, turn on cache, turn off cache, no cache, page cache, caching', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(68, NULL, NULL, 'cache option, turn off cache, no cache, page cache, caching', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(69, NULL, NULL, 'index search, reindex search, build sitemap, sitemap.xml, clear old versions, page versions, remove old', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(71, NULL, NULL, 'editors, hide site, offline, private, public, access', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(72, NULL, NULL, 'file options, file manager, upload, modify', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(73, NULL, NULL, 'security, files, media, extension, manager, upload', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(74, NULL, NULL, 'security, actions, administrator, admin, package, marketplace, search', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(77, NULL, NULL, 'security, lock ip, lock out, block ip, address, restrict, access', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(78, NULL, NULL, 'security, registration', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(79, NULL, NULL, 'antispam, block spam, security', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(80, NULL, NULL, 'lock site, under construction, hide, hidden', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(82, NULL, NULL, 'profile, login, redirect, specific, dashboard, administrators', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(83, NULL, NULL, 'member profile, member page,community, forums, social, avatar', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(84, NULL, NULL, 'signup, new user, community', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(85, NULL, NULL, 'smtp, mail settings', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(86, NULL, NULL, 'email server, mail settings, mail configuration, external, internal', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(87, NULL, NULL, 'email server, mail settings, mail configuration, private message, message system, import, email, message', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(88, NULL, NULL, 'attribute configuration', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(89, NULL, NULL, 'attributes, sets', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(90, NULL, NULL, 'attributes, types', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(91, NULL, NULL, NULL, NULL, 0, 0, NULL, 1, 0, NULL, 0, NULL, NULL),
+(92, NULL, NULL, 'overrides, system info, debug, support,help', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(93, NULL, NULL, 'errors,exceptions, develop, support, help', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(94, NULL, NULL, 'email, logging, logs, smtp, pop, errors, mysql, errors, log', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(95, NULL, NULL, 'security, alternate storage, hide files', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(96, NULL, NULL, 'network, proxy server', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(97, NULL, NULL, 'export, backup, database, sql, mysql, encryption, restore', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(99, NULL, NULL, 'upgrade, new version, update', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(100, NULL, NULL, 'export, database, xml, starting, points, schema, refresh, custom, tables', NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(105, NULL, NULL, NULL, NULL, 1, 0, NULL, 1, 0, NULL, 0, NULL, NULL),
+(106, NULL, NULL, NULL, NULL, 1, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(128, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(129, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, '', 0, NULL, NULL),
+(130, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(131, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(132, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(133, NULL, NULL, NULL, NULL, 1, 1, NULL, 1, 0, '', 0, NULL, NULL),
+(134, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, '\ncomposer\nhello\nworld\nfirst post\n', 0, NULL, NULL),
+(136, NULL, NULL, NULL, NULL, 0, 0, NULL, 0, 0, NULL, 0, NULL, NULL),
+(138, 'Tracy Beaker', 'Meta description', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 9, 'Beakeriser', 'http://google.com'),
+(139, 'BBC Bitesize', '', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 10, 'KS3 Geography', ''),
+(140, 'Gloopy Gloop', 'Vector drawn meatballs in canvas', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 12, '', NULL),
+(141, 'My Face', 'Home made 3d face scanner made before Kinnect was cool', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 15, '', NULL),
+(142, 'Open University', 'Discover your design alter-ego', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 16, 'The history of design', NULL),
+(143, 'Kerve Creative', '3d forced perspective cloud thing', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 13, '', NULL),
+(144, 'Martin Parr: touchscreen interactive', 'In gallery voting touchscreen thing', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 14, 'touchscreen interactive', NULL),
+(145, 'Tree Chaving Challenge', 'Wishing you a chavtastic christmas', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 17, '', NULL),
+(146, 'WildScreen: Team Wild', 'Science to the rescue with a lot of jumping', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 18, 'Team Wild', NULL),
+(147, 'Capture the Museum', 'Museum based team fun and shenanigans', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 11, '', NULL),
+(148, 'ZOOM', 'Animal poses unlock archive', NULL, NULL, 0, 0, NULL, 0, 0, NULL, 19, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -2531,7 +2703,6 @@ INSERT INTO `collectionsearchindexattributes` (`cID`, `ak_meta_title`, `ak_meta_
 -- Table structure for table `collectionversionarealayouts`
 --
 
-DROP TABLE IF EXISTS `collectionversionarealayouts`;
 CREATE TABLE IF NOT EXISTS `collectionversionarealayouts` (
   `cvalID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `cID` int(10) unsigned DEFAULT '0',
@@ -2551,7 +2722,6 @@ CREATE TABLE IF NOT EXISTS `collectionversionarealayouts` (
 -- Table structure for table `collectionversionareastyles`
 --
 
-DROP TABLE IF EXISTS `collectionversionareastyles`;
 CREATE TABLE IF NOT EXISTS `collectionversionareastyles` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `cvID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2566,7 +2736,6 @@ CREATE TABLE IF NOT EXISTS `collectionversionareastyles` (
 -- Table structure for table `collectionversionblocks`
 --
 
-DROP TABLE IF EXISTS `collectionversionblocks`;
 CREATE TABLE IF NOT EXISTS `collectionversionblocks` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `cvID` int(10) unsigned NOT NULL DEFAULT '1',
@@ -2592,6 +2761,23 @@ INSERT INTO `collectionversionblocks` (`cID`, `cvID`, `bID`, `arHandle`, `cbDisp
 (1, 1, 25, 'Sidebar', 1, 1, 0, 0),
 (1, 1, 26, 'Main', 0, 1, 0, 0),
 (1, 1, 27, 'Header Image', 0, 1, 0, 0),
+(1, 2, 24, 'Sidebar', 0, 0, 0, 0),
+(1, 2, 25, 'Sidebar', 1, 0, 0, 0),
+(1, 2, 26, 'Main', 0, 0, 0, 0),
+(1, 2, 27, 'Header Image', 0, 0, 0, 0),
+(1, 3, 24, 'Sidebar', 0, 0, 0, 0),
+(1, 3, 25, 'Sidebar', 1, 0, 0, 0),
+(1, 3, 26, 'Main', 0, 0, 0, 0),
+(1, 3, 27, 'Header Image', 0, 0, 0, 0),
+(1, 3, 54, 'Main', 1, 1, 0, 0),
+(1, 4, 24, 'Sidebar', 0, 0, 0, 0),
+(1, 4, 25, 'Sidebar', 1, 0, 0, 0),
+(1, 4, 27, 'Header Image', 0, 0, 0, 0),
+(1, 4, 54, 'Main', 1, 0, 0, 0),
+(1, 5, 24, 'Sidebar', 0, 0, 0, 0),
+(1, 5, 25, 'Sidebar', 1, 0, 0, 0),
+(1, 5, 27, 'Header Image', 0, 0, 0, 0),
+(1, 5, 54, 'Main', 0, 0, 0, 0),
 (105, 1, 6, 'Primary', 0, 1, 0, 0),
 (105, 1, 7, 'Primary', 1, 1, 0, 0),
 (105, 1, 8, 'Secondary 1', 0, 1, 0, 0),
@@ -2649,7 +2835,14 @@ INSERT INTO `collectionversionblocks` (`cID`, `cvID`, `bID`, `arHandle`, `cbDisp
 (138, 3, 50, 'Header Image', 0, 1, 0, 0),
 (138, 4, 50, 'Header Image', 0, 0, 0, 0),
 (138, 5, 50, 'Header Image', 0, 0, 0, 0),
-(138, 6, 50, 'Header Image', 0, 0, 0, 0);
+(138, 6, 50, 'Header Image', 0, 0, 0, 0),
+(138, 7, 50, 'Header Image', 0, 0, 0, 0),
+(138, 8, 50, 'Header Image', 0, 0, 0, 0),
+(138, 9, 50, 'Header Image', 0, 0, 0, 0),
+(138, 10, 50, 'Header Image', 0, 0, 0, 0),
+(138, 11, 50, 'Header Image', 0, 0, 0, 0),
+(138, 11, 55, 'Box 2', 0, 1, 0, 0),
+(138, 12, 50, 'Header Image', 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2657,7 +2850,6 @@ INSERT INTO `collectionversionblocks` (`cID`, `cvID`, `bID`, `arHandle`, `cbDisp
 -- Table structure for table `collectionversionblocksoutputcache`
 --
 
-DROP TABLE IF EXISTS `collectionversionblocksoutputcache`;
 CREATE TABLE IF NOT EXISTS `collectionversionblocksoutputcache` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `cvID` int(10) unsigned NOT NULL DEFAULT '1',
@@ -2716,7 +2908,6 @@ INSERT INTO `collectionversionblocksoutputcache` (`cID`, `cvID`, `bID`, `arHandl
 -- Table structure for table `collectionversionblockstyles`
 --
 
-DROP TABLE IF EXISTS `collectionversionblockstyles`;
 CREATE TABLE IF NOT EXISTS `collectionversionblockstyles` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `cvID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2731,6 +2922,22 @@ CREATE TABLE IF NOT EXISTS `collectionversionblockstyles` (
 --
 
 INSERT INTO `collectionversionblockstyles` (`cID`, `cvID`, `bID`, `arHandle`, `csrID`) VALUES
+(1, 2, 24, 'Sidebar', 0),
+(1, 2, 25, 'Sidebar', 0),
+(1, 2, 26, 'Main', 0),
+(1, 2, 27, 'Header Image', 0),
+(1, 3, 24, 'Sidebar', 0),
+(1, 3, 25, 'Sidebar', 0),
+(1, 3, 26, 'Main', 0),
+(1, 3, 27, 'Header Image', 0),
+(1, 4, 24, 'Sidebar', 0),
+(1, 4, 25, 'Sidebar', 0),
+(1, 4, 27, 'Header Image', 0),
+(1, 4, 54, 'Main', 0),
+(1, 5, 24, 'Sidebar', 0),
+(1, 5, 25, 'Sidebar', 0),
+(1, 5, 27, 'Header Image', 0),
+(1, 5, 54, 'Main', 0),
 (128, 1, 18, 'Header Image', 0),
 (129, 1, 19, 'Header Image', 0),
 (130, 1, 19, 'Header Image', 0),
@@ -2743,7 +2950,13 @@ INSERT INTO `collectionversionblockstyles` (`cID`, `cvID`, `bID`, `arHandle`, `c
 (136, 5, 49, 'Main', 0),
 (138, 4, 50, 'Header Image', 0),
 (138, 5, 50, 'Header Image', 0),
-(138, 6, 50, 'Header Image', 0);
+(138, 6, 50, 'Header Image', 0),
+(138, 7, 50, 'Header Image', 0),
+(138, 8, 50, 'Header Image', 0),
+(138, 9, 50, 'Header Image', 0),
+(138, 10, 50, 'Header Image', 0),
+(138, 11, 50, 'Header Image', 0),
+(138, 12, 50, 'Header Image', 0);
 
 -- --------------------------------------------------------
 
@@ -2751,7 +2964,6 @@ INSERT INTO `collectionversionblockstyles` (`cID`, `cvID`, `bID`, `arHandle`, `c
 -- Table structure for table `collectionversionrelatededits`
 --
 
-DROP TABLE IF EXISTS `collectionversionrelatededits`;
 CREATE TABLE IF NOT EXISTS `collectionversionrelatededits` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `cvID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2766,7 +2978,6 @@ CREATE TABLE IF NOT EXISTS `collectionversionrelatededits` (
 -- Table structure for table `collectionversions`
 --
 
-DROP TABLE IF EXISTS `collectionversions`;
 CREATE TABLE IF NOT EXISTS `collectionversions` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `cvID` int(10) unsigned NOT NULL DEFAULT '1',
@@ -2793,7 +3004,11 @@ CREATE TABLE IF NOT EXISTS `collectionversions` (
 --
 
 INSERT INTO `collectionversions` (`cID`, `cvID`, `cvName`, `cvHandle`, `cvDescription`, `cvDatePublic`, `cvDateCreated`, `cvComments`, `cvIsApproved`, `cvIsNew`, `cvAuthorUID`, `cvApproverUID`, `ptID`, `ctID`, `cvActivateDatetime`) VALUES
-(1, 1, 'Home', 'home', '', '2013-06-22 10:54:13', '2013-06-22 10:54:13', 'Initial Version', 1, 0, 1, NULL, 5, 7, NULL),
+(1, 1, 'Home', 'home', '', '2013-06-22 10:54:13', '2013-06-22 10:54:13', 'Initial Version', 0, 0, 1, NULL, 5, 7, NULL),
+(1, 2, 'Home', 'home', '', '2013-06-22 10:54:13', '2013-06-22 14:25:41', 'New Version 2', 0, 0, 1, 1, 5, 8, NULL),
+(1, 3, 'Home', 'home', '', '2013-06-22 10:54:13', '2013-06-22 14:27:48', 'Version 3', 0, 0, 1, 1, 5, 8, NULL),
+(1, 4, 'Home', 'home', '', '2013-06-22 10:54:13', '2013-06-22 14:28:09', 'Version 4', 0, 0, 1, 1, 5, 8, NULL),
+(1, 5, 'CorinWilkins.co.uk', 'corinwilkinscouk', '', '2013-06-22 10:54:00', '2013-06-23 08:58:38', 'New Version 5', 1, 0, 1, 1, 5, 8, NULL),
 (2, 1, 'Dashboard', 'dashboard', '', '2013-06-22 10:54:16', '2013-06-22 10:54:16', 'Initial Version', 1, 0, 1, NULL, 5, 0, NULL),
 (3, 1, 'Composer', 'composer', 'Write for your site.', '2013-06-22 10:54:17', '2013-06-22 10:54:17', 'Initial Version', 1, 0, 1, NULL, 5, 0, NULL),
 (4, 1, 'Write', 'write', '', '2013-06-22 10:54:17', '2013-06-22 10:54:17', 'Initial Version', 1, 0, 1, NULL, 5, 0, NULL),
@@ -2939,21 +3154,37 @@ INSERT INTO `collectionversions` (`cID`, `cvID`, `cvName`, `cvHandle`, `cvDescri
 (138, 3, 'Work Piece 1', 'work-piece-1', 'This is the first piece of work we will look at', '2013-06-22 11:21:00', '2013-06-22 11:41:18', 'Version 3', 0, 0, 1, 1, 5, 9, NULL),
 (138, 4, 'Work 1:', 'work-piece-1', 'This is the first piece of work we will look at', '2013-06-22 11:21:00', '2013-06-22 12:52:41', 'New Version 4', 0, 0, 1, 1, 5, 9, NULL),
 (138, 5, 'Tracy Beaker:', 'work-piece-1', 'This is the first piece of work we will look at', '2013-06-22 11:21:00', '2013-06-22 12:53:30', 'New Version 5', 0, 0, 1, 1, 5, 9, NULL),
-(138, 6, 'Tracy Beaker', 'work-piece-1', 'This is the first piece of work we will look at', '2013-06-22 11:21:00', '2013-06-22 12:56:01', 'New Version 6', 1, 0, 1, 1, 5, 9, NULL),
+(138, 6, 'Tracy Beaker', 'work-piece-1', 'This is the first piece of work we will look at', '2013-06-22 11:21:00', '2013-06-22 12:56:01', 'New Version 6', 0, 0, 1, 1, 5, 9, NULL),
+(138, 7, 'Tracy Beaker', 'beakerizer', 'This is the first piece of work we will look at', '2013-06-22 11:21:00', '2013-06-22 14:34:21', 'New Version 7', 0, 0, 1, 1, 5, 9, NULL),
+(138, 8, 'Tracy Beaker', 'beakerizer', 'This is the first piece of work we will look at', '2013-06-22 11:21:00', '2013-06-22 14:34:33', 'New Version 8', 0, 0, 1, 1, 5, 9, NULL),
+(138, 9, 'Tracy Beaker', 'beakerizer', 'This is the first piece of work we will look at', '2013-06-22 11:21:00', '2013-06-23 08:50:09', 'New Version 9', 0, 0, 1, 1, 5, 9, NULL),
+(138, 10, 'Tracy Beaker', 'beakerizer', 'This is the first piece of work we will look at', '2013-06-22 11:21:00', '2013-06-23 08:58:56', 'New Version 10', 0, 0, 1, 1, 5, 9, NULL),
+(138, 11, 'Tracy Beaker', 'beakerizer', 'This is the first piece of work we will look at', '2013-06-22 11:21:00', '2013-06-23 08:59:55', 'Version 11', 1, 0, 1, 1, 5, 9, NULL),
+(138, 12, 'Tracy Beaker', 'beakerizer', 'This is the first piece of work we will look at', '2013-06-22 11:21:00', '2013-06-23 09:27:05', 'New Version 12', 0, 1, 1, NULL, 5, 9, NULL),
 (139, 1, 'Work Piece 2', 'work-piece-2', 'This is the second piece of work I will look at', '2013-06-22 11:22:00', '2013-06-22 11:22:16', 'Initial Version', 0, 0, 1, 1, 5, 9, NULL),
 (139, 2, 'Work Piece 2', 'work-piece-2', 'This is the second piece of work I will look at', '2013-06-22 11:22:00', '2013-06-22 11:38:14', 'New Version 2', 0, 0, 1, 1, 5, 9, NULL),
 (139, 3, 'Work 2:', 'work-piece-2', 'This is the second piece of work I will look at', '2013-06-22 11:22:00', '2013-06-22 12:52:50', 'New Version 3', 0, 0, 1, 1, 5, 9, NULL),
 (139, 4, 'BBC Bitesize:', 'work-piece-2', 'This is the second piece of work I will look at', '2013-06-22 11:22:00', '2013-06-22 12:54:06', 'New Version 4', 0, 0, 1, 1, 5, 9, NULL),
-(139, 5, 'BBC Bitesize', 'work-piece-2', 'This is the second piece of work I will look at', '2013-06-22 11:22:00', '2013-06-22 12:56:06', 'New Version 5', 1, 0, 1, 1, 5, 9, NULL),
-(140, 1, 'Gloopy Gloop', 'gloopy-gloop', 'Vector drawn meatballs in canvas', '2013-06-22 12:54:00', '2013-06-22 12:54:49', 'Initial Version', 1, 0, 1, 1, 5, 9, NULL),
+(139, 5, 'BBC Bitesize', 'work-piece-2', 'This is the second piece of work I will look at', '2013-06-22 11:22:00', '2013-06-22 12:56:06', 'New Version 5', 0, 0, 1, 1, 5, 9, NULL),
+(139, 6, 'BBC Bitesize', 'bitesize', 'This is the second piece of work I will look at', '2013-06-22 11:22:00', '2013-06-22 14:36:40', 'New Version 6', 0, 0, 1, 1, 5, 9, NULL),
+(139, 7, 'BBC Bitesize', 'bitesize', 'This is the second piece of work I will look at', '2013-06-22 11:22:00', '2013-06-22 14:36:45', 'New Version 7', 0, 0, 1, 1, 5, 9, NULL),
+(139, 8, 'BBC Bitesize', 'bitesize', 'This is the second piece of work I will look at', '2013-06-22 11:22:00', '2013-06-23 08:59:20', 'New Version 8', 1, 0, 1, 1, 5, 9, NULL),
+(140, 1, 'Gloopy Gloop', 'gloopy-gloop', 'Vector drawn meatballs in canvas', '2013-06-22 12:54:00', '2013-06-22 12:54:49', 'Initial Version', 0, 0, 1, 1, 5, 9, NULL),
+(140, 2, 'Gloopy Gloop', 'gloop', 'Vector drawn meatballs in canvas', '2013-06-22 12:54:00', '2013-06-22 14:36:58', 'New Version 2', 1, 0, 1, 1, 5, 9, NULL),
 (141, 1, 'My Face', 'my-face', 'Home made 3d face scanner made before Kinnect was cool', '2013-06-22 12:55:00', '2013-06-22 12:55:52', 'Initial Version', 0, 0, 1, 1, 5, 9, NULL),
-(141, 2, 'My Face', 'my-face', 'Home made 3d face scanner made before Kinnect was cool', '2013-06-22 12:55:00', '2013-06-22 12:57:17', 'New Version 2', 1, 0, 1, 1, 5, 9, NULL),
-(142, 1, 'Open University', 'open-university', 'Discover your design alter-ego', '2013-06-22 12:56:00', '2013-06-22 12:57:00', 'Initial Version', 1, 0, 1, 1, 5, 9, NULL),
-(143, 1, 'Kerve Creative', 'kerve-creative', '3d forced perspective cloud thing', '2013-06-22 12:57:00', '2013-06-22 12:58:08', 'Initial Version', 1, 0, 1, 1, 5, 9, NULL),
+(141, 2, 'My Face', 'my-face', 'Home made 3d face scanner made before Kinnect was cool', '2013-06-22 12:55:00', '2013-06-22 12:57:17', 'New Version 2', 0, 0, 1, 1, 5, 9, NULL),
+(141, 3, 'My Face', 'myface', 'Home made 3d face scanner made before Kinnect was cool', '2013-06-22 12:55:00', '2013-06-22 14:37:09', 'New Version 3', 1, 0, 1, 1, 5, 9, NULL),
+(142, 1, 'Open University', 'open-university', 'Discover your design alter-ego', '2013-06-22 12:56:00', '2013-06-22 12:57:00', 'Initial Version', 0, 0, 1, 1, 5, 9, NULL),
+(142, 2, 'Open University', 'ou', 'Discover your design alter-ego', '2013-06-22 12:56:00', '2013-06-22 14:37:20', 'New Version 2', 1, 0, 1, 1, 5, 9, NULL),
+(143, 1, 'Kerve Creative', 'kerve-creative', '3d forced perspective cloud thing', '2013-06-22 12:57:00', '2013-06-22 12:58:08', 'Initial Version', 0, 0, 1, 1, 5, 9, NULL),
+(143, 2, 'Kerve Creative', 'kerve', '3d forced perspective cloud thing', '2013-06-22 12:57:00', '2013-06-22 14:37:33', 'New Version 2', 1, 0, 1, 1, 5, 9, NULL),
 (144, 1, 'Martin Parr', 'martin-parr', 'In gallery voting touchscreen thing', '2013-06-22 12:58:00', '2013-06-22 12:59:08', 'Initial Version', 1, 0, 1, 1, 5, 9, NULL),
-(145, 1, 'Tree Chaving Challenge', 'tree-chaving-challenge', 'Wishing you a chavtastic christmas', '2013-06-22 12:59:00', '2013-06-22 12:59:44', 'Initial Version', 1, 0, 1, 1, 5, 9, NULL),
-(146, 1, 'WildScreen', 'wildscreen', 'Science to the rescue with a lot of jumping', '2013-06-22 12:59:00', '2013-06-22 13:00:28', 'Initial Version', 1, 0, 1, 1, 5, 9, NULL),
-(147, 1, 'Capture the Museum', 'capture-museum', 'Museum based team fun and shenanigans', '2013-06-22 13:00:00', '2013-06-22 13:01:19', 'Initial Version', 1, 0, 1, 1, 5, 9, NULL),
+(145, 1, 'Tree Chaving Challenge', 'tree-chaving-challenge', 'Wishing you a chavtastic christmas', '2013-06-22 12:59:00', '2013-06-22 12:59:44', 'Initial Version', 0, 0, 1, 1, 5, 9, NULL),
+(145, 2, 'Tree Chaving Challenge', 'tree-chavin-challenge', 'Wishing you a chavtastic christmas', '2013-06-22 12:59:00', '2013-06-22 14:37:54', 'New Version 2', 1, 0, 1, 1, 5, 9, NULL),
+(146, 1, 'WildScreen', 'wildscreen', 'Science to the rescue with a lot of jumping', '2013-06-22 12:59:00', '2013-06-22 13:00:28', 'Initial Version', 0, 0, 1, 1, 5, 9, NULL),
+(146, 2, 'WildScreen', 'team-wild', 'Science to the rescue with a lot of jumping', '2013-06-22 12:59:00', '2013-06-22 14:38:08', 'New Version 2', 1, 0, 1, 1, 5, 9, NULL),
+(147, 1, 'Capture the Museum', 'capture-museum', 'Museum based team fun and shenanigans', '2013-06-22 13:00:00', '2013-06-22 13:01:19', 'Initial Version', 0, 0, 1, 1, 5, 9, NULL),
+(147, 2, 'Capture the Museum', 'capture', 'Museum based team fun and shenanigans', '2013-06-22 13:00:00', '2013-06-22 14:38:18', 'New Version 2', 1, 0, 1, 1, 5, 9, NULL),
 (148, 1, 'ZOOM', 'zoom', 'Animal poses unlock archive', '2013-06-22 13:01:00', '2013-06-22 13:02:08', 'Initial Version', 1, 0, 1, 1, 5, 9, NULL);
 
 -- --------------------------------------------------------
@@ -2962,7 +3193,6 @@ INSERT INTO `collectionversions` (`cID`, `cvID`, `cvName`, `cvHandle`, `cvDescri
 -- Table structure for table `composercontentlayout`
 --
 
-DROP TABLE IF EXISTS `composercontentlayout`;
 CREATE TABLE IF NOT EXISTS `composercontentlayout` (
   `cclID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `bID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2989,7 +3219,6 @@ INSERT INTO `composercontentlayout` (`cclID`, `bID`, `akID`, `displayOrder`, `ct
 -- Table structure for table `composerdrafts`
 --
 
-DROP TABLE IF EXISTS `composerdrafts`;
 CREATE TABLE IF NOT EXISTS `composerdrafts` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `cpPublishParentID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3002,7 +3231,6 @@ CREATE TABLE IF NOT EXISTS `composerdrafts` (
 -- Table structure for table `composertypes`
 --
 
-DROP TABLE IF EXISTS `composertypes`;
 CREATE TABLE IF NOT EXISTS `composertypes` (
   `ctID` int(10) unsigned NOT NULL DEFAULT '0',
   `ctComposerPublishPageMethod` varchar(64) NOT NULL DEFAULT 'CHOOSE',
@@ -3024,7 +3252,6 @@ INSERT INTO `composertypes` (`ctID`, `ctComposerPublishPageMethod`, `ctComposerP
 -- Table structure for table `config`
 --
 
-DROP TABLE IF EXISTS `config`;
 CREATE TABLE IF NOT EXISTS `config` (
   `cfKey` varchar(64) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -3043,7 +3270,7 @@ INSERT INTO `config` (`cfKey`, `timestamp`, `cfValue`, `uID`, `pkgID`) VALUES
 ('ACCESS_ENTITY_UPDATED', '2013-06-22 09:54:38', '1371898478', 0, 0),
 ('ANTISPAM_LOG_SPAM', '2013-06-22 09:54:37', '1', 0, 0),
 ('APP_VERSION_LATEST', '2013-06-22 09:54:46', '5.6.1.2', 0, 0),
-('DO_PAGE_REINDEX_CHECK', '2013-06-22 12:09:54', '0', 0, 0),
+('DO_PAGE_REINDEX_CHECK', '2013-06-23 08:00:10', '0', 0, 0),
 ('ENABLE_BLOCK_CACHE', '2013-06-22 12:14:44', '0', 0, 0),
 ('ENABLE_LOG_EMAILS', '2013-06-22 09:54:37', '1', 0, 0),
 ('ENABLE_LOG_ERRORS', '2013-06-22 09:54:37', '1', 0, 0),
@@ -3065,7 +3292,6 @@ INSERT INTO `config` (`cfKey`, `timestamp`, `cfValue`, `uID`, `pkgID`) VALUES
 -- Table structure for table `customstylepresets`
 --
 
-DROP TABLE IF EXISTS `customstylepresets`;
 CREATE TABLE IF NOT EXISTS `customstylepresets` (
   `cspID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `cspName` varchar(255) NOT NULL,
@@ -3079,7 +3305,6 @@ CREATE TABLE IF NOT EXISTS `customstylepresets` (
 -- Table structure for table `customstylerules`
 --
 
-DROP TABLE IF EXISTS `customstylerules`;
 CREATE TABLE IF NOT EXISTS `customstylerules` (
   `csrID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `css_id` varchar(128) DEFAULT NULL,
@@ -3095,7 +3320,6 @@ CREATE TABLE IF NOT EXISTS `customstylerules` (
 -- Table structure for table `downloadstatistics`
 --
 
-DROP TABLE IF EXISTS `downloadstatistics`;
 CREATE TABLE IF NOT EXISTS `downloadstatistics` (
   `dsID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `fID` int(10) unsigned NOT NULL,
@@ -3112,7 +3336,6 @@ CREATE TABLE IF NOT EXISTS `downloadstatistics` (
 -- Table structure for table `fileattributevalues`
 --
 
-DROP TABLE IF EXISTS `fileattributevalues`;
 CREATE TABLE IF NOT EXISTS `fileattributevalues` (
   `fID` int(10) unsigned NOT NULL DEFAULT '0',
   `fvID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3171,7 +3394,6 @@ INSERT INTO `fileattributevalues` (`fID`, `fvID`, `akID`, `avID`) VALUES
 -- Table structure for table `filepermissionassignments`
 --
 
-DROP TABLE IF EXISTS `filepermissionassignments`;
 CREATE TABLE IF NOT EXISTS `filepermissionassignments` (
   `fID` int(10) unsigned NOT NULL DEFAULT '0',
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3185,7 +3407,6 @@ CREATE TABLE IF NOT EXISTS `filepermissionassignments` (
 -- Table structure for table `filepermissionfiletypes`
 --
 
-DROP TABLE IF EXISTS `filepermissionfiletypes`;
 CREATE TABLE IF NOT EXISTS `filepermissionfiletypes` (
   `fsID` int(10) unsigned NOT NULL DEFAULT '0',
   `gID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3200,7 +3421,6 @@ CREATE TABLE IF NOT EXISTS `filepermissionfiletypes` (
 -- Table structure for table `filepermissions`
 --
 
-DROP TABLE IF EXISTS `filepermissions`;
 CREATE TABLE IF NOT EXISTS `filepermissions` (
   `fID` int(10) unsigned NOT NULL DEFAULT '0',
   `gID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3218,7 +3438,6 @@ CREATE TABLE IF NOT EXISTS `filepermissions` (
 -- Table structure for table `files`
 --
 
-DROP TABLE IF EXISTS `files`;
 CREATE TABLE IF NOT EXISTS `files` (
   `fID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `fDateAdded` datetime DEFAULT NULL,
@@ -3262,7 +3481,6 @@ INSERT INTO `files` (`fID`, `fDateAdded`, `uID`, `fslID`, `ocID`, `fOverrideSetP
 -- Table structure for table `filesearchindexattributes`
 --
 
-DROP TABLE IF EXISTS `filesearchindexattributes`;
 CREATE TABLE IF NOT EXISTS `filesearchindexattributes` (
   `fID` int(11) unsigned NOT NULL DEFAULT '0',
   `ak_width` decimal(14,4) DEFAULT '0.0000',
@@ -3301,7 +3519,6 @@ INSERT INTO `filesearchindexattributes` (`fID`, `ak_width`, `ak_height`) VALUES
 -- Table structure for table `filesetfiles`
 --
 
-DROP TABLE IF EXISTS `filesetfiles`;
 CREATE TABLE IF NOT EXISTS `filesetfiles` (
   `fsfID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `fID` int(10) unsigned NOT NULL,
@@ -3319,7 +3536,6 @@ CREATE TABLE IF NOT EXISTS `filesetfiles` (
 -- Table structure for table `filesetpermissionassignments`
 --
 
-DROP TABLE IF EXISTS `filesetpermissionassignments`;
 CREATE TABLE IF NOT EXISTS `filesetpermissionassignments` (
   `fsID` int(10) unsigned NOT NULL DEFAULT '0',
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3348,7 +3564,6 @@ INSERT INTO `filesetpermissionassignments` (`fsID`, `paID`, `pkID`) VALUES
 -- Table structure for table `filesetpermissionfiletypeaccesslist`
 --
 
-DROP TABLE IF EXISTS `filesetpermissionfiletypeaccesslist`;
 CREATE TABLE IF NOT EXISTS `filesetpermissionfiletypeaccesslist` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3362,7 +3577,6 @@ CREATE TABLE IF NOT EXISTS `filesetpermissionfiletypeaccesslist` (
 -- Table structure for table `filesetpermissionfiletypeaccesslistcustom`
 --
 
-DROP TABLE IF EXISTS `filesetpermissionfiletypeaccesslistcustom`;
 CREATE TABLE IF NOT EXISTS `filesetpermissionfiletypeaccesslistcustom` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3376,7 +3590,6 @@ CREATE TABLE IF NOT EXISTS `filesetpermissionfiletypeaccesslistcustom` (
 -- Table structure for table `filesets`
 --
 
-DROP TABLE IF EXISTS `filesets`;
 CREATE TABLE IF NOT EXISTS `filesets` (
   `fsID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `fsName` varchar(64) NOT NULL,
@@ -3393,7 +3606,6 @@ CREATE TABLE IF NOT EXISTS `filesets` (
 -- Table structure for table `filesetsavedsearches`
 --
 
-DROP TABLE IF EXISTS `filesetsavedsearches`;
 CREATE TABLE IF NOT EXISTS `filesetsavedsearches` (
   `fsID` int(10) unsigned NOT NULL DEFAULT '0',
   `fsSearchRequest` text,
@@ -3407,7 +3619,6 @@ CREATE TABLE IF NOT EXISTS `filesetsavedsearches` (
 -- Table structure for table `filestoragelocations`
 --
 
-DROP TABLE IF EXISTS `filestoragelocations`;
 CREATE TABLE IF NOT EXISTS `filestoragelocations` (
   `fslID` int(10) unsigned NOT NULL DEFAULT '0',
   `fslName` varchar(255) NOT NULL,
@@ -3421,7 +3632,6 @@ CREATE TABLE IF NOT EXISTS `filestoragelocations` (
 -- Table structure for table `fileversionlog`
 --
 
-DROP TABLE IF EXISTS `fileversionlog`;
 CREATE TABLE IF NOT EXISTS `fileversionlog` (
   `fvlID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `fID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3481,7 +3691,6 @@ INSERT INTO `fileversionlog` (`fvlID`, `fID`, `fvID`, `fvUpdateTypeID`, `fvUpdat
 -- Table structure for table `fileversions`
 --
 
-DROP TABLE IF EXISTS `fileversions`;
 CREATE TABLE IF NOT EXISTS `fileversions` (
   `fID` int(10) unsigned NOT NULL DEFAULT '0',
   `fvID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3538,7 +3747,6 @@ INSERT INTO `fileversions` (`fID`, `fvID`, `fvFilename`, `fvPrefix`, `fvGenericT
 -- Table structure for table `groups`
 --
 
-DROP TABLE IF EXISTS `groups`;
 CREATE TABLE IF NOT EXISTS `groups` (
   `gID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `gName` varchar(128) NOT NULL,
@@ -3567,7 +3775,6 @@ INSERT INTO `groups` (`gID`, `gName`, `gDescription`, `gUserExpirationIsEnabled`
 -- Table structure for table `groupsetgroups`
 --
 
-DROP TABLE IF EXISTS `groupsetgroups`;
 CREATE TABLE IF NOT EXISTS `groupsetgroups` (
   `gID` int(10) unsigned NOT NULL DEFAULT '0',
   `gsID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3580,7 +3787,6 @@ CREATE TABLE IF NOT EXISTS `groupsetgroups` (
 -- Table structure for table `groupsets`
 --
 
-DROP TABLE IF EXISTS `groupsets`;
 CREATE TABLE IF NOT EXISTS `groupsets` (
   `gsID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `gsName` varchar(255) DEFAULT NULL,
@@ -3594,7 +3800,6 @@ CREATE TABLE IF NOT EXISTS `groupsets` (
 -- Table structure for table `jobs`
 --
 
-DROP TABLE IF EXISTS `jobs`;
 CREATE TABLE IF NOT EXISTS `jobs` (
   `jID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `jName` varchar(100) NOT NULL,
@@ -3626,7 +3831,6 @@ INSERT INTO `jobs` (`jID`, `jName`, `jDescription`, `jDateInstalled`, `jDateLast
 -- Table structure for table `jobslog`
 --
 
-DROP TABLE IF EXISTS `jobslog`;
 CREATE TABLE IF NOT EXISTS `jobslog` (
   `jlID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `jID` int(10) unsigned NOT NULL,
@@ -3642,7 +3846,6 @@ CREATE TABLE IF NOT EXISTS `jobslog` (
 -- Table structure for table `layoutpresets`
 --
 
-DROP TABLE IF EXISTS `layoutpresets`;
 CREATE TABLE IF NOT EXISTS `layoutpresets` (
   `lpID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `lpName` varchar(128) NOT NULL,
@@ -3657,7 +3860,6 @@ CREATE TABLE IF NOT EXISTS `layoutpresets` (
 -- Table structure for table `layouts`
 --
 
-DROP TABLE IF EXISTS `layouts`;
 CREATE TABLE IF NOT EXISTS `layouts` (
   `layoutID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `layout_rows` int(5) NOT NULL DEFAULT '3',
@@ -3674,7 +3876,6 @@ CREATE TABLE IF NOT EXISTS `layouts` (
 -- Table structure for table `logs`
 --
 
-DROP TABLE IF EXISTS `logs`;
 CREATE TABLE IF NOT EXISTS `logs` (
   `logID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `logType` varchar(64) NOT NULL,
@@ -3693,7 +3894,6 @@ CREATE TABLE IF NOT EXISTS `logs` (
 -- Table structure for table `mailimporters`
 --
 
-DROP TABLE IF EXISTS `mailimporters`;
 CREATE TABLE IF NOT EXISTS `mailimporters` (
   `miID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `miHandle` varchar(64) NOT NULL,
@@ -3722,7 +3922,6 @@ INSERT INTO `mailimporters` (`miID`, `miHandle`, `miServer`, `miUsername`, `miPa
 -- Table structure for table `mailvalidationhashes`
 --
 
-DROP TABLE IF EXISTS `mailvalidationhashes`;
 CREATE TABLE IF NOT EXISTS `mailvalidationhashes` (
   `mvhID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `miID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3740,7 +3939,6 @@ CREATE TABLE IF NOT EXISTS `mailvalidationhashes` (
 -- Table structure for table `packages`
 --
 
-DROP TABLE IF EXISTS `packages`;
 CREATE TABLE IF NOT EXISTS `packages` (
   `pkgID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pkgName` varchar(255) NOT NULL,
@@ -3760,7 +3958,6 @@ CREATE TABLE IF NOT EXISTS `packages` (
 -- Table structure for table `pagepaths`
 --
 
-DROP TABLE IF EXISTS `pagepaths`;
 CREATE TABLE IF NOT EXISTS `pagepaths` (
   `ppID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `cID` int(10) unsigned DEFAULT '0',
@@ -3769,7 +3966,7 @@ CREATE TABLE IF NOT EXISTS `pagepaths` (
   PRIMARY KEY (`ppID`),
   KEY `cID` (`cID`),
   KEY `ppIsCanonical` (`ppIsCanonical`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=182 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=215 ;
 
 --
 -- Dumping data for table `pagepaths`
@@ -3895,25 +4092,25 @@ INSERT INTO `pagepaths` (`ppID`, `cID`, `cPath`, `ppIsCanonical`) VALUES
 (117, 121, '/!stacks/header-nav', '1'),
 (118, 122, '/!stacks/side-nav', '1'),
 (119, 123, '/!stacks/site-name', '1'),
-(120, 128, '/about', '1'),
-(122, 130, '/search', '1'),
-(123, 131, '/about/contact-us', '1'),
-(124, 132, '/about/guestbook', '1'),
 (139, 129, '/!trash/blog', '1'),
 (140, 133, '/!trash/blog/blog-archives', '1'),
 (141, 134, '/!trash/blog/hello-world', '1'),
-(170, 136, '/work', '1'),
-(171, 138, '/work/work-piece-1', '1'),
-(172, 139, '/work/work-piece-2', '1'),
-(173, 140, '/work/gloopy-gloop', '1'),
-(174, 141, '/work/my-face', '1'),
-(175, 142, '/work/open-university', '1'),
-(176, 143, '/work/kerve-creative', '1'),
-(177, 144, '/work/martin-parr', '1'),
-(178, 145, '/work/tree-chaving-challenge', '1'),
-(179, 146, '/work/wildscreen', '1'),
-(180, 147, '/work/capture-museum', '1'),
-(181, 148, '/work/zoom', '1');
+(188, 144, '/martin-parr', '1'),
+(192, 148, '/zoom', '1'),
+(193, 136, '/!trash/work', '1'),
+(194, 128, '/!trash/about', '1'),
+(195, 131, '/!trash/about/contact-us', '1'),
+(196, 132, '/!trash/about/guestbook', '1'),
+(197, 130, '/!trash/search', '1'),
+(204, 140, '/gloop', '1'),
+(205, 141, '/myface', '1'),
+(206, 142, '/ou', '1'),
+(207, 143, '/kerve', '1'),
+(208, 145, '/tree-chavin-challenge', '1'),
+(209, 146, '/team-wild', '1'),
+(210, 147, '/capture', '1'),
+(213, 139, '/bitesize', '1'),
+(214, 138, '/beakerizer', '1');
 
 -- --------------------------------------------------------
 
@@ -3921,7 +4118,6 @@ INSERT INTO `pagepaths` (`ppID`, `cID`, `cPath`, `ppIsCanonical`) VALUES
 -- Table structure for table `pagepermissionassignments`
 --
 
-DROP TABLE IF EXISTS `pagepermissionassignments`;
 CREATE TABLE IF NOT EXISTS `pagepermissionassignments` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `pkID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3974,7 +4170,6 @@ INSERT INTO `pagepermissionassignments` (`cID`, `pkID`, `paID`) VALUES
 -- Table structure for table `pagepermissionpagetypeaccesslist`
 --
 
-DROP TABLE IF EXISTS `pagepermissionpagetypeaccesslist`;
 CREATE TABLE IF NOT EXISTS `pagepermissionpagetypeaccesslist` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3989,7 +4184,6 @@ CREATE TABLE IF NOT EXISTS `pagepermissionpagetypeaccesslist` (
 -- Table structure for table `pagepermissionpagetypeaccesslistcustom`
 --
 
-DROP TABLE IF EXISTS `pagepermissionpagetypeaccesslistcustom`;
 CREATE TABLE IF NOT EXISTS `pagepermissionpagetypeaccesslistcustom` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -4003,7 +4197,6 @@ CREATE TABLE IF NOT EXISTS `pagepermissionpagetypeaccesslistcustom` (
 -- Table structure for table `pagepermissionpropertyaccesslist`
 --
 
-DROP TABLE IF EXISTS `pagepermissionpropertyaccesslist`;
 CREATE TABLE IF NOT EXISTS `pagepermissionpropertyaccesslist` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -4022,7 +4215,6 @@ CREATE TABLE IF NOT EXISTS `pagepermissionpropertyaccesslist` (
 -- Table structure for table `pagepermissionpropertyattributeaccesslistcustom`
 --
 
-DROP TABLE IF EXISTS `pagepermissionpropertyattributeaccesslistcustom`;
 CREATE TABLE IF NOT EXISTS `pagepermissionpropertyattributeaccesslistcustom` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -4036,7 +4228,6 @@ CREATE TABLE IF NOT EXISTS `pagepermissionpropertyattributeaccesslistcustom` (
 -- Table structure for table `pagepermissionthemeaccesslist`
 --
 
-DROP TABLE IF EXISTS `pagepermissionthemeaccesslist`;
 CREATE TABLE IF NOT EXISTS `pagepermissionthemeaccesslist` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -4050,7 +4241,6 @@ CREATE TABLE IF NOT EXISTS `pagepermissionthemeaccesslist` (
 -- Table structure for table `pagepermissionthemeaccesslistcustom`
 --
 
-DROP TABLE IF EXISTS `pagepermissionthemeaccesslistcustom`;
 CREATE TABLE IF NOT EXISTS `pagepermissionthemeaccesslistcustom` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -4064,7 +4254,6 @@ CREATE TABLE IF NOT EXISTS `pagepermissionthemeaccesslistcustom` (
 -- Table structure for table `pages`
 --
 
-DROP TABLE IF EXISTS `pages`;
 CREATE TABLE IF NOT EXISTS `pages` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `cIsTemplate` int(1) unsigned NOT NULL DEFAULT '0',
@@ -4104,7 +4293,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
 --
 
 INSERT INTO `pages` (`cID`, `cIsTemplate`, `uID`, `cIsCheckedOut`, `cCheckedOutUID`, `cCheckedOutDatetime`, `cCheckedOutDatetimeLastEdit`, `cOverrideTemplatePermissions`, `cInheritPermissionsFromCID`, `cInheritPermissionsFrom`, `cFilename`, `cPointerID`, `cPointerExternalLink`, `cPointerExternalLinkNewWindow`, `cIsActive`, `cChildren`, `cDisplayOrder`, `cParentID`, `pkgID`, `cCacheFullPageContent`, `cCacheFullPageContentOverrideLifetime`, `cCacheFullPageContentLifetimeCustom`, `cIsSystemPage`) VALUES
-(1, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'OVERRIDE', NULL, 0, NULL, 0, 1, 14, 0, 0, 0, -1, '0', 0, 0),
+(1, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'OVERRIDE', NULL, 0, NULL, 0, 1, 22, 0, 0, 0, -1, '0', 0, 0),
 (2, 0, 1, 0, NULL, NULL, NULL, 1, 2, 'OVERRIDE', '/dashboard/view.php', 0, NULL, 0, 1, 13, 0, 0, 0, -1, '0', 0, 1),
 (3, 0, 1, 0, NULL, NULL, NULL, 1, 2, 'PARENT', '/dashboard/composer/view.php', 0, NULL, 0, 1, 2, 0, 2, 0, -1, '0', 0, 1),
 (4, 0, 1, 0, NULL, NULL, NULL, 1, 2, 'PARENT', '/dashboard/composer/write.php', 0, NULL, 0, 1, 0, 0, 3, 0, -1, '0', 0, 1),
@@ -4211,7 +4400,7 @@ INSERT INTO `pages` (`cID`, `cIsTemplate`, `uID`, `cIsCheckedOut`, `cCheckedOutU
 (105, 0, 1, 0, NULL, NULL, NULL, 1, 2, 'PARENT', NULL, 0, NULL, 0, 1, 0, 11, 2, 0, -1, '0', 0, 1),
 (106, 0, 1, 0, NULL, NULL, NULL, 1, 2, 'PARENT', NULL, 0, NULL, 0, 1, 0, 12, 2, 0, -1, '0', 0, 1),
 (107, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', '/!drafts/view.php', 0, NULL, 0, 1, 0, 0, 0, 0, -1, '0', 0, 1),
-(108, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', '/!trash/view.php', 0, NULL, 0, 1, 1, 0, 0, 0, -1, '0', 0, 1),
+(108, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', '/!trash/view.php', 0, NULL, 0, 1, 4, 0, 0, 0, -1, '0', 0, 1),
 (109, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', '/!stacks/view.php', 0, NULL, 0, 1, 3, 0, 0, 0, -1, '0', 0, 1),
 (110, 0, 1, 0, NULL, NULL, NULL, 1, 110, 'OVERRIDE', '/login.php', 0, NULL, 0, 1, 0, 0, 0, 0, -1, '0', 0, 1),
 (111, 0, 1, 0, NULL, NULL, NULL, 1, 111, 'OVERRIDE', '/register.php', 0, NULL, 0, 1, 0, 0, 0, 0, -1, '0', 0, 1),
@@ -4222,8 +4411,8 @@ INSERT INTO `pages` (`cID`, `cIsTemplate`, `uID`, `cIsCheckedOut`, `cCheckedOutU
 (116, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', '/profile/friends.php', 0, NULL, 0, 1, 0, 3, 112, 0, -1, '0', 0, 1),
 (117, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', '/page_not_found.php', 0, NULL, 0, 1, 0, 1, 0, 0, -1, '0', 0, 1),
 (118, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', '/page_forbidden.php', 0, NULL, 0, 1, 0, 1, 0, 0, -1, '0', 0, 1),
-(119, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', '/download_file.php', 0, NULL, 0, 1, 0, 1, 1, 0, -1, '0', 0, 1),
-(120, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', '/members.php', 0, NULL, 0, 1, 0, 2, 1, 0, -1, '0', 0, 1),
+(119, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', '/download_file.php', 0, NULL, 0, 1, 0, 2, 1, 0, -1, '0', 0, 1),
+(120, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', '/members.php', 0, NULL, 0, 1, 0, 4, 1, 0, -1, '0', 0, 1),
 (121, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 0, 109, 0, -1, '0', 0, 1),
 (122, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 1, 109, 0, -1, '0', 0, 1),
 (123, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 2, 109, 0, -1, '0', 0, 1),
@@ -4231,27 +4420,27 @@ INSERT INTO `pages` (`cID`, `cIsTemplate`, `uID`, `cIsCheckedOut`, `cCheckedOutU
 (125, 1, NULL, 0, NULL, NULL, NULL, 1, 0, 'PARENT', NULL, 0, NULL, 0, 1, 0, 0, 0, 0, -1, '0', 0, 0),
 (126, 1, NULL, 0, NULL, NULL, NULL, 1, 0, 'PARENT', NULL, 0, NULL, 0, 1, 0, 0, 0, 0, -1, '0', 0, 0),
 (127, 1, NULL, 0, NULL, NULL, NULL, 1, 0, 'PARENT', NULL, 0, NULL, 0, 1, 0, 0, 0, 0, -1, '0', 0, 0),
-(128, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 2, 3, 1, 0, -1, '0', 0, 0),
+(128, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 0, 2, 2, 108, 0, -1, '0', 0, 1),
 (129, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 0, 2, 0, 108, 0, -1, '0', 0, 1),
-(130, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 5, 1, 0, -1, '0', 0, 0),
-(131, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 0, 128, 0, -1, '0', 0, 0),
-(132, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 1, 128, 0, -1, '0', 0, 0),
+(130, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 0, 0, 3, 108, 0, -1, '0', 0, 1),
+(131, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 0, 128, 0, -1, '0', 0, 1),
+(132, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 1, 128, 0, -1, '0', 0, 1),
 (133, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 0, 129, 0, -1, '0', 0, 1),
 (134, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 1, 129, 0, -1, '0', 0, 1),
 (135, 1, NULL, 0, NULL, NULL, NULL, 1, 0, 'PARENT', NULL, 0, NULL, 0, 1, 0, 0, 0, 0, -1, '0', 0, 0),
-(136, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 11, 6, 1, 0, -1, '0', 0, 0),
+(136, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 0, 0, 1, 108, 0, -1, '0', 0, 1),
 (137, 1, NULL, 0, NULL, NULL, NULL, 1, 0, 'PARENT', NULL, 0, NULL, 0, 1, 0, 0, 0, 0, -1, '0', 0, 0),
-(138, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 0, 136, 0, -1, '0', 0, 0),
-(139, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 1, 136, 0, -1, '0', 0, 0),
-(140, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 2, 136, 0, -1, '0', 0, 0),
-(141, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 3, 136, 0, -1, '0', 0, 0),
-(142, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 4, 136, 0, -1, '0', 0, 0),
-(143, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 5, 136, 0, -1, '0', 0, 0),
-(144, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 6, 136, 0, -1, '0', 0, 0),
-(145, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 7, 136, 0, -1, '0', 0, 0),
-(146, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 8, 136, 0, -1, '0', 0, 0),
-(147, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 9, 136, 0, -1, '0', 0, 0),
-(148, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 10, 136, 0, -1, '0', 0, 0);
+(138, 0, 1, 1, 1, '2013-06-23 09:27:01', '2013-06-23 09:27:05', 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 6, 1, 0, -1, '0', 0, 0),
+(139, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 7, 1, 0, -1, '0', 0, 0),
+(140, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 8, 1, 0, -1, '0', 0, 0),
+(141, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 9, 1, 0, -1, '0', 0, 0),
+(142, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 10, 1, 0, -1, '0', 0, 0),
+(143, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 11, 1, 0, -1, '0', 0, 0),
+(144, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 12, 1, 0, -1, '0', 0, 0),
+(145, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 13, 1, 0, -1, '0', 0, 0),
+(146, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 14, 1, 0, -1, '0', 0, 0),
+(147, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 15, 1, 0, -1, '0', 0, 0),
+(148, 0, 1, 0, NULL, NULL, NULL, 1, 1, 'PARENT', NULL, 0, NULL, 0, 1, 0, 16, 1, 0, -1, '0', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -4259,7 +4448,6 @@ INSERT INTO `pages` (`cID`, `cIsTemplate`, `uID`, `cIsCheckedOut`, `cCheckedOutU
 -- Table structure for table `pagesearchindex`
 --
 
-DROP TABLE IF EXISTS `pagesearchindex`;
 CREATE TABLE IF NOT EXISTS `pagesearchindex` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `content` text,
@@ -4373,7 +4561,7 @@ INSERT INTO `pagesearchindex` (`cID`, `content`, `cName`, `cDescription`, `cPath
 (100, '', 'Database XML', '', '/dashboard/system/backup_restore/database', '2013-06-22 10:54:29', '2013-06-22 10:54:35', NULL, 0),
 (106, '	Welcome to concrete5.\n						It''s easy to edit content and add pages using in-context editing. \n						 \n							Building Your Own Site\n							 Editing with concrete5 is a breeze. Just point and click to make changes. \n							 \n							 Editor''s Guide \n							  \n							Developing Applications\n							 If you’re comfortable in PHP concrete5 should be a breeze to learn. Take a few moments to understand the architecture. \n							 Developer''s Guide \n							  \n							Designing Websites\n							 Good with CSS and HTML? You can easily theme anything with concrete5. \n							 \n							 Designer''s Guide \n							  \n						\n						Business Background\n						 Worried about license structures, white-labeling or why concrete5 is a good choice for your agency? \n						 Executive''s Guide \n						  ', 'Welcome to concrete5', 'Learn about how to use concrete5, how to develop for concrete5, and get general help.', '/dashboard/welcome', '2013-06-22 10:54:30', '2013-06-22 10:54:35', NULL, 0),
 (105, '', 'Customize Dashboard Home', '', '/dashboard/home', '2013-06-22 10:54:30', '2013-06-22 10:54:36', NULL, 0),
-(1, 'Sidebar  Everything about concrete5 is completely customizable through the CMS. This is a separate area from the main content on the homepage. You can&nbsp;drag and drop blocks&nbsp;like this around your layout.  Welcome to concrete5!\n                                         Content Management is easy with concrete5''s in-context editing. Just login and you can change things as you browse your site. \n                                         You can watch videos and learn how to: \n                                        \n                                        Edit&nbsp;this page.\n                                        Add a new page.\n                                        Add some basic functionality, like&nbsp;a Form.\n                                        Finding &amp; adding&nbsp;more functionality and themes.\n                                        \n                                         We''ve taken the liberty to build out the rest of this site with some sample content that will help you learn concrete5. Wander around a bit, or click Dashboard to get to the&nbsp;Sitemap and quickly delete the parts you don''t want.  ', 'Home', '', NULL, '2013-06-22 10:54:13', '2013-06-22 10:54:42', NULL, 0),
+(1, 'Sidebar  Everything about concrete5 is completely customizable through the CMS. This is a separate area from the main content on the homepage. You can&nbsp;drag and drop blocks&nbsp;like this around your layout.  ', 'CorinWilkins.co.uk', '', NULL, '2013-06-22 10:54:00', '2013-06-23 08:59:26', NULL, 0),
 (128, 'Learn More\n																 Visit&nbsp;concrete5.org&nbsp;to learn more from the&nbsp;community&nbsp;and the&nbsp;documentation. You can also browse our&nbsp;marketplace&nbsp;for more&nbsp;add-ons&nbsp;and&nbsp;themes&nbsp;to quickly build the site you really need.&nbsp; \n																&nbsp;\n																Getting Help\n																 You can get free help in the forums and post for free to the&nbsp;jobs board.&nbsp; \n																 You can also pay the concrete5 team of developers to help with&nbsp;any problem&nbsp;you run into. We offer training courses&nbsp;and&nbsp;hosting packages, just let us know how we can help.  ', 'About', '', '/about', '2013-06-22 10:54:40', '2013-06-22 10:54:42', NULL, 0),
 (132, '', 'Guestbook', '', '/about/guestbook', '2013-06-22 10:54:40', '2013-06-22 10:54:42', NULL, 0),
 (131, 'Contact Us\n									 Building a form is easy to do. Learn how to add a form block.  ', 'Contact Us', '', '/about/contact-us', '2013-06-22 10:54:40', '2013-06-22 10:54:43', NULL, 0),
@@ -4382,16 +4570,16 @@ INSERT INTO `pagesearchindex` (`cID`, `content`, `cName`, `cDescription`, `cPath
 (134, ' Here is some sample content! I''m writing it using composer!  ', 'Hello World', 'This is my first blog post!', '/blog/hello-world', '2013-06-22 10:54:40', '2013-06-22 10:54:44', NULL, 0),
 (133, '', 'Blog Archives', '', '/blog/blog-archives', '2013-06-22 10:54:40', '2013-06-22 10:54:45', NULL, 0),
 (136, '', 'Work', '', '/work', '2013-06-22 11:19:00', '2013-06-22 13:09:54', NULL, 0),
-(138, '', 'Tracy Beaker', 'This is the first piece of work we will look at', '/work/work-piece-1', '2013-06-22 11:21:00', '2013-06-22 12:57:01', NULL, 0),
-(139, '', 'BBC Bitesize', 'This is the second piece of work I will look at', '/work/work-piece-2', '2013-06-22 11:22:00', '2013-06-22 12:57:01', NULL, 0),
-(140, '', 'Gloopy Gloop', 'Vector drawn meatballs in canvas', '/work/gloopy-gloop', '2013-06-22 12:54:00', '2013-06-22 12:54:49', NULL, 0),
-(141, '', 'My Face', 'Home made 3d face scanner made before Kinnect was cool', '/work/my-face', '2013-06-22 12:55:00', '2013-06-22 12:58:09', NULL, 0),
-(143, '', 'Kerve Creative', '3d forced perspective cloud thing', '/work/kerve-creative', '2013-06-22 12:57:00', '2013-06-22 12:58:09', NULL, 0),
-(142, '', 'Open University', 'Discover your design alter-ego', '/work/open-university', '2013-06-22 12:56:00', '2013-06-22 12:57:01', NULL, 0),
+(138, '', 'Tracy Beaker', 'This is the first piece of work we will look at', '/beakerizer', '2013-06-22 11:21:00', '2013-06-23 09:00:10', NULL, 0),
+(139, '', 'BBC Bitesize', 'This is the second piece of work I will look at', '/bitesize', '2013-06-22 11:22:00', '2013-06-23 08:59:26', NULL, 0),
+(140, '', 'Gloopy Gloop', 'Vector drawn meatballs in canvas', '/gloop', '2013-06-22 12:54:00', '2013-06-22 14:38:28', NULL, 0),
+(141, '', 'My Face', 'Home made 3d face scanner made before Kinnect was cool', '/myface', '2013-06-22 12:55:00', '2013-06-22 14:38:28', NULL, 0),
+(143, '', 'Kerve Creative', '3d forced perspective cloud thing', '/kerve', '2013-06-22 12:57:00', '2013-06-22 14:38:28', NULL, 0),
+(142, '', 'Open University', 'Discover your design alter-ego', '/ou', '2013-06-22 12:56:00', '2013-06-22 14:38:28', NULL, 0),
 (144, '', 'Martin Parr', 'In gallery voting touchscreen thing', '/work/martin-parr', '2013-06-22 12:58:00', '2013-06-22 12:59:09', NULL, 0),
-(145, '', 'Tree Chaving Challenge', 'Wishing you a chavtastic christmas', '/work/tree-chaving-challenge', '2013-06-22 12:59:00', '2013-06-22 12:59:45', NULL, 0),
-(146, '', 'WildScreen', 'Science to the rescue with a lot of jumping', '/work/wildscreen', '2013-06-22 12:59:00', '2013-06-22 13:00:29', NULL, 0),
-(147, '', 'Capture the Museum', 'Museum based team fun and shenanigans', '/work/capture-museum', '2013-06-22 13:00:00', '2013-06-22 13:01:20', NULL, 0),
+(145, '', 'Tree Chaving Challenge', 'Wishing you a chavtastic christmas', '/tree-chavin-challenge', '2013-06-22 12:59:00', '2013-06-22 14:38:28', NULL, 0),
+(146, '', 'WildScreen', 'Science to the rescue with a lot of jumping', '/team-wild', '2013-06-22 12:59:00', '2013-06-22 14:38:28', NULL, 0),
+(147, '', 'Capture the Museum', 'Museum based team fun and shenanigans', '/capture', '2013-06-22 13:00:00', '2013-06-22 14:38:28', NULL, 0),
 (148, '', 'ZOOM', 'Animal poses unlock archive', '/work/zoom', '2013-06-22 13:01:00', '2013-06-22 13:02:09', NULL, 0);
 
 -- --------------------------------------------------------
@@ -4400,7 +4588,6 @@ INSERT INTO `pagesearchindex` (`cID`, `content`, `cName`, `cDescription`, `cPath
 -- Table structure for table `pagestatistics`
 --
 
-DROP TABLE IF EXISTS `pagestatistics`;
 CREATE TABLE IF NOT EXISTS `pagestatistics` (
   `pstID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -4411,7 +4598,7 @@ CREATE TABLE IF NOT EXISTS `pagestatistics` (
   KEY `cID` (`cID`),
   KEY `date` (`date`),
   KEY `uID` (`uID`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=220 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=346 ;
 
 --
 -- Dumping data for table `pagestatistics`
@@ -4636,7 +4823,133 @@ INSERT INTO `pagestatistics` (`pstID`, `cID`, `date`, `timestamp`, `uID`) VALUES
 (216, 138, '2013-06-22', '2013-06-22 13:43:25', 1),
 (217, 2, '2013-06-22', '2013-06-22 13:43:27', 1),
 (218, 1, '2013-06-22', '2013-06-22 13:43:30', 1),
-(219, 136, '2013-06-22', '2013-06-22 13:43:33', 1);
+(219, 136, '2013-06-22', '2013-06-22 13:43:33', 1),
+(220, 7, '2013-06-22', '2013-06-22 14:25:05', 1),
+(221, 1, '2013-06-22', '2013-06-22 14:27:21', 1),
+(222, 1, '2013-06-22', '2013-06-22 14:27:27', 1),
+(223, 1, '2013-06-22', '2013-06-22 14:27:51', 1),
+(224, 1, '2013-06-22', '2013-06-22 14:28:06', 1),
+(225, 1, '2013-06-22', '2013-06-22 14:28:12', 1),
+(226, 1, '2013-06-22', '2013-06-22 14:29:19', 1),
+(227, 1, '2013-06-22', '2013-06-22 14:29:50', 1),
+(228, 138, '2013-06-22', '2013-06-22 14:30:02', 1),
+(229, 1, '2013-06-22', '2013-06-22 14:30:07', 1),
+(230, 1, '2013-06-22', '2013-06-22 14:34:37', 1),
+(231, 1, '2013-06-22', '2013-06-22 14:38:28', 1),
+(232, 1, '2013-06-22', '2013-06-22 14:43:24', 1),
+(233, 1, '2013-06-22', '2013-06-22 14:44:23', 1),
+(234, 1, '2013-06-22', '2013-06-22 14:44:52', 1),
+(235, 1, '2013-06-22', '2013-06-22 14:46:00', 1),
+(236, 1, '2013-06-22', '2013-06-22 14:46:17', 1),
+(237, 1, '2013-06-22', '2013-06-22 14:46:20', 1),
+(238, 1, '2013-06-22', '2013-06-22 14:46:22', 1),
+(239, 1, '2013-06-22', '2013-06-22 14:46:37', 1),
+(240, 1, '2013-06-22', '2013-06-22 14:47:17', 1),
+(241, 1, '2013-06-22', '2013-06-22 14:47:18', 1),
+(242, 1, '2013-06-22', '2013-06-22 14:47:19', 1),
+(243, 1, '2013-06-22', '2013-06-22 14:47:22', 1),
+(244, 1, '2013-06-22', '2013-06-22 14:47:23', 1),
+(245, 1, '2013-06-22', '2013-06-22 14:48:10', 1),
+(246, 110, '2013-06-22', '2013-06-22 14:48:33', 1),
+(247, 1, '2013-06-22', '2013-06-22 14:48:33', 0),
+(248, 1, '2013-06-22', '2013-06-22 14:54:57', 0),
+(249, 1, '2013-06-22', '2013-06-22 14:54:58', 0),
+(250, 1, '2013-06-22', '2013-06-22 14:54:59', 0),
+(251, 1, '2013-06-22', '2013-06-22 14:55:00', 0),
+(252, 1, '2013-06-22', '2013-06-22 14:55:00', 0),
+(253, 1, '2013-06-22', '2013-06-22 14:55:00', 0),
+(254, 1, '2013-06-22', '2013-06-22 14:55:01', 0),
+(255, 138, '2013-06-22', '2013-06-22 14:56:03', 0),
+(256, 1, '2013-06-22', '2013-06-22 14:56:05', 0),
+(257, 1, '2013-06-22', '2013-06-22 14:56:07', 0),
+(258, 1, '2013-06-22', '2013-06-22 14:57:46', 0),
+(259, 1, '2013-06-22', '2013-06-22 15:03:00', 0),
+(260, 1, '2013-06-22', '2013-06-22 15:20:13', 0),
+(261, 146, '2013-06-22', '2013-06-22 15:20:26', 0),
+(262, 1, '2013-06-22', '2013-06-22 15:50:18', 0),
+(263, 1, '2013-06-22', '2013-06-22 15:50:23', 0),
+(264, 1, '2013-06-22', '2013-06-22 15:50:26', 0),
+(265, 1, '2013-06-22', '2013-06-22 16:27:29', 0),
+(266, 1, '2013-06-23', '2013-06-23 08:46:32', 0),
+(267, 1, '2013-06-23', '2013-06-23 08:46:46', 0),
+(268, 110, '2013-06-23', '2013-06-23 08:47:52', 0),
+(269, 110, '2013-06-23', '2013-06-23 08:48:06', 0),
+(270, 1, '2013-06-23', '2013-06-23 08:48:06', 1),
+(271, 138, '2013-06-23', '2013-06-23 08:48:13', 1),
+(272, 138, '2013-06-23', '2013-06-23 08:48:24', 1),
+(273, 138, '2013-06-23', '2013-06-23 08:48:36', 1),
+(274, 2, '2013-06-23', '2013-06-23 08:48:42', 1),
+(275, 34, '2013-06-23', '2013-06-23 08:48:45', 1),
+(276, 34, '2013-06-23', '2013-06-23 08:48:54', 1),
+(277, 34, '2013-06-23', '2013-06-23 08:49:21', 1),
+(278, 34, '2013-06-23', '2013-06-23 08:49:21', 1),
+(279, 2, '2013-06-23', '2013-06-23 08:49:29', 1),
+(280, 32, '2013-06-23', '2013-06-23 08:49:32', 1),
+(281, 32, '2013-06-23', '2013-06-23 08:49:41', 1),
+(282, 32, '2013-06-23', '2013-06-23 08:49:44', 1),
+(283, 32, '2013-06-23', '2013-06-23 08:49:44', 1),
+(284, 7, '2013-06-23', '2013-06-23 08:49:50', 1),
+(285, 1, '2013-06-23', '2013-06-23 08:50:24', 1),
+(286, 138, '2013-06-23', '2013-06-23 08:50:25', 1),
+(287, 138, '2013-06-23', '2013-06-23 08:50:29', 1),
+(288, 1, '2013-06-23', '2013-06-23 08:56:07', 1),
+(289, 1, '2013-06-23', '2013-06-23 08:57:07', 1),
+(290, 138, '2013-06-23', '2013-06-23 08:57:10', 1),
+(291, 138, '2013-06-23', '2013-06-23 08:59:25', 1),
+(292, 138, '2013-06-23', '2013-06-23 09:00:09', 1),
+(293, 139, '2013-06-23', '2013-06-23 09:00:11', 1),
+(294, 138, '2013-06-23', '2013-06-23 09:00:14', 1),
+(295, 138, '2013-06-23', '2013-06-23 09:10:18', 1),
+(296, 2, '2013-06-23', '2013-06-23 09:11:02', 1),
+(297, 43, '2013-06-23', '2013-06-23 09:11:07', 1),
+(298, 43, '2013-06-23', '2013-06-23 09:11:13', 1),
+(299, 43, '2013-06-23', '2013-06-23 09:11:18', 1),
+(300, 43, '2013-06-23', '2013-06-23 09:12:39', 1),
+(301, 43, '2013-06-23', '2013-06-23 09:12:52', 1),
+(302, 43, '2013-06-23', '2013-06-23 09:13:17', 1),
+(303, 43, '2013-06-23', '2013-06-23 09:13:20', 1),
+(304, 138, '2013-06-23', '2013-06-23 09:14:20', 1),
+(305, 138, '2013-06-23', '2013-06-23 09:14:30', 1),
+(306, 138, '2013-06-23', '2013-06-23 09:14:31', 1),
+(307, 138, '2013-06-23', '2013-06-23 09:15:02', 1),
+(308, 138, '2013-06-23', '2013-06-23 09:15:04', 1),
+(309, 138, '2013-06-23', '2013-06-23 09:15:05', 1),
+(310, 138, '2013-06-23', '2013-06-23 09:16:14', 1),
+(311, 138, '2013-06-23', '2013-06-23 09:16:16', 1),
+(312, 138, '2013-06-23', '2013-06-23 09:16:18', 1),
+(313, 138, '2013-06-23', '2013-06-23 09:16:19', 1),
+(314, 138, '2013-06-23', '2013-06-23 09:17:28', 1),
+(315, 138, '2013-06-23', '2013-06-23 09:17:59', 1),
+(316, 138, '2013-06-23', '2013-06-23 09:18:34', 1),
+(317, 138, '2013-06-23', '2013-06-23 09:18:43', 1),
+(318, 138, '2013-06-23', '2013-06-23 09:18:47', 1),
+(319, 138, '2013-06-23', '2013-06-23 09:19:01', 1),
+(320, 138, '2013-06-23', '2013-06-23 09:22:40', 1),
+(321, 138, '2013-06-23', '2013-06-23 09:25:51', 1),
+(322, 138, '2013-06-23', '2013-06-23 09:25:58', 1),
+(323, 139, '2013-06-23', '2013-06-23 09:26:16', 1),
+(324, 139, '2013-06-23', '2013-06-23 09:26:34', 1),
+(325, 139, '2013-06-23', '2013-06-23 09:26:54', 1),
+(326, 138, '2013-06-23', '2013-06-23 09:26:59', 1),
+(327, 138, '2013-06-23', '2013-06-23 09:27:01', 1),
+(328, 139, '2013-06-23', '2013-06-23 09:28:54', 1),
+(329, 138, '2013-06-23', '2013-06-23 09:28:55', 1),
+(330, 139, '2013-06-23', '2013-06-23 09:28:56', 1),
+(331, 140, '2013-06-23', '2013-06-23 09:28:57', 1),
+(332, 141, '2013-06-23', '2013-06-23 09:28:58', 1),
+(333, 142, '2013-06-23', '2013-06-23 09:28:58', 1),
+(334, 143, '2013-06-23', '2013-06-23 09:28:59', 1),
+(335, 144, '2013-06-23', '2013-06-23 09:29:00', 1),
+(336, 145, '2013-06-23', '2013-06-23 09:29:01', 1),
+(337, 146, '2013-06-23', '2013-06-23 09:29:02', 1),
+(338, 147, '2013-06-23', '2013-06-23 09:29:03', 1),
+(339, 146, '2013-06-23', '2013-06-23 09:29:05', 1),
+(340, 145, '2013-06-23', '2013-06-23 09:29:05', 1),
+(341, 144, '2013-06-23', '2013-06-23 09:29:05', 1),
+(342, 143, '2013-06-23', '2013-06-23 09:29:06', 1),
+(343, 142, '2013-06-23', '2013-06-23 09:29:06', 1),
+(344, 141, '2013-06-23', '2013-06-23 09:29:07', 1),
+(345, 1, '2013-06-23', '2013-06-23 09:29:34', 1);
 
 -- --------------------------------------------------------
 
@@ -4644,7 +4957,6 @@ INSERT INTO `pagestatistics` (`pstID`, `cID`, `date`, `timestamp`, `uID`) VALUES
 -- Table structure for table `pagethemes`
 --
 
-DROP TABLE IF EXISTS `pagethemes`;
 CREATE TABLE IF NOT EXISTS `pagethemes` (
   `ptID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ptHandle` varchar(64) NOT NULL,
@@ -4668,7 +4980,6 @@ INSERT INTO `pagethemes` (`ptID`, `ptHandle`, `ptName`, `ptDescription`, `pkgID`
 -- Table structure for table `pagethemestyles`
 --
 
-DROP TABLE IF EXISTS `pagethemestyles`;
 CREATE TABLE IF NOT EXISTS `pagethemestyles` (
   `ptID` int(10) unsigned NOT NULL DEFAULT '0',
   `ptsHandle` varchar(128) NOT NULL,
@@ -4683,7 +4994,6 @@ CREATE TABLE IF NOT EXISTS `pagethemestyles` (
 -- Table structure for table `pagetypeattributes`
 --
 
-DROP TABLE IF EXISTS `pagetypeattributes`;
 CREATE TABLE IF NOT EXISTS `pagetypeattributes` (
   `ctID` int(10) unsigned NOT NULL DEFAULT '0',
   `akID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -4700,7 +5010,8 @@ INSERT INTO `pagetypeattributes` (`ctID`, `akID`) VALUES
 (9, 1),
 (9, 2),
 (9, 15),
-(9, 16);
+(9, 16),
+(9, 17);
 
 -- --------------------------------------------------------
 
@@ -4708,7 +5019,6 @@ INSERT INTO `pagetypeattributes` (`ctID`, `akID`) VALUES
 -- Table structure for table `pagetypes`
 --
 
-DROP TABLE IF EXISTS `pagetypes`;
 CREATE TABLE IF NOT EXISTS `pagetypes` (
   `ctID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ctHandle` varchar(32) NOT NULL,
@@ -4741,7 +5051,6 @@ INSERT INTO `pagetypes` (`ctID`, `ctHandle`, `ctIcon`, `ctName`, `ctIsInternal`,
 -- Table structure for table `pageworkflowprogress`
 --
 
-DROP TABLE IF EXISTS `pageworkflowprogress`;
 CREATE TABLE IF NOT EXISTS `pageworkflowprogress` (
   `cID` int(10) unsigned NOT NULL DEFAULT '0',
   `wpID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -4754,7 +5063,6 @@ CREATE TABLE IF NOT EXISTS `pageworkflowprogress` (
 -- Table structure for table `permissionaccess`
 --
 
-DROP TABLE IF EXISTS `permissionaccess`;
 CREATE TABLE IF NOT EXISTS `permissionaccess` (
   `paID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `paIsInUse` int(1) unsigned NOT NULL DEFAULT '0',
@@ -4832,7 +5140,6 @@ INSERT INTO `permissionaccess` (`paID`, `paIsInUse`) VALUES
 -- Table structure for table `permissionaccessentities`
 --
 
-DROP TABLE IF EXISTS `permissionaccessentities`;
 CREATE TABLE IF NOT EXISTS `permissionaccessentities` (
   `peID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `petID` int(10) unsigned DEFAULT NULL,
@@ -4857,7 +5164,6 @@ INSERT INTO `permissionaccessentities` (`peID`, `petID`) VALUES
 -- Table structure for table `permissionaccessentitygroups`
 --
 
-DROP TABLE IF EXISTS `permissionaccessentitygroups`;
 CREATE TABLE IF NOT EXISTS `permissionaccessentitygroups` (
   `pegID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -4881,7 +5187,6 @@ INSERT INTO `permissionaccessentitygroups` (`pegID`, `peID`, `gID`) VALUES
 -- Table structure for table `permissionaccessentitygroupsets`
 --
 
-DROP TABLE IF EXISTS `permissionaccessentitygroupsets`;
 CREATE TABLE IF NOT EXISTS `permissionaccessentitygroupsets` (
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
   `gsID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -4895,7 +5200,6 @@ CREATE TABLE IF NOT EXISTS `permissionaccessentitygroupsets` (
 -- Table structure for table `permissionaccessentitytypecategories`
 --
 
-DROP TABLE IF EXISTS `permissionaccessentitytypecategories`;
 CREATE TABLE IF NOT EXISTS `permissionaccessentitytypecategories` (
   `petID` int(10) unsigned NOT NULL DEFAULT '0',
   `pkCategoryID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -4961,7 +5265,6 @@ INSERT INTO `permissionaccessentitytypecategories` (`petID`, `pkCategoryID`) VAL
 -- Table structure for table `permissionaccessentitytypes`
 --
 
-DROP TABLE IF EXISTS `permissionaccessentitytypes`;
 CREATE TABLE IF NOT EXISTS `permissionaccessentitytypes` (
   `petID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `petHandle` varchar(255) NOT NULL,
@@ -4988,7 +5291,6 @@ INSERT INTO `permissionaccessentitytypes` (`petID`, `petHandle`, `petName`, `pkg
 -- Table structure for table `permissionaccessentityusers`
 --
 
-DROP TABLE IF EXISTS `permissionaccessentityusers`;
 CREATE TABLE IF NOT EXISTS `permissionaccessentityusers` (
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
   `uID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5002,7 +5304,6 @@ CREATE TABLE IF NOT EXISTS `permissionaccessentityusers` (
 -- Table structure for table `permissionaccesslist`
 --
 
-DROP TABLE IF EXISTS `permissionaccesslist`;
 CREATE TABLE IF NOT EXISTS `permissionaccesslist` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5087,7 +5388,6 @@ INSERT INTO `permissionaccesslist` (`paID`, `peID`, `pdID`, `accessType`) VALUES
 -- Table structure for table `permissionaccessworkflows`
 --
 
-DROP TABLE IF EXISTS `permissionaccessworkflows`;
 CREATE TABLE IF NOT EXISTS `permissionaccessworkflows` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `wfID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5100,7 +5400,6 @@ CREATE TABLE IF NOT EXISTS `permissionaccessworkflows` (
 -- Table structure for table `permissionassignments`
 --
 
-DROP TABLE IF EXISTS `permissionassignments`;
 CREATE TABLE IF NOT EXISTS `permissionassignments` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `pkID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5137,7 +5436,6 @@ INSERT INTO `permissionassignments` (`paID`, `pkID`) VALUES
 -- Table structure for table `permissiondurationobjects`
 --
 
-DROP TABLE IF EXISTS `permissiondurationobjects`;
 CREATE TABLE IF NOT EXISTS `permissiondurationobjects` (
   `pdID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pdObject` text,
@@ -5150,7 +5448,6 @@ CREATE TABLE IF NOT EXISTS `permissiondurationobjects` (
 -- Table structure for table `permissionkeycategories`
 --
 
-DROP TABLE IF EXISTS `permissionkeycategories`;
 CREATE TABLE IF NOT EXISTS `permissionkeycategories` (
   `pkCategoryID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pkCategoryHandle` varchar(255) NOT NULL,
@@ -5184,7 +5481,6 @@ INSERT INTO `permissionkeycategories` (`pkCategoryID`, `pkCategoryHandle`, `pkgI
 -- Table structure for table `permissionkeys`
 --
 
-DROP TABLE IF EXISTS `permissionkeys`;
 CREATE TABLE IF NOT EXISTS `permissionkeys` (
   `pkID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pkHandle` varchar(255) NOT NULL,
@@ -5280,7 +5576,6 @@ INSERT INTO `permissionkeys` (`pkID`, `pkHandle`, `pkName`, `pkCanTriggerWorkflo
 -- Table structure for table `pilecontents`
 --
 
-DROP TABLE IF EXISTS `pilecontents`;
 CREATE TABLE IF NOT EXISTS `pilecontents` (
   `pcID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5298,7 +5593,6 @@ CREATE TABLE IF NOT EXISTS `pilecontents` (
 -- Table structure for table `piles`
 --
 
-DROP TABLE IF EXISTS `piles`;
 CREATE TABLE IF NOT EXISTS `piles` (
   `pID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uID` int(10) unsigned DEFAULT NULL,
@@ -5315,7 +5609,6 @@ CREATE TABLE IF NOT EXISTS `piles` (
 -- Table structure for table `signuprequests`
 --
 
-DROP TABLE IF EXISTS `signuprequests`;
 CREATE TABLE IF NOT EXISTS `signuprequests` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ipFrom` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5330,7 +5623,6 @@ CREATE TABLE IF NOT EXISTS `signuprequests` (
 -- Table structure for table `stacks`
 --
 
-DROP TABLE IF EXISTS `stacks`;
 CREATE TABLE IF NOT EXISTS `stacks` (
   `stID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `stName` varchar(255) NOT NULL,
@@ -5356,7 +5648,6 @@ INSERT INTO `stacks` (`stID`, `stName`, `stType`, `cID`) VALUES
 -- Table structure for table `systemantispamlibraries`
 --
 
-DROP TABLE IF EXISTS `systemantispamlibraries`;
 CREATE TABLE IF NOT EXISTS `systemantispamlibraries` (
   `saslHandle` varchar(64) NOT NULL,
   `saslName` varchar(255) DEFAULT NULL,
@@ -5371,7 +5662,6 @@ CREATE TABLE IF NOT EXISTS `systemantispamlibraries` (
 -- Table structure for table `systemcaptchalibraries`
 --
 
-DROP TABLE IF EXISTS `systemcaptchalibraries`;
 CREATE TABLE IF NOT EXISTS `systemcaptchalibraries` (
   `sclHandle` varchar(64) NOT NULL,
   `sclName` varchar(255) DEFAULT NULL,
@@ -5393,7 +5683,6 @@ INSERT INTO `systemcaptchalibraries` (`sclHandle`, `sclName`, `sclIsActive`, `pk
 -- Table structure for table `systemnotifications`
 --
 
-DROP TABLE IF EXISTS `systemnotifications`;
 CREATE TABLE IF NOT EXISTS `systemnotifications` (
   `snID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `snTypeID` int(3) unsigned NOT NULL DEFAULT '0',
@@ -5414,7 +5703,6 @@ CREATE TABLE IF NOT EXISTS `systemnotifications` (
 -- Table structure for table `userattributekeys`
 --
 
-DROP TABLE IF EXISTS `userattributekeys`;
 CREATE TABLE IF NOT EXISTS `userattributekeys` (
   `akID` int(10) unsigned NOT NULL,
   `uakProfileDisplay` tinyint(1) NOT NULL DEFAULT '0',
@@ -5442,7 +5730,6 @@ INSERT INTO `userattributekeys` (`akID`, `uakProfileDisplay`, `uakMemberListDisp
 -- Table structure for table `userattributevalues`
 --
 
-DROP TABLE IF EXISTS `userattributevalues`;
 CREATE TABLE IF NOT EXISTS `userattributevalues` (
   `uID` int(10) unsigned NOT NULL DEFAULT '0',
   `akID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5456,7 +5743,6 @@ CREATE TABLE IF NOT EXISTS `userattributevalues` (
 -- Table structure for table `userbannedips`
 --
 
-DROP TABLE IF EXISTS `userbannedips`;
 CREATE TABLE IF NOT EXISTS `userbannedips` (
   `ipFrom` int(10) unsigned NOT NULL DEFAULT '0',
   `ipTo` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5474,7 +5760,6 @@ CREATE TABLE IF NOT EXISTS `userbannedips` (
 -- Table structure for table `usergroups`
 --
 
-DROP TABLE IF EXISTS `usergroups`;
 CREATE TABLE IF NOT EXISTS `usergroups` (
   `uID` int(10) unsigned NOT NULL DEFAULT '0',
   `gID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5491,7 +5776,6 @@ CREATE TABLE IF NOT EXISTS `usergroups` (
 -- Table structure for table `useropenids`
 --
 
-DROP TABLE IF EXISTS `useropenids`;
 CREATE TABLE IF NOT EXISTS `useropenids` (
   `uID` int(10) unsigned NOT NULL,
   `uOpenID` varchar(255) NOT NULL,
@@ -5505,7 +5789,6 @@ CREATE TABLE IF NOT EXISTS `useropenids` (
 -- Table structure for table `userpermissionassigngroupaccesslist`
 --
 
-DROP TABLE IF EXISTS `userpermissionassigngroupaccesslist`;
 CREATE TABLE IF NOT EXISTS `userpermissionassigngroupaccesslist` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5519,7 +5802,6 @@ CREATE TABLE IF NOT EXISTS `userpermissionassigngroupaccesslist` (
 -- Table structure for table `userpermissionassigngroupaccesslistcustom`
 --
 
-DROP TABLE IF EXISTS `userpermissionassigngroupaccesslistcustom`;
 CREATE TABLE IF NOT EXISTS `userpermissionassigngroupaccesslistcustom` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5533,7 +5815,6 @@ CREATE TABLE IF NOT EXISTS `userpermissionassigngroupaccesslistcustom` (
 -- Table structure for table `userpermissioneditpropertyaccesslist`
 --
 
-DROP TABLE IF EXISTS `userpermissioneditpropertyaccesslist`;
 CREATE TABLE IF NOT EXISTS `userpermissioneditpropertyaccesslist` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5553,7 +5834,6 @@ CREATE TABLE IF NOT EXISTS `userpermissioneditpropertyaccesslist` (
 -- Table structure for table `userpermissioneditpropertyattributeaccesslistcustom`
 --
 
-DROP TABLE IF EXISTS `userpermissioneditpropertyattributeaccesslistcustom`;
 CREATE TABLE IF NOT EXISTS `userpermissioneditpropertyattributeaccesslistcustom` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5567,7 +5847,6 @@ CREATE TABLE IF NOT EXISTS `userpermissioneditpropertyattributeaccesslistcustom`
 -- Table structure for table `userpermissionusersearchaccesslist`
 --
 
-DROP TABLE IF EXISTS `userpermissionusersearchaccesslist`;
 CREATE TABLE IF NOT EXISTS `userpermissionusersearchaccesslist` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5581,7 +5860,6 @@ CREATE TABLE IF NOT EXISTS `userpermissionusersearchaccesslist` (
 -- Table structure for table `userpermissionusersearchaccesslistcustom`
 --
 
-DROP TABLE IF EXISTS `userpermissionusersearchaccesslistcustom`;
 CREATE TABLE IF NOT EXISTS `userpermissionusersearchaccesslistcustom` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5595,7 +5873,6 @@ CREATE TABLE IF NOT EXISTS `userpermissionusersearchaccesslistcustom` (
 -- Table structure for table `userpermissionviewattributeaccesslist`
 --
 
-DROP TABLE IF EXISTS `userpermissionviewattributeaccesslist`;
 CREATE TABLE IF NOT EXISTS `userpermissionviewattributeaccesslist` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5609,7 +5886,6 @@ CREATE TABLE IF NOT EXISTS `userpermissionviewattributeaccesslist` (
 -- Table structure for table `userpermissionviewattributeaccesslistcustom`
 --
 
-DROP TABLE IF EXISTS `userpermissionviewattributeaccesslistcustom`;
 CREATE TABLE IF NOT EXISTS `userpermissionviewattributeaccesslistcustom` (
   `paID` int(10) unsigned NOT NULL DEFAULT '0',
   `peID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5623,7 +5899,6 @@ CREATE TABLE IF NOT EXISTS `userpermissionviewattributeaccesslistcustom` (
 -- Table structure for table `userprivatemessages`
 --
 
-DROP TABLE IF EXISTS `userprivatemessages`;
 CREATE TABLE IF NOT EXISTS `userprivatemessages` (
   `msgID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uAuthorID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5640,7 +5915,6 @@ CREATE TABLE IF NOT EXISTS `userprivatemessages` (
 -- Table structure for table `userprivatemessagesto`
 --
 
-DROP TABLE IF EXISTS `userprivatemessagesto`;
 CREATE TABLE IF NOT EXISTS `userprivatemessagesto` (
   `msgID` int(10) unsigned NOT NULL DEFAULT '0',
   `uID` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5662,7 +5936,6 @@ CREATE TABLE IF NOT EXISTS `userprivatemessagesto` (
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `uID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uName` varchar(64) NOT NULL,
@@ -5689,7 +5962,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`uID`, `uName`, `uEmail`, `uPassword`, `uIsActive`, `uIsValidated`, `uIsFullRecord`, `uDateAdded`, `uHasAvatar`, `uLastOnline`, `uLastLogin`, `uLastIP`, `uPreviousLogin`, `uNumLogins`, `uTimezone`, `uDefaultLanguage`) VALUES
-(1, 'admin', 'thealscott@gmail.com', '4f3de1d75f6f030cb4c241f73bb2db34', '1', -1, 1, '2013-06-22 10:54:12', 0, 1371908530, 1371898452, 2130706433, 0, 1, NULL, NULL);
+(1, 'admin', 'thealscott@gmail.com', '4f3de1d75f6f030cb4c241f73bb2db34', '1', -1, 1, '2013-06-22 10:54:12', 0, 1371979734, 1371977286, 2130706433, 1371898452, 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -5697,7 +5970,6 @@ INSERT INTO `users` (`uID`, `uName`, `uEmail`, `uPassword`, `uIsActive`, `uIsVal
 -- Table structure for table `usersearchindexattributes`
 --
 
-DROP TABLE IF EXISTS `usersearchindexattributes`;
 CREATE TABLE IF NOT EXISTS `usersearchindexattributes` (
   `uID` int(11) unsigned NOT NULL DEFAULT '0',
   `ak_profile_private_messages_enabled` tinyint(4) DEFAULT '0',
@@ -5711,7 +5983,6 @@ CREATE TABLE IF NOT EXISTS `usersearchindexattributes` (
 -- Table structure for table `usersfriends`
 --
 
-DROP TABLE IF EXISTS `usersfriends`;
 CREATE TABLE IF NOT EXISTS `usersfriends` (
   `ufID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uID` int(10) unsigned DEFAULT NULL,
@@ -5727,7 +5998,6 @@ CREATE TABLE IF NOT EXISTS `usersfriends` (
 -- Table structure for table `uservalidationhashes`
 --
 
-DROP TABLE IF EXISTS `uservalidationhashes`;
 CREATE TABLE IF NOT EXISTS `uservalidationhashes` (
   `uvhID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `uID` int(10) unsigned DEFAULT NULL,
@@ -5744,7 +6014,6 @@ CREATE TABLE IF NOT EXISTS `uservalidationhashes` (
 -- Table structure for table `workflowprogress`
 --
 
-DROP TABLE IF EXISTS `workflowprogress`;
 CREATE TABLE IF NOT EXISTS `workflowprogress` (
   `wpID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `wpCategoryID` int(10) unsigned DEFAULT NULL,
@@ -5758,7 +6027,7 @@ CREATE TABLE IF NOT EXISTS `workflowprogress` (
   PRIMARY KEY (`wpID`),
   KEY `wrID` (`wrID`),
   KEY `wpIsCompleted` (`wpIsCompleted`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 -- --------------------------------------------------------
 
@@ -5766,7 +6035,6 @@ CREATE TABLE IF NOT EXISTS `workflowprogress` (
 -- Table structure for table `workflowprogresscategories`
 --
 
-DROP TABLE IF EXISTS `workflowprogresscategories`;
 CREATE TABLE IF NOT EXISTS `workflowprogresscategories` (
   `wpCategoryID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `wpCategoryHandle` varchar(255) NOT NULL,
@@ -5789,14 +6057,13 @@ INSERT INTO `workflowprogresscategories` (`wpCategoryID`, `wpCategoryHandle`, `p
 -- Table structure for table `workflowprogresshistory`
 --
 
-DROP TABLE IF EXISTS `workflowprogresshistory`;
 CREATE TABLE IF NOT EXISTS `workflowprogresshistory` (
   `wphID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `wpID` int(10) unsigned NOT NULL DEFAULT '0',
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `object` text,
   PRIMARY KEY (`wphID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
 
 --
 -- Dumping data for table `workflowprogresshistory`
@@ -5829,7 +6096,40 @@ INSERT INTO `workflowprogresshistory` (`wphID`, `wpID`, `timestamp`, `object`) V
 (24, 24, '2013-06-22 13:01:19', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"147";s:4:"cvID";s:1:"1";s:4:"wrID";s:2:"24";}'),
 (25, 25, '2013-06-22 13:02:08', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"148";s:4:"cvID";s:1:"1";s:4:"wrID";s:2:"25";}'),
 (26, 26, '2013-06-22 13:07:54', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"136";s:4:"cvID";s:1:"4";s:4:"wrID";s:2:"26";}'),
-(27, 27, '2013-06-22 13:09:54', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"136";s:4:"cvID";s:1:"5";s:4:"wrID";s:2:"27";}');
+(27, 27, '2013-06-22 13:09:54', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"136";s:4:"cvID";s:1:"5";s:4:"wrID";s:2:"27";}'),
+(28, 28, '2013-06-22 14:25:41', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:1:"1";s:4:"cvID";s:1:"2";s:4:"wrID";s:2:"28";}'),
+(29, 29, '2013-06-22 14:26:01', 'O:27:"MovePagePageWorkflowRequest":9:{s:12:"\0*\0targetCID";s:1:"1";s:14:"\0*\0wrStatusNum";i:50;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"14";s:3:"cID";s:3:"138";s:15:"saveOldPagePath";N;s:4:"wrID";s:2:"29";}'),
+(30, 30, '2013-06-22 14:26:07', 'O:27:"MovePagePageWorkflowRequest":9:{s:12:"\0*\0targetCID";s:1:"1";s:14:"\0*\0wrStatusNum";i:50;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"14";s:3:"cID";s:3:"139";s:15:"saveOldPagePath";N;s:4:"wrID";s:2:"30";}'),
+(31, 31, '2013-06-22 14:26:10', 'O:27:"MovePagePageWorkflowRequest":9:{s:12:"\0*\0targetCID";s:1:"1";s:14:"\0*\0wrStatusNum";i:50;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"14";s:3:"cID";s:3:"140";s:15:"saveOldPagePath";N;s:4:"wrID";s:2:"31";}'),
+(32, 32, '2013-06-22 14:26:14', 'O:27:"MovePagePageWorkflowRequest":9:{s:12:"\0*\0targetCID";s:1:"1";s:14:"\0*\0wrStatusNum";i:50;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"14";s:3:"cID";s:3:"141";s:15:"saveOldPagePath";N;s:4:"wrID";s:2:"32";}'),
+(33, 33, '2013-06-22 14:26:17', 'O:27:"MovePagePageWorkflowRequest":9:{s:12:"\0*\0targetCID";s:1:"1";s:14:"\0*\0wrStatusNum";i:50;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"14";s:3:"cID";s:3:"142";s:15:"saveOldPagePath";N;s:4:"wrID";s:2:"33";}'),
+(34, 34, '2013-06-22 14:26:20', 'O:27:"MovePagePageWorkflowRequest":9:{s:12:"\0*\0targetCID";s:1:"1";s:14:"\0*\0wrStatusNum";i:50;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"14";s:3:"cID";s:3:"143";s:15:"saveOldPagePath";N;s:4:"wrID";s:2:"34";}'),
+(35, 35, '2013-06-22 14:26:23', 'O:27:"MovePagePageWorkflowRequest":9:{s:12:"\0*\0targetCID";s:1:"1";s:14:"\0*\0wrStatusNum";i:50;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"14";s:3:"cID";s:3:"144";s:15:"saveOldPagePath";N;s:4:"wrID";s:2:"35";}'),
+(36, 36, '2013-06-22 14:26:26', 'O:27:"MovePagePageWorkflowRequest":9:{s:12:"\0*\0targetCID";s:1:"1";s:14:"\0*\0wrStatusNum";i:50;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"14";s:3:"cID";s:3:"145";s:15:"saveOldPagePath";N;s:4:"wrID";s:2:"36";}'),
+(37, 37, '2013-06-22 14:26:30', 'O:27:"MovePagePageWorkflowRequest":9:{s:12:"\0*\0targetCID";s:1:"1";s:14:"\0*\0wrStatusNum";i:50;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"14";s:3:"cID";s:3:"146";s:15:"saveOldPagePath";N;s:4:"wrID";s:2:"37";}'),
+(38, 38, '2013-06-22 14:26:33', 'O:27:"MovePagePageWorkflowRequest":9:{s:12:"\0*\0targetCID";s:1:"1";s:14:"\0*\0wrStatusNum";i:50;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"14";s:3:"cID";s:3:"147";s:15:"saveOldPagePath";N;s:4:"wrID";s:2:"38";}'),
+(39, 39, '2013-06-22 14:26:36', 'O:27:"MovePagePageWorkflowRequest":9:{s:12:"\0*\0targetCID";s:1:"1";s:14:"\0*\0wrStatusNum";i:50;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"14";s:3:"cID";s:3:"148";s:15:"saveOldPagePath";N;s:4:"wrID";s:2:"39";}'),
+(40, 40, '2013-06-22 14:26:41', 'O:29:"DeletePagePageWorkflowRequest":7:{s:14:"\0*\0wrStatusNum";i:100;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"10";s:3:"cID";s:3:"136";s:4:"wrID";s:2:"40";}'),
+(41, 41, '2013-06-22 14:26:54', 'O:29:"DeletePagePageWorkflowRequest":7:{s:14:"\0*\0wrStatusNum";i:100;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"10";s:3:"cID";s:3:"128";s:4:"wrID";s:2:"41";}'),
+(42, 42, '2013-06-22 14:27:00', 'O:29:"DeletePagePageWorkflowRequest":7:{s:14:"\0*\0wrStatusNum";i:100;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"10";s:3:"cID";s:3:"130";s:4:"wrID";s:2:"42";}'),
+(43, 43, '2013-06-22 14:27:51', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:1:"1";s:4:"cvID";s:1:"3";s:4:"wrID";s:2:"43";}'),
+(44, 44, '2013-06-22 14:28:12', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:1:"1";s:4:"cvID";s:1:"4";s:4:"wrID";s:2:"44";}'),
+(45, 45, '2013-06-22 14:34:22', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"138";s:4:"cvID";s:1:"7";s:4:"wrID";s:2:"45";}'),
+(46, 46, '2013-06-22 14:34:33', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"138";s:4:"cvID";s:1:"8";s:4:"wrID";s:2:"46";}'),
+(47, 47, '2013-06-22 14:36:40', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"139";s:4:"cvID";s:1:"6";s:4:"wrID";s:2:"47";}'),
+(48, 48, '2013-06-22 14:36:45', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"139";s:4:"cvID";s:1:"7";s:4:"wrID";s:2:"48";}'),
+(49, 49, '2013-06-22 14:36:59', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"140";s:4:"cvID";s:1:"2";s:4:"wrID";s:2:"49";}'),
+(50, 50, '2013-06-22 14:37:09', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"141";s:4:"cvID";s:1:"3";s:4:"wrID";s:2:"50";}'),
+(51, 51, '2013-06-22 14:37:20', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"142";s:4:"cvID";s:1:"2";s:4:"wrID";s:2:"51";}'),
+(52, 52, '2013-06-22 14:37:34', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"143";s:4:"cvID";s:1:"2";s:4:"wrID";s:2:"52";}'),
+(53, 53, '2013-06-22 14:37:54', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"145";s:4:"cvID";s:1:"2";s:4:"wrID";s:2:"53";}'),
+(54, 54, '2013-06-22 14:38:08', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"146";s:4:"cvID";s:1:"2";s:4:"wrID";s:2:"54";}'),
+(55, 55, '2013-06-22 14:38:18', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"147";s:4:"cvID";s:1:"2";s:4:"wrID";s:2:"55";}'),
+(56, 1, '2013-06-23 08:50:09', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"138";s:4:"cvID";s:1:"9";s:4:"wrID";s:1:"1";}'),
+(57, 2, '2013-06-23 08:58:38', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:1:"1";s:4:"cvID";s:1:"5";s:4:"wrID";s:1:"2";}'),
+(58, 3, '2013-06-23 08:58:56', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"138";s:4:"cvID";s:2:"10";s:4:"wrID";s:1:"3";}'),
+(59, 4, '2013-06-23 08:59:20', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"139";s:4:"cvID";s:1:"8";s:4:"wrID";s:1:"4";}'),
+(60, 5, '2013-06-23 09:00:09', 'O:30:"ApprovePagePageWorkflowRequest":8:{s:14:"\0*\0wrStatusNum";i:30;s:12:"\0*\0currentWP";N;s:6:"\0*\0uID";s:1:"1";s:5:"error";s:0:"";s:4:"pkID";s:2:"12";s:3:"cID";s:3:"138";s:4:"cvID";s:2:"11";s:4:"wrID";s:1:"5";}');
 
 -- --------------------------------------------------------
 
@@ -5837,12 +6137,11 @@ INSERT INTO `workflowprogresshistory` (`wphID`, `wpID`, `timestamp`, `object`) V
 -- Table structure for table `workflowrequestobjects`
 --
 
-DROP TABLE IF EXISTS `workflowrequestobjects`;
 CREATE TABLE IF NOT EXISTS `workflowrequestobjects` (
   `wrID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `wrObject` text,
   PRIMARY KEY (`wrID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 -- --------------------------------------------------------
 
@@ -5850,7 +6149,6 @@ CREATE TABLE IF NOT EXISTS `workflowrequestobjects` (
 -- Table structure for table `workflows`
 --
 
-DROP TABLE IF EXISTS `workflows`;
 CREATE TABLE IF NOT EXISTS `workflows` (
   `wfID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `wfName` varchar(255) DEFAULT NULL,
@@ -5865,7 +6163,6 @@ CREATE TABLE IF NOT EXISTS `workflows` (
 -- Table structure for table `workflowtypes`
 --
 
-DROP TABLE IF EXISTS `workflowtypes`;
 CREATE TABLE IF NOT EXISTS `workflowtypes` (
   `wftID` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `wftHandle` varchar(64) NOT NULL,

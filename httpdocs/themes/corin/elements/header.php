@@ -16,8 +16,8 @@
 
 <body class="<?php echo $page_handle; ?>">
 	<header class="navbar">
-		<a class="btn logo" href="#"><i class="icon-logo"></i><h1 class="logo-title">Corin Wilkins</h1></a>	
-		<h2 class="title">Title</h2>
+		<a class="btn logo" href="/"><i class="icon-logo"></i><h1 class="logo-title">Corin Wilkins</h1></a>	
+		<h2 class="title"><?php echo $c->getCollectionName(); ?></h2>
 
 		<nav>	
 			<span class="tel">07896207312</span>
