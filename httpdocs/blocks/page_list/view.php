@@ -56,21 +56,20 @@ $ih = Loader::helper('image'); //<--uncomment this line if displaying image attr
 		/* End data preparation. */
 
 		/* The HTML from here through "endforeach" is repeated for every item in the list... */ ?>
-
 		<a href="<?php  echo $url ?>" class="project <?php echo $handle; ?>">
             <div class="rollover">
                 <div class="inner">
-                    <div class="content">
-                        <h2><strong><?php  echo $title ?></strong><?php if (!empty($subtitle)) echo ':&nbsp;'. $subtitle ?></h2>
+					<div class="content">
+                        <h2>
+                        	<strong><?php  echo $title ?></strong><?php if (!empty($subtitle)) echo ':&nbsp;'. $subtitle ?>
+                        </h2>
                         <span><?php  echo $description ?></span>
                     </div>
                 </div>
             </div>
             <img src="<?php  echo $img_src ?>" alt="" />
         </a>
-		
 	<?php  endforeach; ?>
- 
 </div><!-- end .ccm-page-list -->
 
 
